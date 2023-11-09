@@ -1,0 +1,32 @@
+[{
+    "id": 3,
+    "col": 6,
+    "colSpan": 1,
+    "device": "",
+    "row": 1,
+    "rowSpan": 2,
+    "template": "images",
+    "templateExtra": "weatherimage.php",
+    "refreshInterval": "300",
+    "name":""
+  },
+  {
+      "template": "temperature",
+      "row": 1,
+      "rowSpan": 1,
+      "col": 5,
+      "colSpan": 1,
+      "id": 3,
+      "device": "526",
+      "name":"Weather Data"
+  },
+  {
+      "template": "illuminance",
+      "row": 2,
+      "rowSpan": 1,
+      "col": 5,
+      "colSpan": 1,
+      "id": 3,
+      "device": "526",
+      "name":""
+  }]

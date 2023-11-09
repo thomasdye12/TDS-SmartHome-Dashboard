@@ -1,0 +1,73 @@
+[
+    {
+        "ID": 1,
+        "Name": "Home",
+        "Centralheating": true,
+        "iconsvg": "house.circle",
+        "tiles": [
+            {
+                "template": "switches",
+                "device": "380",
+                "startx": 40,
+                "starty": 0,
+                "width": 2,
+                "height": 1,
+                "customIconarray": {
+                    "customicon": true,
+                    "on": "pedestrian.gate.open",
+                    "off": "pedestrian.gate.closed.svg"
+                }
+            },
+            {
+                "template": "switches",
+                "device": "513",
+                "startx": 40,
+                "starty": 10,
+                "width": 2,
+                "height": 1,
+                "customIconarray": {
+                    "customicon": true,
+                    "on": "pedestrian.gate.open",
+                    "off": "pedestrian.gate.closed.svg"
+                }
+            },
+            {
+                "template": "lock",
+                "device": "518",
+                "startx": 60,
+                "starty": 0,
+                "width": 2,
+                "height": 2,
+                "customIconarray": {
+                    "customicon": true,
+                    "locked": "lock.shield",
+                    "unlocked": "lock.open"
+                }
+            },
+            {
+                "template": "garage-control",
+                "device": "1139",
+                "startx": 80,
+                "starty": 0,
+                "width": 2,
+                "height": 2,
+                "customIconarray": {
+                    "customicon": true,
+                    "open": "door.garage.open",
+                    "closed": "door.garage.closed.svg",
+                    "opening": "door.garage.open.trianglebadge.exclamationmark",
+                    "closing": "door.garage.closed.trianglebadge.exclamationmark"
+                }
+            },
+            {
+                "template": "power",
+                "device": "1459",
+                "units":"Kwh",
+                "startx": 0,
+                "starty": 20,
+                "width": 2,
+                "height": 2
+            }
+        ]
+    }
+]

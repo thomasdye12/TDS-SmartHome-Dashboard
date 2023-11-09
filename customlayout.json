@@ -1,0 +1,73 @@
+[
+{
+    "template": "switches",
+    "bgColor": "rgb(47, 125, 59, 0.619)",
+    "iconColor": "rgb(0,0,0)",
+    "state": "on"
+  },
+{
+    "template": "thermostat",
+    "iconColor": "rgb(255,252,252)",
+    "bgColor2": "rgb(255,127,0)",
+    "state": "heating"
+},
+{
+    "template": "garage-control",
+    "bgColor": "rgb(9,255,9)",
+    "iconColor": "rgb(255,255,255)",
+    "state": "open"
+},
+{
+    "template": "garage-control",
+    "bgColor": "rgb(175,175,175,0.1)",
+    "iconColor": "rgb(255,255,255)",
+    "state": "closed"
+},
+{
+    "template": "garage-control",
+    "bgColor": "rgba(247,17,17,0.97)",
+    "iconColor": "rgb(255,255,255)",
+    "state": "opening"
+},
+{
+    "template": "garage-control",
+    "iconColor": "rgb(255,255,255)",
+    "state": "closing"
+},{
+    "template": "lock",
+    "iconColor": "rgb(255,255,255))",
+    "state": "locked",
+    "customIcon": ""
+},{
+    "template": "thermostat",
+    "iconColor": "rgb(255,255,255)",
+    "state": "idle",
+    "customIcon": ""
+},{
+    "template": "mode",
+    "bgColor": "rgb(175,175,175,0.1)",
+    "iconColor": "rgb(255,255,255)",
+    "state": "day",
+    "customIcon": ""
+},{
+    "template": "mode",
+    "bgColor": "rgb(175,175,175,0.1)",
+    "iconColor": "rgb(255,255,255)",
+    "state": "night",
+    "customIcon": ""
+},
+{
+    "template": "gates",
+    "bgColor": "rgb(25,240,57)",
+    "iconColor": "rgb(0,0,0)",
+    "state": "on",
+    "customIcon": "pedestrian.gate.open"
+  },
+  {
+    "template": "gates",
+    "bgColor": "rgb(175,175,175,0.1)",
+    "iconColor": "rgb(255,255,255)",
+    "state": "off",
+    "customIcon": "pedestrian.gate.closed.svg"
+  }
+]
