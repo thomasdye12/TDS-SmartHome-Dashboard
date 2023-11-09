@@ -2,7 +2,10 @@
 
 This is a smarthome Dashboard built using some of the code from the Hubitat dashboard, built to work with there API endpoints, but uses lots of customisation.
 
-# Not Porduction ready
+# Not Production ready 
+<!-- make text red -->
+This is not production ready, and is still in development, so please use at your own risk. 
+
 This is not meant to be or intended to be compleate package, this is part of a larage, much larager system that controls our house, and is only here to show how we have done it, and to help others who are looking to do the same. There is usefull code in here as well as SF symbols that we are using to reference the icons.
 
 ## How it works
