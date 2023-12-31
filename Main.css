@@ -46,7 +46,7 @@ body {
   /* padding-top: 10px; */
   /* margin-top: 10px; */
   width: 100vw;
-  height: 92vh;
+  height: 90vh;
 
 }
 .Stacking {
@@ -181,7 +181,7 @@ body {
   flex-direction: column;
   padding-bottom: 5px;
   width: auto;
-  min-width: 100px;
+  min-width: 120px;
   
   white-space: nowrap;
 

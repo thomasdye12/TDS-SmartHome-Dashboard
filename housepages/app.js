@@ -15282,7 +15282,7 @@ console.log("loadpage");
                 SOCKET_ONMESSAGE: function(t, e) {
                     if (t.socket.message = e,
                     t.socket.retryCount = 0,
-                    "DEVICE" === e.source) {
+                    "TDS Homeserver" === e.source) {
                         var o = t.devices.find((function(t) {
                             return t.id == e.deviceId
                         }

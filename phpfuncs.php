@@ -310,62 +310,38 @@ function getDevicesforroomwithformatting($room = null) {
     // loop over the tiles in the room 
     $returnarray = array();
     foreach ($room["tiles"] as $roomdevice) {
-        $Device = array();
+             $Device = array();
             $atts = array();
             $Device["id"] = $roomdevice["device"];
-        $allKeys = $redis_Storage->keys('DeviceState:Hubitat:'.$roomdevice["device"].":*");
-       // loop over the array and get each key
-        foreach ($allKeys as $key) {
-            // get the value from the key
-            $value = $redis_Storage->get($key);
-            // split key by : and get the last one 
-            // json decode the value
-            $value = json_decode($value,true);
-            $key = explode(":",$key);
-            $keyname = $key[count($key)-1];
-            // if key is name set the name of the device
-            if ($keyname == "name") {
-                // trim out the room name from the device name
-                
-                $Device["name"] = $value["value"];
-                continue;
-            }
-            // if key is lable set the lable of the device
-            if ($keyname == "label") {
-                $Device["label"] = $value["value"];
-                continue;
-            }
-            // if key is type set the state of the device
-            if ($keyname == "type") {
-                $Device["type"] = $value["value"];
-                continue;
-            }
-    
-            // if lockCodes then dont add it to the array
-            if ($keyname == "lockCodes") {
-                continue;
-            }
-    
-    
-            $newatts = array();
-            $newatts[ $keyname] = $value["value"];
-            $newatts["unit"] = "";
-            // if key is battery set the unit to %
-            // if ($keyname == "battery" || $keyname == "level") {
-            //     $newatts["unit"] = "%";
+            // {
+            //     "id": "1139",
+            //     "label": "Garage door",
+            //     "name": "Garage Door",
+            //     "type": "Virtual Simple Garage Door Controller",
+            //     "attr": [{
+            //         "door": "open",
+            //         "unit": ""
+            //     }, {
+            //         "deviceConfigured": false,
+            //         "unit": ""
+            //     }]
             // }
-    
-            // if key is level also set it as volume
-            $atts[] = $newatts;
-            if ($keyname == "level") {
-                $newatts = array();
-                $newatts["volume"] = $value["value"];
-                $newatts["unit"] = "";
-                $atts[] = $newatts;
-            }
-         
-    
-        }
+
+            // get state from homeserverapi
+            $state = file_get_contents("http://homeserverapiinternal.local.thomasdye.net/Brain/api/devices/".$roomdevice["device"]);
+            $state = json_decode($state,true);
+            $Device["name"] = $state["name"];
+            $Device["label"] = $state["label"];
+            $Device["type"] = $state["type"];
+    // loop over the items in the attributes 
+             foreach ($state["attributes"] as $key => $value) {
+                $atts[] = array(
+                    $key => $value,
+                    "unit" => ""
+                );
+             }
+               $Device["attr"] = $atts;
+
         $Device["attr"] = $atts;
           //if roomdevice has a name then use that 
           if (isset($roomdevice["name"])) {
@@ -393,11 +369,14 @@ function getDevicesforroomwithformatting($room = null) {
 function getWeatherData() {
     global $redis_Storage;
     $device = "526";
+    $state = file_get_contents("http://homeserverapiinternal.local.thomasdye.net/Brain/api/devices/".$device);
+    $state = json_decode($state,true);
         $weatherarry = array();
+        $weatherarry = $state["attributes"];
 
-        $weatherarry["weather_icon-url"] = json_decode($redis_Storage->get('DeviceState:Hubitat:'.$device.":weather_icon-url"),true)["value"];
-        $weatherarry["temperature"] = json_decode($redis_Storage->get('DeviceState:Hubitat:'.$device.":temperature"),true)["value"];
-    // in the weather icon url replace weatherapi.server.thomasdye.net with weatherapi1.server.thomasdye.net
+    //     $weatherarry["weather_icon-url"] = json_decode($redis_Storage->get('DeviceState:Hubitat:'.$device.":weather_icon-url"),true)["value"];
+    //     $weatherarry["temperature"] = json_decode($redis_Storage->get('DeviceState:Hubitat:'.$device.":temperature"),true)["value"];
+    // // in the weather icon url replace weatherapi.server.thomasdye.net with weatherapi1.server.thomasdye.net
     $weatherarry["weather_icon-url"] = str_replace("weatherapi.server.thomasdye.net","weatherapitds.server.thomasdye.net",$weatherarry["weather_icon-url"]);
         return $weatherarry;
 }

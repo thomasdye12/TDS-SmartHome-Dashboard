@@ -69,7 +69,7 @@ connect();
 var sidebarLinks = document.getElementsByClassName("sidebar-link");
 
 for (var i = 0; i < sidebarLinks.length; i++) {
-  sidebarLinks[i].addEventListener("click", function(e) {
+  sidebarLinks[i].addEventListener("click", function (e) {
     // Preventing the mouse event if it's a touch device
     // if (isTouchDevice) 
     // e.preventDefault();
@@ -130,25 +130,45 @@ function handleLockout(name) {
 
 function updateSidebar(roomId) {
   var head = document.head;
-      // Get all <style> elements within the <head>
-      var styleTags = head.querySelectorAll('style[type="text/css"]');
-  
+  // Get all <style> elements within the <head>
+  var styleTags = head.querySelectorAll('style[type="text/css"]');
+
 
   fetch("housepages/roominfo.php?room=" + roomId)
-  .then(response => response.json())
-  .then(json => {
-    hub["Room"] = roomId;
-    hub["dashboardId"] = json.Did;
-    hub["layout"] = json.layout;
-    hub["devices"] = json.devices;
-    MainCurrentHTML = document.getElementById("main").innerHTML;
+    .then(response => response.json())
+    .then(json => {
+      hub["Room"] = roomId;
+      hub["dashboardId"] = json.Did;
+      hub["layout"] = json.layout;
+      hub["devices"] = json.devices;
+      MainCurrentHTML = document.getElementById("main").innerHTML;
       // Loop through the <style> elements and remove them
       styleTags.forEach(function (styleTag) {
         styleTag.parentNode.removeChild(styleTag);
       });
-      
-    LoadDeviceScreen();
-  });
+
+
+      // security check is set then, ask for a PIN, and there will be a device ID too 
+      if (json.security == true) {
+        var pin = prompt("Please enter your PIN:");
+
+        if (pin !== null) {
+          validatePIN(pin,json.security_keypad, function (isValid) {
+            if (isValid) {
+              LoadDeviceScreen();
+              // alert("PIN accepted. Access granted!");
+            } else {
+              alert("Incorrect PIN. Access denied!");
+            }
+          });
+        }
+      } else {
+        // if no security, then just load the screen
+        LoadDeviceScreen();
+      }
+
+
+    });
 
   var current = document.getElementsByClassName("is-active");
   current[0].className = current[0].className.replace(" is-active", "");
@@ -156,12 +176,46 @@ function updateSidebar(roomId) {
   sidebarLink.className += " is-active";
 
   // var iframe = document.getElementById("MainIframe");
-  var currentUrl = window.location.href;
-  var currentParams = new URLSearchParams(window.location.search);
-  currentParams.set("room", roomId);
-  var newUrl = currentUrl.split("?")[0] + "?" + currentParams.toString();
-  history.pushState({}, "", newUrl);
+  if (json.security == false) {
+    var currentUrl = window.location.href;
+    var currentParams = new URLSearchParams(window.location.search);
+    currentParams.set("room", roomId);
+    var newUrl = currentUrl.split("?")[0] + "?" + currentParams.toString();
+    history.pushState({}, "", newUrl);
+  }
 
 
 
+}
+
+
+// Function to validate the PIN using an API (simulated)
+function validatePIN(pin,keypad, callback) {
+  // Make an API request to your server to validate the PIN
+  fetch('https://dashboardcomstds-net.local.thomasdye.net/dashboard/housepages/KeypadPin.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // {"id":1115,"cmd":"setLevel","secondary":70}
+    body: JSON.stringify({
+      id: keypad,
+      cmd: "testUnlockWithCode",
+      secondary: pin
+    }),
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('API request failed');
+      }
+    })
+    .then(data => {
+      callback(data.attributes.lock == "unlocked"); // Assuming the server responds with an 'isValid' property
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      callback(false);
+    });
 }
