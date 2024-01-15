@@ -21,7 +21,7 @@ $Room = $parameters['room'];
 <!-- version 2.3.3 -->
 
 <head>
-<link rel=stylesheet href=material.min.css>
+<link rel=stylesheet href=material.min1.css>
     <style>
         @font-face {
             font-family: 'Material Icons';

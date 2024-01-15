@@ -1,0 +1,368 @@
+@font-face {
+  font-family: 'GothamCondSSm-XLight';
+  src: url('GothamRndSSm-Light.woff') format('woff')
+}
+* {
+  font-family: "GothamCondSSm-XLight", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+::selection {
+  background-color: transparent; /* Set the background color to transparent */
+  color: inherit; /* Inherit the color from the parent element */
+}
+
+body {
+  
+  
+   /* background-image: linear-gradient(to bottom right, rgb(234, 41, 11), rgb(27, 44, 238)); */
+   /* background black*/
+   background-image: linear-gradient(to bottom right, rgb(22, 233, 226), rgb(9, 17, 134), rgb(122, 22, 180), rgb(183, 14, 113));
+
+  /* background-color: #212222; */
+
+   background-size: cover;
+  margin: 0px;
+  /* height: 99%; */
+  /* width: 100%; */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right:0px;
+
+  -webkit-touch-callout: none;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Chrome */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  overflow: scroll; /* Hide the browser's default scrollbar */
+}
+
+.mybody{
+  background-image: linear-gradient(to bottom right, rgb(22, 233, 226), rgb(9, 17, 134), rgb(122, 22, 180), rgb(183, 14, 113));
+  top: 0px;
+  left: 0px;
+  right:0px;
+  bottom: -40px;
+}
+:root {
+  -webkit-tap-highlight-color: transparent;
+  --body-font: "Inter", sans-serif;
+  --theme-bg: #1f1d2b;
+  --body-color: #808191;
+  --button-bg: #353340;
+  --border-color: rgb(128 129 145 / 24%);
+  --video-bg: #252936;
+  --delay: 0s;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+
+.main {
+  /* margin-left: 220px; */
+  /* Same as the width of the sidenav */
+  position: absolute;
+  top: 20vh;
+  /* right: 0px;
+  bottom: 0px; */
+  left: 0px;
+  right:0px;
+  /* padding-top: 10px; */
+  /* margin-top: 10px; */
+  /* width: 100vw; */
+  height: 120vh;
+  overflow-y: scroll; /* Enable vertical scrolling within the wrapper */
+  scroll-behavior: smooth; /* Optional: Add smooth scrolling behavior */
+
+}
+.Stacking {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+
+}
+.mainiframe {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  overflow: hidden;
+
+}
+
+.testobject {
+  background-color: rgba(47, 125, 59, 0.619);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0vh;
+  left: 10px;
+  right: 10px;
+  height: 17vh;
+  /* width: 100vw; */
+  /* width: 200px;
+  height: 100%; */
+  /* padding-top: 10px; */
+  /* padding-left: 10px; */
+  display: flex;
+  flex-direction: row;
+  /* flex-shrink: 0; */
+  /* transition-duration: 0.2s; */
+  /* overflow-x: hidden; */
+  align-content: center;
+  /* border-right: 1px solid white; */
+  /* flex-wrap: nowrap; */
+  /* stroke:#ffffff; */
+  background-color: #353839;
+  /* corner */
+  border-radius: 0px 0px 10px 10px;
+  /* bottom shadow */
+  /* box-shadow: 0px 0px 7px 8px rgba(226, 226, 226, 0.273); */
+  /* side padding of 5 */
+  /* padding-left: 5px;
+  padding-right: 5px; */
+}
+
+.sidebar .logo {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: #22b07d;
+  flex-shrink: 0;
+  color: #fff;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.sidebar .logo-expand {
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 34px;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar .logo-expand:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: var(--theme-bg);
+  width: 200px;
+  height: 70px;
+  z-index: -1;
+}
+
+
+.side-menu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow-y: scroll;
+  font-size: 16px;
+  justify-content: space-between; 
+  padding-left: 10px;
+  scroll-snap-type: x mandatory; /* Enable snapping horizontally */
+}
+
+
+
+
+.side-menu svg {
+  width: 35px;
+  height: 30px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  /* background-color: var(--button-bg); */
+}
+
+.side-menu svg:hover {
+  color: #fff;
+}
+
+.side-title {
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  /* margin-bottom: 10px; */
+}
+
+.side-wrapper {
+  border-bottom: 1px solid var(--border-color);
+  padding: 36px 0;
+  width: 145px;
+}
+
+.side-wrapper+.side-wrapper {
+  border-bottom: none;
+}
+
+.sidebar-link {
+  /* rounded corner */
+  border-radius: 5px;
+  border-color: #aaa3a361;
+  background-color: rgba(175, 175, 175, 0.1);
+  /* border-width: 1.25px; */
+  border-style: solid;
+  box-shadow: inset 0px 0px 14px 3px rgba(226, 226, 226, 0.273);
+  flex: 1;
+  margin: 5px; 
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  flex-direction: column;
+  padding-bottom: 5px;
+  width: auto;
+  min-width: 120px;
+  
+  white-space: nowrap;
+  scroll-snap-align: start; /* Snap to the start of the container */
+
+} 
+.sidebar-link-text {
+  padding: 5px;
+}
+
+.sidebar-link.is-active {
+  color: #ff0000;
+  font-weight: 900;
+  /* stroke: #22b07d; */
+}
+
+.sidebar-link.is-active svg {
+  /* background: #ffffff; */
+}
+
+.clock {
+  /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+  color: #ffffff;
+  font-size: 20px;
+  /* font-family: Orbitron; */
+  letter-spacing: 1px;
+  padding-right: 4px;
+
+
+
+}
+
+.Sidebarclocks {
+  /* border-right: 1px solid white; */
+  display: flex;
+  /* spacing */
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SidebarHeader {
+  display: flex;
+  flex-direction:column;
+  /* background-color: red; */
+}
+
+.SidebarHeader img {
+  border-radius: 50%;
+}
+
+.SidebarHeaderImage {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.Sidebarweather {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.side-menu a:last-child {
+  margin-bottom: 50px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.version-id {
+  font-size: 12px;
+  color: #888;
+}
+
+.sidebar-container {
+  /* height: 15vh; */
+  /* set a fixed height for the container */
+  overflow: scroll;
+  /* set overflow to scroll */
+  padding-top: 2vh;
+  
+}
+
+.media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-item {
+  margin: 10px;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tile {
+  border-color: #ffffff2e;
+  border-style: solid;
+  /* border-width: 0px;
+  border-radius: 5px; */
+  /* padding: 10px;
+  box-shadow: 0px 0px 7px 8px rgba(226, 226, 226, 0.273) */
+  background-color: #74747673;
+
+}
+.power {
+  background-color: transparent;
+  border-width: 0px;
+  border-radius: 0px;
+}
+
+
+
+.BigClockScreen
+{
+   background-color: #212222;
+}
+.BigWeathericon
+{
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}

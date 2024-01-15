@@ -1,6 +1,6 @@
 <?php
 // this will retun a svg image 
-
+header('Cache-Control: max-age=3600');
 $file = $_GET["name"];
 
 // add .svg to the end of the file name if it is not there
@@ -21,6 +21,28 @@ $setcolour = $_GET["colour"];
 if ($setcolour == "undefined") {
     $setcolour = "rgb(255,255,255)";
 }
+// if (isset($_GET["size"])) {
+
+// $size = $_GET["size"];
+// // trim the px off the end of the size if it is there
+// if (substr($size, -2) == "px") {
+//     $size = substr($size, 0, -2);
+// }
+// // chang the size of the svg
+// // $svg = str_replace("width=\"100px\"", "width=\"".$size."\"", $svg);
+// // $svg = str_replace("height=\"100px\"", "height=\"".$size."\"", $svg);
+// //  the current size is diffent for all all icons we need to use regex to find the size and replace it
+// // width="19.9219" height="19.9316"
+// // $svg = preg_replace('/width="(\d+)"/', 'width="'.$size.'"', $svg);
+// // $svg = preg_replace('/height="(\d+)"/', 'height="'.$size.'"', $svg);
+// $svg = preg_replace('/width="(\d+.\d+)"/', 'width="'.$size.'"', $svg);
+// $svg = preg_replace('/height="(\d+.\d+)"/', 'height="'.$size.'"', $svg);
+
+
+
+
+
+// }
 
 // convert rgb(255,255,255)  to hex 
 

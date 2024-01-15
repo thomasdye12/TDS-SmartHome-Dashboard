@@ -143,7 +143,7 @@ console.log("loadpage");
     "0814": function(t, e, o) {
         var a = o("24fb");
         e = a(!1),
-        e.push([t.i, ".verte-picker__cursor{border:1px solid #fff}.slider__track{height:1rem}.slider__handle{height:1.3rem;width:1.3rem;margin-top:-.15rem;-webkit-box-shadow:0 1px 1px 1px #333;box-shadow:0 1px 1px 1px #333}", ""]),
+        e.push([t.i, ".verte-picker__cursor{border:1px solid #fff}.slider__track{height:1rem}.slider__handle{height:2rem;width:2rem;margin-top:-.5rem;-webkit-box-shadow:0 1px 1px 1px #333;box-shadow:0 1px 1px 1px #333}", ""]),
         t.exports = e
     },
     "1f25": function(t, e, o) {
@@ -193,7 +193,7 @@ console.log("loadpage");
     "511e": function(t, e, o) {
         var a = o("24fb");
         e = a(!1),
-        e.push([t.i, "body,html{overscroll-behavior-y:contain}*{-webkit-transition:all .1s ease-out;transition:all .1s ease-out}a{color:unset}.mute,.muteControl,.next,.play-pause,.previous,.unmute,.volume{display:inline-block}.tile-primary{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;white-space:normal;text-overflow:clip;overflow:hidden;display:table-cell;vertical-align:middle}.tile-primary,.tile-secondary{width:calc(100% - 8px);text-align:center}.tile-secondary{position:absolute}.tile-tertiary{text-align:left;position:absolute;left:8px;top:4px}.tile-edit{text-align:center;position:absolute;top:4px;right:0;cursor:pointer;width:25px;height:25px;text-align:right;font-size:24px}.wrapper{display:grid;grid-gap:8px;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(5,calc(20vh - 16px));-ms-flex-line-pack:stretch;align-content:stretch;grid-auto-flow:row;grid-auto-columns:1fr;grid-auto-rows:calc(20vh - 16px);overflow:auto;position:absolute;height:calc(100% - 48px);width:calc(100% - 16px);margin-left:8px;margin-bottom:8px}.header{color:hsla(0,0%,100%,.87);text-shadow:1px 1px #222}.tile{float:left;display:table-cell;width:200px;height:160px;margin:2px;color:#fff;position:relative;cursor:pointer}@supports (display:grid){.tile{position:relative;cursor:pointer;width:unset;height:unset;margin:unset}}.tile-title{position:absolute;bottom:2px;left:4px;right:4px;text-align:center;overflow:hidden;text-overflow:clip}.tile-contents{text-align:center;position:relative;width:calc(100% - 8px);padding:4px;height:calc(100% - 8px);display:table}.rotate{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}input[type=number]{width:50px;height:30px;text-align:center}.tile{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.loader{border:5px solid #f2f4f8;border-top:5px solid #81bc00;border-radius:50%;display:inline-block;width:48px;height:48px;-webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.small{font-size:50%}.popup-content{text-shadow:none;color:#000}", ""]),
+        e.push([t.i, "body,html{overscroll-behavior-y:contain}*{-webkit-transition:all .1s ease-out;transition:all .1s ease-out}a{color:unset}.mute,.muteControl,.next,.play-pause,.previous,.unmute,.volume{display:inline-block}.tile-primary{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;white-space:normal;text-overflow:clip;overflow:hidden;display:table-cell;vertical-align:middle}.tile-primary,.tile-secondary{width:calc(100% - 8px);text-align:center}.tile-secondary{position:absolute}.tile-tertiary{text-align:left;position:absolute;left:8px;top:4px}.tile-edit{text-align:center;position:absolute;top:4px;right:0;cursor:pointer;width:25px;height:25px;text-align:right;font-size:24px}.header{color:hsla(0,0%,100%,.87);text-shadow:1px 1px #222}.tile{float:left;display:table-cell;width:200px;height:160px;margin:2px;color:#fff;position:relative;cursor:pointer}@supports (display:grid){.tile{position:relative;cursor:pointer;width:unset;height:unset;margin:unset}}.tile-title{position:absolute;bottom:2px;left:4px;right:4px;text-align:center;overflow:hidden;text-overflow:clip}.tile-contents{text-align:center;position:relative;width:calc(100% - 8px);padding:4px;height:calc(100% - 8px);display:table}.rotate{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}input[type=number]{width:50px;height:30px;text-align:center}.tile{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.loader{border:5px solid #f2f4f8;border-top:5px solid #81bc00;border-radius:50%;display:inline-block;width:48px;height:48px;-webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.small{font-size:50%}.popup-content{text-shadow:none;color:#000;top:70px}", ""]),
         t.exports = e
     },
     5684: function(t, e, o) {
@@ -663,29 +663,29 @@ console.log("loadpage");
                     t.appendChild(e),
                     this.$store.dispatch("saveLayout")
                 },
-                showHistory: function() {
-                    var t = this
-                      , e = i.a.create({
-                        baseURL: this.$store.getters.urlPrefix + this.$store.getters.urlPath,
-                        crossDomain: !0,
-                        responseType: "json",
-                        withCredentials: !0,
-                        headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                            Authorization: "Bearer " + this.$store.state.token
-                        }
-                    });
-                    e.get("/device/" + this.selectedDevice + "/events").then((function(e) {
-                        t.events = e.data
-                    }
-                    )).catch((function(e) {
-                        t.response = e,
-                        t.$store.commit("SET_CONNECTED", !1),
-                        console.log(e)
-                    }
-                    ))
-                },
+                // showHistory: function() {
+                //     var t = this
+                //       , e = i.a.create({
+                //         baseURL: this.$store.getters.urlPrefix + this.$store.getters.urlPath,
+                //         crossDomain: !0,
+                //         responseType: "json",
+                //         withCredentials: !0,
+                //         headers: {
+                //             Accept: "application/json",
+                //             "Content-Type": "application/json",
+                //             Authorization: "Bearer " + this.$store.state.token
+                //         }
+                //     });
+                //     e.get("/device/" + this.selectedDevice + "/events").then((function(e) {
+                //         t.events = e.data
+                //     }
+                //     )).catch((function(e) {
+                //         t.response = e,
+                //         t.$store.commit("SET_CONNECTED", !1),
+                //         console.log(e)
+                //     }
+                //     ))
+                // },
                 validateJson: function() {
                     var t;
                     if (this.importError = "",
@@ -1192,7 +1192,9 @@ console.log("loadpage");
                     return this.templates[this.selectedTemplate]
                 }
             }),
-            mounted: function() {},
+            mounted: function() {
+
+            },
             updated: function() {},
             methods: {
                 toggleColor: function() {
@@ -3048,7 +3050,7 @@ console.log("loadpage");
                         e.target.composing || t.$set(t.menuTile, "bgImage", e.target.value)
                     }
                 }
-            })])])]), "attribute" != t.menuTile.template.toLowerCase() && "battery" != t.menuTile.template.toLowerCase() && "carbon-dioxide" != t.menuTile.template.toLowerCase() && "clock" != t.menuTile.template.toLowerCase() && "clock-analog" != t.menuTile.template.toLowerCase() && "clock-date" != t.menuTile.template.toLowerCase() && "dashboard" != t.menuTile.template.toLowerCase() && "date" != t.menuTile.template.toLowerCase() && "energy" != t.menuTile.template.toLowerCase() && "generic" != t.menuTile.template.toLowerCase() && "hsm" != t.menuTile.template.toLowerCase() && "illuminance" != t.menuTile.template.toLowerCase() && "images" != t.menuTile.template.toLowerCase() && "links" != t.menuTile.template.toLowerCase() && "mode" != t.menuTile.template.toLowerCase() && "music-player" != t.menuTile.template.toLowerCase() && "power" != t.menuTile.template.toLowerCase() && "temperature" != t.menuTile.template.toLowerCase() && "texttile" != t.menuTile.template.toLowerCase() && "thermostat" != t.menuTile.template.toLowerCase() && "video-player" != t.menuTile.template.toLowerCase() && "weather" != t.menuTile.template.toLowerCase() && "variable-number" != t.menuTile.template.toLowerCase() && "variable-decimal" != t.menuTile.template.toLowerCase() && "variable-time" != t.menuTile.template.toLowerCase() && "variable-date" != t.menuTile.template.toLowerCase() && "variable-string" != t.menuTile.template.toLowerCase() && "variable-bool" != t.menuTile.template.toLowerCase() ? o("div", {
+            })])])]), "attribute" != t.menuTile.template.toLowerCase() && "battery" != t.menuTile.template.toLowerCase() && "carbon-dioxide" != t.menuTile.template.toLowerCase() && "clock" != t.menuTile.template.toLowerCase() && "clock-analog" != t.menuTile.template.toLowerCase() && "clock-date" != t.menuTile.template.toLowerCase() && "dashboard" != t.menuTile.template.toLowerCase() && "date" != t.menuTile.template.toLowerCase() && "energy" != t.menuTile.template.toLowerCase() && "generic" != t.menuTile.template.toLowerCase() && "hsm" != t.menuTile.template.toLowerCase() && "illuminance" != t.menuTile.template.toLowerCase() && "images" != t.menuTile.template.toLowerCase() && "links" != t.menuTile.template.toLowerCase() && "mode" != t.menuTile.template.toLowerCase() && "music-player" != t.menuTile.template.toLowerCase() && "power" != t.menuTile.template.toLowerCase() && "temperature" != t.menuTile.template.toLowerCase() && "texttile" != t.menuTile.template.toLowerCase() && "thermostat" != t.menuTile.template.toLowerCase() && "video-player" != t.menuTile.template.toLowerCase() && "weather" != t.menuTile.template.toLowerCase() && "variable-number" != t.menuTile.template.toLowerCase() && "variable-decimal" != t.menuTile.template.toLowerCase() && "variable-time" != t.menuTile.template.toLowerCase() && "variable-date" != t.menuTile.template.toLowerCase() && "variable-string" != t.menuTile.template.toLowerCase() && "variable-bool" != t.menuTile.template.toLowerCase() && "GroupColour" != t.menuTile.template.toLowerCase()  ? o("div", {
                 staticClass: "p-1"
             }, [o("div", {}, [o("h4", {}, [t._v(" " + t._s(t.local.customIcon) + ": ")]), o("div", {
                 staticClass: "material-icons m-1 p-2 border-2 cursor-pointer",
@@ -3651,7 +3653,20 @@ console.log("loadpage");
             }, [o("button", {
                 staticClass: "shadow px-4 py-2 bg-gray-200 m-2 cursor-pointer ",
                 on: {
-                    click: t.doCommand
+                    // click: t.doCommand
+                    click:  function() {
+                        console.log(t);
+                        ShowKeypad(t.$parent.name,function (code) {
+                        validatePIN(code, t.$parent.context.id, function (isValid) {
+                          if (isValid) {
+                            t.doCommand();
+                            CancelKeypad();
+                          } else {
+                            CancelKeypad();
+                          }
+                        });
+                      })
+                    }
                 }
             }, [t._v(" " + "Yes" + " ")])]), o("div", {
                 staticClass: "inline-block p-2"
@@ -3974,35 +3989,35 @@ console.log("loadpage");
                     this.setAttributes(),
                     this.updateTile(!0)
                 },
-                setAttributes: function() {
-                    var t = this;
-                    if ("attribute" == this.selectedTemplate && void 0 != this.menuTile.device && "" != this.menuTile.device && "-3" != this.menuTile.device && "-2" != this.menuTile.device) {
-                        var e = i.a.create({
-                            baseURL: this.$store.getters.urlPrefix + this.$store.getters.urlPath,
-                            crossDomain: !0,
-                            responseType: "json",
-                            withCredentials: !0,
-                            headers: {
-                                Accept: "application/json",
-                                "Content-Type": "application/json",
-                                Authorization: "Bearer " + this.$store.state.token
-                            }
-                        });
-                        "" != this.menuTile.device && e.get("/device/" + this.menuTile.device).then((function(e) {
-                            var o = e.data;
-                            t.attributes = o[0].attr.map((function(t) {
-                                return Object.keys(t)[0]
-                            }
-                            )).sort()
-                        }
-                        )).catch((function(e) {
-                            t.response = e,
-                            t.$store.commit("SET_CONNECTED", !1),
-                            console.log(e)
-                        }
-                        ))
-                    }
-                },
+                // setAttributes: function() {
+                //     var t = this;
+                //     if ("attribute" == this.selectedTemplate && void 0 != this.menuTile.device && "" != this.menuTile.device && "-3" != this.menuTile.device && "-2" != this.menuTile.device) {
+                //         var e = i.a.create({
+                //             baseURL: this.$store.getters.urlPrefix + this.$store.getters.urlPath,
+                //             crossDomain: !0,
+                //             responseType: "json",
+                //             withCredentials: !0,
+                //             headers: {
+                //                 Accept: "application/json",
+                //                 "Content-Type": "application/json",
+                //                 Authorization: "Bearer " + this.$store.state.token
+                //             }
+                //         });
+                //         "" != this.menuTile.device && e.get("/device/" + this.menuTile.device).then((function(e) {
+                //             var o = e.data;
+                //             t.attributes = o[0].attr.map((function(t) {
+                //                 return Object.keys(t)[0]
+                //             }
+                //             )).sort()
+                //         }
+                //         )).catch((function(e) {
+                //             t.response = e,
+                //             t.$store.commit("SET_CONNECTED", !1),
+                //             console.log(e)
+                //         }
+                //         ))
+                //     }
+                // },
                 closeMenu: function() {
                     -1 != this.menuTile.device && this.updateTile()
                 },
@@ -4104,31 +4119,31 @@ console.log("loadpage");
                     this.$store.commit("DELETE_TILE", this.menuTile.id),
                     this.$store.commit("CLOSE_MENUTILE")
                 },
-                showHistory: function() {
-                    var t = this;
-                    this.historyArea = !0,
-                    this.tileArea = !1;
-                    var e = i.a.create({
-                        baseURL: this.$store.getters.urlPrefix + this.$store.getters.urlPath,
-                        crossDomain: !0,
-                        responseType: "json",
-                        withCredentials: !0,
-                        headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                            Authorization: "Bearer " + this.$store.state.token
-                        }
-                    });
-                    void 0 != this.menuTile.device && e.get("/device/" + this.menuTile.device + "/events").then((function(e) {
-                        t.events = e.data
-                    }
-                    )).catch((function(e) {
-                        t.response = e,
-                        t.$store.commit("SET_CONNECTED", !1),
-                        console.log(e)
-                    }
-                    ))
-                },
+                // showHistory: function() {
+                //     var t = this;
+                //     this.historyArea = !0,
+                //     this.tileArea = !1;
+                //     var e = i.a.create({
+                //         baseURL: this.$store.getters.urlPrefix + this.$store.getters.urlPath,
+                //         crossDomain: !0,
+                //         responseType: "json",
+                //         withCredentials: !0,
+                //         headers: {
+                //             Accept: "application/json",
+                //             "Content-Type": "application/json",
+                //             Authorization: "Bearer " + this.$store.state.token
+                //         }
+                //     });
+                //     void 0 != this.menuTile.device && e.get("/device/" + this.menuTile.device + "/events").then((function(e) {
+                //         t.events = e.data
+                //     }
+                //     )).catch((function(e) {
+                //         t.response = e,
+                //         t.$store.commit("SET_CONNECTED", !1),
+                //         console.log(e)
+                //     }
+                //     ))
+                // },
                 setAttribute: function(t) {
                     var e = t.target.value;
                     this.menuTile.templateExtra = e,
@@ -4206,9 +4221,9 @@ console.log("loadpage");
               , o = t._self._c || e;
             return o("div", {
                 staticClass: "dashboard",
-                staticStyle: {
-                    height: "100vh"
-                }
+                // staticStyle: {
+                //     height: "200vh"
+                // }
             }, [t.devices.length > 0 ? o("Grid") : t._e()], 1)
         }
           , Ft = []
@@ -4218,13 +4233,6 @@ console.log("loadpage");
               , o = t._self._c || e;
             return o("div", [ t.layout.tiles && 0 == t.layout.tiles.length ? o("NoTiles") : t._e(), t.layout.tiles && t.layout.tiles.length > 0 ? o("TransitionGroup", {
                 staticClass: "wrapper z-0",
-                style: {
-                    gridTemplateColumns: t.repeatCols,
-                    gridTemplateRows: t.repeatRows,
-                    gridGap: t.layout.gridGap + "px",
-                    gridAutoColumns: t.autoColumns,
-                    gridAutoRows: t.autoRows
-                },
                 attrs: {
                     appear: "",
                     name: "fade",
@@ -4357,7 +4365,7 @@ console.log("loadpage");
             return o("div", {
                 staticClass: "popup-container fixed inset-0 z-10 overflow-auto w-full h-screen"
             }, [o("div", {
-                staticClass: "popup-content inset-auto relative bg-white z-50 w-full md:w-2/3 mx-auto md:mt-16 flex-col flex shadow-xl border h-auto overflow-auto md:h-auto rounded-xl"
+                staticClass: "popup-content inset-auto relative bg-white z-50 w-full md:w-2/3 mx-auto md:mt-16 flex-col flex shadow-xl border h-auto overflow-auto md:h-auto rounded-xl "
             }, [o("div", {
                 staticClass: "navHeader bg-black text-white p-2 w-full h-10"
             }, [o("div", {
@@ -4917,11 +4925,14 @@ console.log("loadpage");
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
                         fontSize: parseInt(this.layout.fontSize) + "px",
-                        borderRadius: this.layout.roundedCorners + "px",
+                        // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
                         backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover"
+                        backgroundSize: "cover",
+                        overflow: "hidden",
+                        boxShadow: this.customColor.boxShadow,
+                        borderWidth: this.customColor.borderWidth,
                     }
                 },
                 currentState: function() {
@@ -5294,19 +5305,38 @@ console.log("loadpage");
                     }
                 },
                 tileStyle: function() {
+
+                    // return {
+                    //     gridRow: this.row,
+                    //     gridColumn: this.col,
+                    //     backgroundColor: this.customColor.bgColor,
+                    //     color: this.customColor.iconColor,
+                    //     fontSize: parseInt(this.layout.fontSize) + "px",
+                    //     borderRadius: this.layout.roundedCorners + "px",
+                    //     backgroundImage: this.bgImage,
+                    //     backgroundPosition: "center center",
+                    //     backgroundRepeat: "no-repeat",
+                    //     backgroundSize: "cover",
+                    //     overflow: "hidden",
+                        // boxShadow: this.customColor.boxShadow,
+                        // borderWidth: this.customColor.borderWidth,
+                    // }
                     return {
                         gridRow: this.row,
                         gridColumn: this.col,
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
                         fontSize: parseInt(this.layout.fontSize) + "px",
-                        borderRadius: this.layout.roundedCorners + "px",
+                        // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
                         overflow: "hidden",
-                        textShadow: this.layout.hideTextShadow ? "none" : "1px 1px 4px #000"
+                        textShadow: this.layout.hideTextShadow ? "none" : "1px 1px 4px #000",
+                        boxShadow: this.customColor.boxShadow,
+                        borderWidth: this.customColor.borderWidth,
+                        overflow: this.customColor.overflow
                     }
                 },
                 currentState: function() {
@@ -5814,204 +5844,7 @@ console.log("loadpage");
             var t = this
               , e = t.$createElement
               , o = t._self._c || e;
-            return o("div", {
-                staticClass: "tile bulb-color",
-                style: t.tileStyle,
-                attrs: {
-                    id: "tile-" + t.context.id
-                }
-            }, [o("div", {
-                staticClass: "tile-title",
-                style: {
-                    fontSize: t.customColor.fontSize
-                }
-            }, [t._v(" " + t._s(t.name) + " ")]), o("div", {
-                staticClass: "tile-contents"
-            }, [t.layout.hideLabels ? t._e() : o("div", {
-                staticClass: "tile-secondary"
-            }, [t._v(" " + t._s(t.templates[t.context.template]) + " ")]), o("div", {
-                staticClass: "tile-primary",
-                on: {
-                    click: t.showPopup
-                }
-            }, [o("div", [
-                
-                o("i", {
-                    staticClass: "material-icons",
-                    class: t.customIcon(t.attr, t.customColor.customIcon, t.context.template),
-                    style: {
-                        color: t.customColor.iconColor,
-                        fontSize: t.iconSize,
-                        backgroundColor: t.color,
-                        padding: "12px",
-                        borderRadius: "50%"
-                    }
-                }, [
-                    
-                    (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', { style: {
-                        width: 1.5 * parseInt(t.layout.iconSize) + "px",
-                            height: "100%",
-                            "max-width": "100%",
-                            "max-height": "100%"
-                        },
-                        attrs: {
-                        src: "housepages/svg.php?name=" +  t.customIcon(t.attr, t.customColor.customIcon, t.context.template) + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
-                    }}) :  t._v(" " + (t.context.customIconarray  && t.context.customIconarray.customicon  ? '' : (t._s(t.parseFont(t.customColor.customIcon ? t.customColor.customIcon : "")) + " ")))),
-                    
-                   
-                
-                
-                
-                ])
-        
-        ])])]), t.layout.readOnly || t.layout.hide3dot ? t._e() : o("div", {
-                staticClass: "tile-edit",
-                on: {
-                    click: t.showMenuTile
-                }
-            }, [o("i", {
-                staticClass: "material-icons",
-                style: {
-                    color: t.customColor.iconColor
-                }
-            }, [t._v("more_vert")])]), t.popup ? o("div", {
-                staticClass: "popup-container fixed inset-0 z-10 overflow-auto w-full h-full"
-            }, [o("div", {
-                staticClass: "popup-content inset-auto relative bg-white z-50 m-2 mt-12 md:w-2/3 md:mx-auto flex-col flex shadow-xl h-85p md:h-auto overflow-auto rounded-xl"
-            }, [o("div", {
-                staticClass: "top-0 right-0 absolute px-4 py-2 text-black text-lg",
-                on: {
-                    click: t.hidePopup
-                }
-            }, [t._v(" X ")]), o("div", {
-                staticClass: "flex flex-row flex-wrap p-2 mt-8"
-            }, [o("div", {
-                staticClass: "md:w-1/3 text-center order-3 md:order-1"
-            }, [o("div", {
-                staticClass: "colorpicker w-full p-2 mx-1"
-            }, [o("div", {
-                staticClass: "text-lg"
-            }, [t._v(" " + t._s(t.local.colorBulbOptions) + " ")]), o("div", {
-                staticClass: "min-w-full"
-            }, ["?" != t.attr3.hue ? o("div", [t._v(" " + t._s(t.local.pickAColor) + " "), o("div", {}, [t.tempColor ? o("verte", {
-                attrs: {
-                    "show-history": !1,
-                    "rgb-sliders": !0,
-                    model: "rgb",
-                    "menu-position": "top",
-                    display: "widget",
-                    draggable: !0
-                },
-                on: {
-                    input: t.changeBulbColor
-                },
-                model: {
-                    value: t.tempColor,
-                    callback: function(e) {
-                        t.tempColor = e
-                    },
-                    expression: "tempColor"
-                }
-            }) : t._e()], 1)]) : t._e()])])]), o("div", {
-                staticClass: "w-full md:w-1/6 text-center order-1 md:order-2"
-            }, [o("div", {
-                staticClass: "w-full p-2",
-                on: {
-                    click: t.doCommand
-                }
-            }, [o("div", {
-                staticClass: "text-lg"
-            }, [t._v(" " + t._s(t.templates["switches"]) + " ")]), o("i", {
-                staticClass: "material-icons",
-                class: t.customIcon(t.attr, t.customColor.customIcon, t.context.template),
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: t.iconSize
-                }
-            }, [t._v(t._s(t.parseFont(t.customColor.customIcon ? t.customColor.customIcon : "")))]), o("div", [t._v(t._s(t.attr.switch))])])]), o("div", {
-                staticClass: "w-full md:w-3/12 text-center order-2 md:order-3"
-            }, [o("div", {
-                staticClass: "level w-full p-2"
-            }, [o("div", {
-                staticClass: "text-lg"
-            }, [t._v(" " + t._s(t.templates["level-step"]) + " ")]), o("div", {
-                staticClass: "dimmer m-4",
-                on: {
-                    click: t.doCommand
-                }
-            }, [o("VueSlider", {
-                staticClass: "w-full",
-                attrs: {
-                    min: 0,
-                    max: 100,
-                    step: 1,
-                    "dot-size": 20,
-                    height: 12,
-                    "process-style": {
-                        backgroundColor: "rgba(255,255,255,.85)"
-                    },
-                    "rail-style": {
-                        backgroundColor: "rgba(0,0,0,.85)"
-                    },
-                    lazy: !0
-                },
-                on: {
-                    change: t.updateSlider
-                },
-                model: {
-                    value: t.attr2.level,
-                    callback: function(e) {
-                        t.$set(t.attr2, "level", e)
-                    },
-                    expression: "attr2.level"
-                }
-            })], 1), o("div", {}, [t._v(" " + t._s(t.attr2.level) + "% ")])])]), o("div", {
-                staticClass: "w-full md:w-3/12 text-center order-4"
-            }, ["0" != t.attr5.colorTemperature ? o("div", {
-                staticClass: "ct w-full p-2"
-            }, [o("div", {
-                staticClass: "text-lg"
-            }, [t._v(" " + t._s(t.local.colorTemperature) + " ")]), o("div", {
-                staticClass: "dimmer m-4",
-                on: {
-                    click: t.doCommand
-                }
-            }, [o("VueSlider", {
-                attrs: {
-                    min: 1500,
-                    max: 6500,
-                    step: 100,
-                    "dot-size": 20,
-                    height: 12,
-                    "process-style": {
-                        backgroundColor: "rgba(255, 255, 255, .85)"
-                    },
-                    "rail-style": {
-                        backgroundColor: "rgba(0, 0, 0, .85)"
-                    },
-                    lazy: !0
-                },
-                on: {
-                    change: t.updateSliderCT
-                },
-                model: {
-                    value: t.attr5.colorTemperature,
-                    callback: function(e) {
-                        t.$set(t.attr5, "colorTemperature", e)
-                    },
-                    expression: "attr5.colorTemperature"
-                }
-            })], 1), o("div", {
-                staticClass: "dimLevel",
-                staticStyle: {
-                    width: "80%",
-                    "text-align": "center",
-                    background: "linear-gradient(to right, rgb(255, 224, 0), rgb(229, 241, 247))",
-                    margin: "0 10%",
-                    padding: "8px 0",
-                    "border-radius": "25px"
-                }
-            }, [t._v(" " + t._s(t.attr5.colorTemperature) + "K ")])]) : t._e()])])])]) : t._e()])
+            return tile_bulbColor(o,t);
         }
           , Ge = []
           , Ue = {
@@ -6308,8 +6141,8 @@ console.log("loadpage");
                 }, [
                     
                     (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', { style: {
-                            width: "100%",
-                            height: "100%",
+                            width: "50%",
+                            height: "50%",
                             "max-width": "100%",
                             "max-height": "100%"
                         },
@@ -6693,7 +6526,7 @@ console.log("loadpage");
             },
             methods: {
                 visitLink: function() {
-                    parentToken == hub.token ? window.location = this.url : alert("Dashboard Link Tile only work with Legacy Dashboards links")
+                window.location = this.url
                 },
                 obsoloteTile: function() {
                     alert("Please use regular 'Link' template instead of 'Dashboard link'.")
@@ -7352,13 +7185,13 @@ console.log("loadpage");
                     style: {
                         color: t.customColor.iconColor,
                         fontSize: t.iconSize,
-                        width: 1.5 * parseInt(t.layout.iconSize) + "px"
+                        width: 3 * parseInt(t.layout.iconSize) + "px"
                     }
                 }, [
                     
                     (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', { style: {
-                            width: "100%",
-                            height: "100%",
+                            // width: "80%",
+                            height: "80%",
                             "max-width": "100%",
                             "max-height": "100%"
                         },
@@ -7769,130 +7602,12 @@ console.log("loadpage");
             var t = this
               , e = t.$createElement
               , o = t._self._c || e;
-            return o("div", {
-                staticClass: "tile level-vertical",
-                style: t.tileStyle,
-                attrs: {
-                    id: "tile-" + t.context.id
-                }
-            }, [o("div", {
-                staticClass: "tile-title",
-                style: {
-                    fontSize: t.customColor.fontSize
-                }
-            }, [t._v(" " + t._s(t.name) + " ")]), o("div", {
-                staticClass: "tile-contents"
-            }, [t.layout.hideLabels ? t._e() : o("div", {
-                staticClass: "tile-secondary"
-            }, [t._v(" " + t._s(t.templates[t.context.template]) + " ")]), o("div", {
-                staticClass: "tile-primary",
-                class: "level-" + t.attr.level
-            }, [o("div", {
-                staticClass: "dimmer",
-                staticStyle: {
-                    margin: "auto"
-                }
-            }, [o("VueSlider", {
-                staticStyle: {
-                    margin: "0 auto"
-                },
-                attrs: {
-                    min: 0,
-                    max: 100,
-                    step: 1,
-                    "dot-size": 20,
-                    height: t.sliderHeight,
-                    width: 12,
-                    direction: "btt",
-                    "process-style": t.process1,
-                    "rail-style": t.rail1,
-                    lazy: !0
-                },
-                on: {
-                    change: t.updateSlider
-                },
-                model: {
-                    value: t.attr.level,
-                    callback: function(e) {
-                        t.$set(t.attr, "level", e)
-                    },
-                    expression: "attr.level"
-                }
-            })], 1), 0 == t.layout.hideIconText ? o("div", {}, [t._v(" " + t._s(t.attr.level) + "% ")]) : t._e()])]), t.layout.readOnly || t.layout.hide3dot ? t._e() : o("div", {
-                staticClass: "tile-edit",
-                on: {
-                    click: t.showMenuTile
-                }
-            }, [o("i", {
-                staticClass: "material-icons",
-                style: {
-                    color: t.customColor.iconColor
-                }
-            }, [t._v(" more_vert ")])])])
+            return tile_Levelvertical(o,t);
         }, Ta = function() {
             var t = this
               , e = t.$createElement
               , o = t._self._c || e;
-            return o("div", {
-                staticClass: "tile level-vertical1",
-                style: t.tileStyle,
-                attrs: {
-                    id: "tile-" + t.context.id
-                }
-            }, [o("div", {
-                staticClass: "tile-title",
-                style: {
-                    fontSize: t.customColor.fontSize
-                }
-            }, [t._v(" " + t._s(t.name) + " ")]), o("div", {
-                staticClass: "tile-contents"
-            }, [t.layout.hideLabels ? t._e() : o("div", {
-                staticClass: "tile-secondary"
-            }, [t._v(" " + t._s(t.templates[t.context.template]) + " ")]), o("div", {
-                staticClass: "tile-primary",
-                class: "level-" + t.attr.level
-            }, [o("div", {
-                staticClass: "dimmer",
-                staticStyle: {
-                    margin: "auto"
-                }
-            }, [o("VueSlider", {
-                staticStyle: {
-                    margin: "0 auto"
-                },
-                attrs: {
-                    min: 0,
-                    max: 100,
-                    step: 1,
-                    "dot-size": 20,
-                    height: t.sliderHeight,
-                    width: 12,
-                    direction: "btt",
-                    "process-style": t.process1,
-                    "rail-style": t.rail1,
-                    lazy: !0
-                },
-                on: {
-                    change: t.updateSlider
-                },
-                model: {
-                    value: t.attr.level,
-                    callback: function(e) {
-                        t.$set(t.attr, "level", e)
-                    },
-                    expression: "attr.level"
-                }
-            })], 1), 0 == t.layout.hideIconText ? o("div", {}, [t._v(" " + t._s(t.attr.level) + "% ")]) : t._e()])]), t.layout.readOnly || t.layout.hide3dot ? t._e() : o("div", {
-                staticClass: "tile-edit",
-                on: {
-                    click: t.showMenuTile
-                }
-            }, [o("i", {
-                staticClass: "material-icons",
-                style: {
-                    color: t.customColor.iconColor
-                }
-            }, [t._v(" more_vert ")])])])
+            return tile_Levelvertical(o,t);
         }
           , Ea = []
           , Ia = {
@@ -7941,6 +7656,26 @@ console.log("loadpage");
                         id: parseInt(this.context.device),
                         cmd: e,
                         secondary: parseInt(t)
+                    };
+                    this.$store.dispatch("sendCommand", o)
+                },
+                updateSliderTop: function(t) {
+                    this.attr.level = 100;
+                    var e = "setLevel"
+                      , o = {
+                        id: parseInt(this.context.device),
+                        cmd: e,
+                        secondary: parseInt(100)
+                    };
+                    this.$store.dispatch("sendCommand", o)
+                },
+                updateSliderbottom: function(t) {
+                    this.attr.level = 0;
+                    var e = "setLevel"
+                      , o = {
+                        id: parseInt(this.context.device),
+                        cmd: e,
+                        secondary: parseInt(0)
                     };
                     this.$store.dispatch("sendCommand", o)
                 }
@@ -8127,13 +7862,13 @@ console.log("loadpage");
                 style: {
                     color: t.customColor.iconColor,
                     fontSize: t.iconSize,
-                    width: 1.5 * parseInt(t.layout.iconSize) + "px"
+                    width: 2.5 * parseInt(t.layout.iconSize) + "px"
                 }
             }, [
                 
                 (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', { style: {
-                        width: "100%",
-                        height: "100%",
+                        // width: "80%",
+                        height: "80%",
                         "max-width": "100%",
                         "max-height": "100%"
                     },
@@ -8375,7 +8110,7 @@ console.log("loadpage");
                 }, [
                     
                     (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', { style: {
-                            width: "100%",
+                            // width: "100%",
                             height: "100%",
                             "max-width": "100%",
                             "max-height": "100%"
@@ -8683,18 +8418,7 @@ console.log("loadpage");
                 style: {
                     fontSize: t.customColor.fontSize
                 }
-            }, [t._v(" " + t._s(t.name) + " ")]), o("div", {
-                staticClass: "tile-contents"
-            }, [t.layout.hideLabels ? t._e() : o("div", {
-                staticClass: "tile-secondary"
-            }, [t._v(" " + t._s(t.templates[t.context.template]) + " ")]), o("div", {
-                staticClass: "tile-primary",
-                class: "power" + t.attr.power,
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: 1.75 * parseInt(t.layout.fontSize) + "px"
-                }
-            }, [t._v(" " + t._s(t.attr.power) + " ")])]), t.layout.readOnly || t.layout.hide3dot ? t._e() : o("div", {
+            }, [t._v(" " + t._s(t.name) + " ")]), tile_Power(o,t), t.layout.readOnly || t.layout.hide3dot ? t._e() : o("div", {
                 staticClass: "tile-edit",
                 on: {
                     click: t.showMenuTile
@@ -9296,8 +9020,8 @@ console.log("loadpage");
             }, [
                 
                 (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', { style: {
-                        width: "100%",
-                        height: "100%",
+                        // width: "80%",
+                        height: "80%",
                         "max-width": "100%",
                         "max-height": "100%"
                     },
@@ -9451,149 +9175,7 @@ console.log("loadpage");
             var t = this
               , e = t.$createElement
               , o = t._self._c || e;
-            return o("div", {
-                staticClass: "tile thermostat cursor-default",
-                style: t.tileStyle,
-                attrs: {
-                    id: "tile-" + t.context.id
-                }
-            }, [o("div", {
-                staticClass: "flex flex-col w-full text-center h-full justify-center items-stretch"
-            }, [o("div", {
-                staticClass: "flex-grow-0 w-full self-start",
-                class: t.attr.thermostatOperatingState,
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: t.layout.fontSize
-                }
-            }, [o("div", {
-                staticClass: "p-1"
-            }, [t._v(" " + t._s(t.attr7.temperature)), o("small", [t._v(t._s(t.attr7.unit))]), o("span", [t._v(" and " + t._s(t.attr.thermostatOperatingState))])])]), o("div", {
-                staticClass: "flex flex-grow flex-no-wrap flex-col w-full -mt-6 justify-center overflow-auto"
-            }, ["cool" == t.attr8.thermostatMode || "auto" == t.attr8.thermostatMode ? o("div", {
-                staticClass: "cooling w-full"
-            }, [o("i", {
-                staticClass: "material icons he-circle-down pr-3",
-                style: {
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px"
-                },
-                on: {
-                    click: t.decreaseCoolingSetpoint
-                }
-            }), o("div", {
-                staticClass: "inline-block",
-                style: {
-                    fontSize: parseInt(t.layout.fontSize) + "px"
-                }
-            }, [t._v(" " + t._s(t.attr2.coolingSetpoint)), o("small", [t._v(t._s(t.attr2.unit))]), o("br"), t._v("Cool ")]), o("i", {
-                staticClass: "material icons he-circle-up pl-3",
-                style: {
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px"
-                },
-                on: {
-                    click: t.increaseCoolingSetpoint
-                }
-            })]) : t._e(), "heat" == t.attr8.thermostatMode || "emergency heat" == t.attr8.thermostatMode || "auto" == t.attr8.thermostatMode ? o("div", {
-                staticClass: "heating pt-1 w-full"
-            }, [o("i", {
-                staticClass: "material icons he-circle-down pr-3",
-                style: {
-                    fontSize: 1.2 * parseInt(t.layout.iconSize) + "px"
-                },
-                on: {
-                    click: t.decreaseHeatingSetpoint
-                }
-            }), o("div", {
-                staticClass: "inline-block",
-                style: {
-                    fontSize: parseInt(t.layout.fontSize) + "px"
-                }
-            }, [t._v(" " + t._s(t.attr3.heatingSetpoint)), o("small", [t._v(t._s(t.attr3.unit))]), o("br"), t._v("Heat ")]), o("i", {
-                staticClass: "material icons he-circle-up pl-3",
-                style: {
-                    fontSize: 1.2 * parseInt(t.layout.iconSize) + "px"
-                },
-                on: {
-                    click: t.increaseHeatingSetpoint
-                }
-            })]) : t._e(), o("div", {
-                staticClass: "w-full my-1"
-            }, [ o("div", {
-                staticClass: "inline-block rounded-lg text-xs w-1/3",
-                style: {
-                    "background-color": t.customColor.bgColor2
-                },
-            }, [o("div", {
-                staticClass: "no-wrap overflow-hidden",
-                style: {
-                    fontSize: parseInt(t.layout.fontSize) + "px"
-                }
-            }, [t._v(" " + t._s(t.attr.thermostatOperatingState) + " ")]), t._v("")]), o("div", {
-                staticStyle: {
-                    width: "16px",
-                    display: "inline-block"
-                }
-            })])])]), o("div", {
-                staticClass: "absolute bottom-0 text-center w-full"
-            }, [t._v(" " + t._s(t.name) + " ")]), t.hvacPopup ? o("div", {
-                staticClass: "popup-container fixed inset-0 z-10 overflow-auto w-full h-full"
-            }, [o("div", {
-                staticClass: "popup-content inset-auto relative bg-white z-50 md:mx-2 w-full md:w-2/3 mt-12 md:mx-auto flex-col flex shadow-xl h-85p md:h-auto overflow-auto rounded-xl cursor-default"
-            }, [o("div", {
-                staticClass: "top-0 right-0 absolute px-4 py-2 text-black text-lg",
-                on: {
-                    click: t.hideHVAC
-                }
-            }, [t._v(" X ")]), o("div", {
-                staticClass: "hsmList"
-            }, [o("div", {
-                staticClass: "text-center m-4"
-            }, [o("div", {
-                staticClass: "w-auto m-2 p-4"
-            }, [o("div", {
-                staticClass: "text-lg"
-            }, [t._v(" Currently: " + t._s(t.attr7.temperature)), o("small", [t._v(t._s(t.attr7.unit))]), o("span", [t._v(" and " + t._s(t.attr.thermostatOperatingState))])])]), t._l(t.supportedThermostatModes, (function(e, a) {
-                return o("div", {
-                    key: a,
-                    staticClass: "modeList shadow-md w-auto m-2 p-4 border cursor-pointer text-lg hover:bg-gray-300"
-                }, [o("div", {
-                    staticClass: "modeItem",
-                    on: {
-                        click: function(o) {
-                            return t.doMode(e)
-                        }
-                    }
-                }, [t._v(" " + t._s(e) + " ")])])
-            }
-            ))], 2)])])]) : t._e(), t.fanPopup ? o("div", {
-                staticClass: "popup-container fixed inset-0 z-10 overflow-auto w-full h-full"
-            }, [o("div", {
-                staticClass: "popup-content inset-auto relative bg-white z-50 md:mx-2 md:w-2/3 mt-12 md:mx-auto flex-col flex shadow-xl h-85p md:h-auto overflow-auto rounded-xl cursor-default"
-            }, [o("div", {
-                staticClass: "top-0 right-0 absolute px-4 py-2 text-black text-lg",
-                on: {
-                    click: t.hideFan
-                }
-            }, [t._v(" X ")]), o("div", {}, [o("div", {
-                staticClass: "text-center m-4"
-            }, [o("div", {}, [o("div", {
-                staticClass: "text-lg mt-6"
-            }, [t._v(" Currently: " + t._s(t.attr7.temperature)), o("span", {
-                staticClass: "small"
-            }, [t._v(" " + t._s(t.attr.unit) + " ")]), o("span", [t._v(" and " + t._s(t.attr.thermostatOperatingState))])])]), t._l(t.supportedThermostatFanModes, (function(e, a) {
-                return o("div", {
-                    key: a,
-                    staticClass: "modeList shadow-md w-auto m-2 p-4 border cursor-pointer text-lg hover:bg-gray-300"
-                }, [o("div", {
-                    staticClass: "modeItem",
-                    on: {
-                        click: function(o) {
-                            return t.doFanMode(e)
-                        }
-                    }
-                }, [t._v(" " + t._s(e) + " ")])])
-            }
-            ))], 2)])])]) : t._e()])
+            return tile_heatingcontrol(o,t)
         }
           , bi = []
           , gi = {
@@ -10557,18 +10139,21 @@ console.log("loadpage");
                     return void 0 != this.context.bgImage && "" != this.context.bgImage ? "url(" + this.context.bgImage + ")" : null
                 },
                 tileStyle: function() {
+                    console.log(this.customColor);
                     return {
                         gridRow: this.row,
                         gridColumn: this.col,
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
                         fontSize: parseInt(this.layout.fontSize) + "px",
-                        borderRadius: this.layout.roundedCorners + "px",
+                        // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
-                        overflow: "hidden"
+                        overflow: "hidden",
+                        boxShadow: this.customColor.boxShadow,
+                        borderWidth: this.customColor.borderWidth,
                     }
                 },
                 row: function() {
@@ -10781,12 +10366,14 @@ console.log("loadpage");
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
                         fontSize: parseInt(this.layout.fontSize) + "px",
-                        borderRadius: this.layout.roundedCorners + "px",
+                        // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
-                        overflow: "hidden"
+                        overflow: "hidden",
+                        boxShadow: this.customColor.boxShadow,
+                        borderWidth: this.customColor.borderWidth,
                     }
                 },
                 bgImage: function() {
@@ -10960,12 +10547,14 @@ console.log("loadpage");
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
                         fontSize: parseInt(this.layout.fontSize) + "px",
-                        borderRadius: this.layout.roundedCorners + "px",
+                        // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
-                        overflow: "hidden"
+                        overflow: "hidden",
+                        boxShadow: this.customColor.boxShadow,
+                        borderWidth: this.customColor.borderWidth,
                     }
                 },
                 row: function() {
@@ -11578,11 +11167,14 @@ console.log("loadpage");
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
                         fontSize: parseInt(this.layout.fontSize) + "px",
-                        borderRadius: this.layout.roundedCorners + "px",
+                        // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
                         backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover"
+                        backgroundSize: "cover",
+                        overflow: "hidden",
+                        boxShadow: this.customColor.boxShadow,
+                        borderWidth: this.customColor.borderWidth,
                     }
                 },
                 row: function() {
@@ -11901,347 +11493,8 @@ console.log("loadpage");
               , e = t.$createElement
               , o = t._self._c || e;
             //   console.log(t.title);
-            return o("div", {
-                staticClass: "tile music-player",
-                style: t.tileStyle,
-                attrs: {
-                    id: "tile-" + t.context.id
-                }
-            }, 
-            
-        
-            [o("div", {
-                staticClass: "tile-title",
-                style: {
-                    fontSize: t.customColor.fontSize
-                }
-            }, [t._v(" " + t._s(t.name) + t._s(t.status) + " ")]),
-            
-            o("div", {
-                staticClass: "tile-contents"
-            }, [
-                
-                t.layout.hideLabels ? t._e() : o("div", {
-                staticClass: "tile-secondary"
-            }, [t._v(" " + t._s(t.templates[t.context.template]) + " ")]),
-            
-            o("div", {
-                staticClass: "tile-primary"
-            }, [
-                
-                
-                o("div", {
-                staticClass: "music-player",
-                class: t.attr.status
-            }, [
-                "PLAYING" == t.attr.playbackState ? o("div", {
-                    staticClass: "song-info"
-                }, [
-                    
-                 o("i", {
-                    staticClass: "material-icons ",
-                    style: {
-                        width: 1.5 * parseInt(t.layout.iconSize) + "px",
-                        color: t.customColor.iconColor,
-                    }
-                }, [
-                    
-                    o('img', { style: {
-                        width: "100%",
-                        height: "100%",
-                        "max-width": "100%",
-                        "max-height": "100%",
-                        "border-radius":"10px"
-                    },
-                    attrs: {
-                    src: "housepages/imagefromurl.php?url=" + encodeURIComponent(t.absoluteAlbumArtUri.absoluteAlbumArtUri)
-                }}) ]),
-                o("div", {
-                    staticClass: "trackDescription",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: t.customColor.fontSize
-                },
-                    domProps: {
-                        innerHTML: t._s(t.title.title.substring(0, 70))
-                    }
-                }),
-                o("div", {
-                    staticClass: "trackDescription",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: t.customColor.fontSize
-                },
-                    domProps: {
-                        innerHTML: t._s(t.album.album.substring(0, 70))
-                    }
-                }),
-                o("div", {
-                    staticClass: "trackDescription",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: t.customColor.fontSize
-                },
-                    domProps: {
-                        innerHTML: t._s(t.artist.artist.substring(0, 70))
-                    }
-                })
-            
-            
-            
-            ]) :  t._e(),
-                o("div", {
-                staticClass: "previous",
-                on: {
-                    click: t.previous
-                }
-            }, [
-                
-                o("i", {
-                staticClass: "material-icons ",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px"
-                }
-            }, [
-                
-                o('img', { style: {
-                    width: "100%",
-                    height: "100%",
-                    "max-width": "100%",
-                    "max-height": "100%"
-                },
-                attrs: {
-                src: "housepages/svg.php?name=" + "backward" + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
-            }})
-            
-            
-            ])]),
-            
-            o("div", {
-                staticClass: "play-pause",
-                on: {
-                    click: function(e) {
-                        return t.play("play")
-                    }
-                }
-            }, [
-                
-                "STOPPED" == t.attr.playbackState ? o("i", {
-                staticClass: "material-icons music-player pause",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px",
-                    "padding-left": "10px",
-                    "padding-right": "10px",
-                    "padding-top": "10px"
-                }
-            }, [
-                o('img', { style: {
-                    width: 1.1 * parseInt(t.layout.iconSize) + "px",
-                    height: "100%",
-                    "max-width": "100%",
-                    "max-height": "100%"
-                },
-                attrs: {
-                src: "housepages/svg.php?name=" + "play" + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
-            }})
-        ]) : t._e()]),
-            o("div", {
-                staticClass: "play-pause",
-                on: {
-                    click: function(e) {
-                        return t.play("play")
-                    }
-                }
-            }, ["PAUSED_PLAYBACK" == t.attr.playbackState ? o("i", {
-                staticClass: "material-icons music-player pause",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px",
-                    "padding-left": "10px",
-                    "padding-right": "10px",
-                    "padding-top": "10px"
-                }
-            }, [       
-                  o('img', { style: {
-                    width: 1.1 * parseInt(t.layout.iconSize) + "px",
-                height: "100%",
-                "max-width": "100%",
-                "max-height": "100%"
-            },
-            attrs: {
-            src: "housepages/svg.php?name=" + "play" + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
-        }})
-            ]) : t._e()]),
+            return tile_musicPlayer(o,t)
 
-            o("div", {
-                staticClass: "play-pause",
-                on: {
-                    click: function(e) {
-                        return t.play("pause")
-                    }
-                }
-            }, ["PLAYING" == t.attr.playbackState ? o("i", {
-                staticClass: "material-icons music-player play",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px",
-                    "padding-left": "10px",
-                    "padding-right": "10px",
-                    "padding-top": "10px"
-
-                }
-            }, [      
-                   o('img', { style: {
-                    width: 1.1 * parseInt(t.layout.iconSize) + "px",
-                height: "100%"
-              
-
-            },
-            attrs: {
-            src: "housepages/svg.php?name=" + "pause" + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
-        }})
-    ]) : t._e()]),
-            
-            o("div", {
-                staticClass: "play-pause",
-                on: {
-                    click: function(e) {
-                        return t.play("play")
-                    }
-                }
-            }, ["TRANSITIONING" == t.attr.playbackState ? o("i", {
-                staticClass: "material-icons music-player stop",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px",
-                    padding: "20px",
-                    width: 1.3 * parseInt(t.layout.iconSize) + "px",
-                }
-            }, [   
-                      o('img', { style: {
-                width: "100%",
-                height: "100%",
-                "max-width": "100%",
-                "max-height": "100%"
-            },
-            attrs: {
-            src: "housepages/svg.php?name=" + "speaker.badge.exclamationmark" + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
-        }})
-    ]) : t._e()]),
-            
-            o("div", {
-                staticClass: "next",
-                on: {
-                    click: t.next
-                }
-            }, [o("i", {
-                staticClass: "material-icons music-player nextTrack",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px",
-                }
-            }, [ o('img', { style: {
-                width: "100%",
-                height: "100%",
-                "max-width": "100%",
-                "max-height": "100%"
-            },
-            attrs: {
-            src: "housepages/svg.php?name=" + "forward" + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
-        }})])]),
-            
-            o("div", {
-                staticClass: "muteControl"
-            }, ["muted" == t.attr2.mute ? o("i", {
-                staticClass: "material-icons music-player unmute",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px"
-                },
-                on: {
-                    click: function(e) {
-                        return t.play("unmute")
-                    }
-                }
-            }, [t._v(" volume_off ")]) : t._e(), "unmuted" == t.attr2.mute ? o("i", {
-                staticClass: "material-icons music-player mute",
-                style: {
-                    color: t.customColor.iconColor,
-                    fontSize: .75 * parseInt(t.layout.iconSize) + "px"
-                },
-                on: {
-                    click: function(e) {
-                        return t.play("mute")
-                    }
-                }
-            }, [t._v(" volume_up ")]) : t._e()]), o("div", {}, [t._v(" " + t._s(t.volume) + "% ")])]),
-            
-            
-            o("div", {
-                staticClass: "dimmer",
-                on: {
-                    click: t.doCommand
-                }
-            }, [
-                
-                o("VueSlider", {
-                staticStyle: {
-                    margin: "0 16px"
-                },
-                attrs: {
-                    min: 0,
-                    max: 100,
-                    step: 1,
-                    "dot-size": 20,
-                    height: 12,
-                    "process-style": t.process1,
-                    "rail-style": t.rail1,
-                    lazy: !0
-                },
-                on: {
-                    change: t.updateSlider
-                },
-                model: {
-                    value: t.volume,
-                    callback: function(e) {
-                        t.volume = e
-                    },
-                    expression: "volume"
-                }
-            }), 
-            o("div", {
-                staticClass: "trackDescription",
-                domProps: {
-                    innerHTML: t._s(t.attr4.trackDescription)
-                }
-            })
-        
-        ],
-            
-            1 )
-        ]
-        )
-        ]
-        ),
-            
-            
-            t.layout.readOnly || t.layout.hide3dot ? t._e() : o("div", {
-                staticClass: "tile-edit",
-                on: {
-                    click: t.showMenuTile
-                }
-            }, [o("i", {
-                staticClass: "material-icons",
-                style: {
-                    color: t.customColor.iconColor
-                }
-            }, [t._v(" more_vert ")])])]
-            
-            
-            
-            )
         }
           , os = []
           , as = {
@@ -12260,7 +11513,8 @@ console.log("loadpage");
             },
             data: function() {
                 return {
-                    status: ""
+                    status: "",
+                    Popup: !1
                 }
             },
             computed: {
@@ -12409,9 +11663,34 @@ console.log("loadpage");
                         }
                     
                 }
-            }
+            },        
+          Getfavs: function() {
+                fetch("housepages/sonos.php?code=favorites")
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                      return [];
+                    }
+                    return response.json();
+                  })
+                  .then(data => {
+                    return data;
+                  })
+                  .catch(error => {
+                    this.errorMessage = error.message;
+                    console.error('There has been a problem with your fetch operation:', error);
+                    return [];
+                  });
+              }
             },
             methods: {
+                showPopup: function(t) {
+                    console.log("popupshown")
+                    this.Popup = !0
+                },
+                hidePopup: function() {
+                    this.Popup = !1
+                },
                 previous: function() {
                     var t = {
                         id: parseInt(this.context.device),
@@ -12437,7 +11716,9 @@ console.log("loadpage");
                     this.$store.dispatch("sendCommand", e)
                 },
                 updateSlider: function(t) {
+                    this.volume = t,
                     this.attr3.level = t;
+                    this.attr5.volume = t;
                     var e = "setVolume";
                     "" == this.attr5.volume && (e = "setLevel");
                     var o = {
@@ -14122,6 +13403,7 @@ console.log("loadpage");
                     ))
                 },
                 displayValue: function() {
+
                     if ("datetime" == this.globalVariable.type) {
                         var t = new g.a;
                         if (this.globalVariable.value.includes("99:99:99.999-9999"))
@@ -14281,7 +13563,8 @@ console.log("loadpage");
                 variableBool: al,
                 variableTime: pl,
                 variableDate: Cl,
-                globalVariable: Tl
+                globalVariable: Tl,
+                GroupColour: rs,
             },
             data: function() {
                 return {}
@@ -14489,6 +13772,9 @@ console.log("loadpage");
             }, {
                 template: "variable-bool",
                 states: [""]
+            }, {
+                template: "GroupColour",
+                states: [""]
             }]
         }, $l = Yl;
         function Nl(t, e) {
@@ -14649,6 +13935,7 @@ console.log("loadpage");
                 clearInterval(this.polling)
             },
             created: function() {
+                DevicesPageStore = this;
                 window.addEventListener("resize", this.fixBG),
                 this.getData()
             },
@@ -14658,22 +13945,22 @@ console.log("loadpage");
             mounted: function() {
                 this.pollLayout(),
                 this.pollDevices(),
-                this.pollGlobalVariables(),
-                window.applicationCache && applicationCache.addEventListener("updateready", (function() {
-                    confirm("An update is available. Reload now?") && window.location.reload(!0)
-                }
-                ));
+                this.pollGlobalVariables()
+                // window.applicationCache && applicationCache.addEventListener("updateready", (function() {
+                //     confirm("An update is available. Reload now?") && window.location.reload(!0)
+                // }
+                // ));
                 var t = this;
-                window.addEventListener("focus", (function() {
-                    t.log("Dashboard in Focus"),
-                    t.pollLayout(),
-                    t.pollDevices()
-                }
-                ), !1),
-                window.addEventListener("blur", (function() {
-                    t.log("Dashboard in Background")
-                }
-                ), !1)
+                // window.addEventListener("focus", (function() {
+                //     t.log("Dashboard in Focus"),
+                //     t.pollLayout(),
+                //     t.pollDevices()
+                // }
+                // ), !1),
+                // window.addEventListener("blur", (function() {
+                //     t.log("Dashboard in Background")
+                // }
+                // ), !1)
             },
             methods: {
                 getData: function() {
@@ -14683,10 +13970,6 @@ console.log("loadpage");
                             while (1)
                                 switch (e.prev = e.next) {
                                 case 0:
-                                    if (!(null == t.lastRefresh || t.lastRefresh + 1e4 < (new Date).getTime())) {
-                                        e.next = 10;
-                                        break
-                                    }
                                     return e.next = 3,
                                     t.$store.dispatch("loadLayout");
                                 case 3:
@@ -14696,7 +13979,6 @@ console.log("loadpage");
                                     return e.next = 7,
                                     t.$store.dispatch("loadGlobalVars");
                                 case 7:
-                                    t.lastRefresh = (new Date).getTime(),
                                     e.next = 11;
                                     break;
                                 case 10:
@@ -14786,22 +14068,21 @@ console.log("loadpage");
                 isConnected: !1,
                 local: {},
                 debug: [""],
-                hubId: hub.hubId,
-                token: hub.token,
-                hubURL: hub.hubURL,
-                cloudURL: "cloud.hubitat.com",
-                isLocal: isLocal,
-                port: 80,
-                localPath: "/apps/api/",
-                appId: hub.appId,
-                dashboardId: hub.dashboardId,
-                Room: hub.Room,
+                hubId: "",
+                token: "",
+                hubURL: "",
+                cloudURL: "",
+                port: null,
+                localPath: "",
+                appId:"",
+                dashboardId: "",
+                Room:"",
                 layout1: hub.layout,
                 devices1: hub.devices,
                 layout: hub.layout,
-                Websocketurl: hub.Websocketurl,
-                WebSocketTimeout: hub.WebSocketTimeout,
-                ScreenID: hub.ScreenID,
+                Websocketurl: "",
+                WebSocketTimeout: "",
+
                 locales: [],
                 devices: [],
                 globalVars: [],
@@ -14825,9 +14106,9 @@ console.log("loadpage");
                 timer: "",
                 lastUpdate: "",
                 showTileBuilder: !1,
-                parentToken: parentToken,
-                allowGoBack: allowGoBack,
-                parentId: parentId
+                parentToken: "",
+                allowGoBack: "",
+                parentId: ""
             },
             getters: {
                 templatesSorted: function() {
@@ -14845,12 +14126,13 @@ console.log("loadpage");
             },
             mutations: {
                 log: function(t, e) {
-                    if (1 == t.debugOn) {
-                        t.debug.length > 200 && t.debug.splice(0, t.debug.length - 199);
+                    if (true) {
+                        // t.debug.length > 200 && t.debug.splice(0, t.debug.length - 199);
                         var o = ""
                           , a = new g.a(new Date);
                         1 == t.layout.clockMode ? "DD/MM/YYYY" == t.layout.dateFormat ? o = a.format("DD/MM/YYYY hh:mm:ss a") : "MM/DD/YYYY" == t.layout.dateFormat ? o = a.format("MM/DD/YYYY hh:mm:ss a") : "YYYY-MM-DD" == t.layout.dateFormat && (o = a.format("YYYY-MM-DD hh:mm:ss a")) : "DD/MM/YYYY" == t.layout.dateFormat ? o = a.format("DD/MM/YYYY HH:mm:ss") : "MM/DD/YYYY" == t.layout.dateFormat ? o = a.format("MM/DD/YYYY HH:mm:ss") : "YYYY-MM-DD" == t.layout.dateFormat && (o = a.format("YYYY-MM-DD HH:mm:ss")),
                         t.debug.push(o + " - " + e)
+                        console.log(o + " - " + e)
                     }
                 },
                 SET_TILEBUILDER: function(t, e) {
@@ -14980,9 +14262,10 @@ console.log("loadpage");
                     t.layout && t.devices.length
                 },
                 SET_DEVICES: function(t, e) {
-      
-                    this.commit("log", "Device Count: " + t.devices.length),
-                    t.devices.length > 0 ? a["default"].set(t.devices, e) : e.forEach((function(e) {
+                    hub.DeviceConnect = t
+                    //             created: function() {
+                    this.commit("log", "Device Count: " + hub.devices),
+                    hub.devices > 0 ? a["default"].set(hub.devices, e) : e.forEach((function(e) {
                         t.devices.push(e)
                     }
                     )),
@@ -15096,257 +14379,222 @@ console.log("loadpage");
                     t.layout.iconSize = e.toString(),
                     this.dispatch("saveLayout")
                 },
-                SET_CLOCKMODE: function(t, e) {
-                    t.layout.clockMode = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_HIDEICONTEXT: function(t, e) {
-                    t.layout.hideIconText = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_HIDETEXTSHADOW: function(t, e) {
-                    t.layout.hideTextShadow = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_HIDEEVENTS: function(t, e) {
-                    t.layout.hideEvents = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_NOCOLORS: function(t, e) {
-                    t.layout.noColors = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_DATEFORMAT: function(t, e) {
-                    t.layout.dateFormat = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_GRIDGAP: function(t, e) {
-                    t.layout.gridGap = parseInt(e),
-                    this.dispatch("saveLayout")
-                },
-                SET_CLOUDREFRESH: function(t, e) {
-                    t.layout.cloudRefresh = parseInt(e),
-                    this.dispatch("saveLayout")
-                },
-                SET_LANREFRESH: function(t, e) {
-                    t.layout.lanRefresh = parseInt(e),
-                    this.dispatch("saveLayout")
-                },
-                SET_GOBACK: function(t, e) {
-                    t.layout.goBack = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_HIDE3DOT: function(t, e) {
-                    t.layout.hide3dot = e,
-                    this.dispatch("saveLayout")
-                },
-                SET_HIDELABELS: function(t, e) {
-                    t.layout.hideLabels = e,
-                    this.dispatch("saveLayout")
-                },
-                REMOVE_COLORS: function(t, e) {
-                    var o = t.layout.customColors.find((function(t) {
-                        return t.template == e.template && t.state == e.state
-                    }
-                    ));
-                    void 0 != o && t.layout.customColors.pop(o),
-                    this.dispatch("saveLayout")
-                },
-                SET_COLWIDTH: function(t, e) {
-                    t.layout.colWidth = "" == e ? e : parseInt(e),
-                    this.dispatch("saveLayout")
-                },
-                SET_ROWHEIGHT: function(t, e) {
-                    t.layout.rowHeight = "" == e ? e : parseInt(e),
-                    this.dispatch("saveLayout")
-                },
-                SET_ROUNDEDCORNERS: function(t, e) {
-                    t.layout.roundedCorners = parseInt(e),
-                    this.dispatch("saveLayout")
-                },
-                TOGGLE_MENU: function(t) {
-                    t.toggleMenu = !t.toggleMenu
-                },
-                TOGGLE_COLORS: function(t) {
-                    t.toggleColors = !t.toggleColors
-                },
-                SET_CUSTOMCOLOR: function(t, e) {
-                    var o = t.layout.customColors.filter((function(t) {
-                        return t.template == e.template && t.state == e.state
-                    }
-                    ));
-                    o.length > 0 ? o[0].iconColor = e.color : t.layout.customColors.push({
-                        template: e.template,
-                        bgColor: "",
-                        iconColor: e.color,
-                        state: e.state
-                    })
-                },
-                SET_CUSTOMBACKGROUNDCOLOR: function(t, e) {
-                    var o = t.layout.customColors.filter((function(t) {
-                        return t.template == e.template && t.state == e.state
-                    }
-                    ));
-                    o.length > 0 ? o[0].bgColor = e.color : t.layout.customColors.push({
-                        template: e.template,
-                        bgColor: e.color,
-                        iconColor: "",
-                        customIcon: "",
-                        state: e.state
-                    })
-                },
-                SET_CUSTOMICON: function(t, e) {
-                    var o = t.layout.customColors.filter((function(t) {
-                        return t.template == e.template && t.state == e.state
-                    }
-                    ));
-                    o.length > 0 ? o[0].customIcon = e.icon : t.layout.customColors.push({
-                        template: e.template,
-                        bgColor: "",
-                        iconColor: "",
-                        customIcon: e.icon,
-                        state: e.state
-                    })
-                },
-                SET_LOCALESJSON: function(t, e) {
-                    t.locales = e.locales
-                },
-                SET_LOCALJSON: function(t, e) {
-                    t.local = e
-                },
-                SET_TEMPLATESJSON: function(t, e) {
-                    t.templates = e
-                },
-                GRID_UPDATE: function(t, e) {
-                    t.grid = e
-                },
-                SHOW_MENUTILE: function(t, e) {
-                    t.toggleMenuTile = !0,
-                    t.menuTile = e
-                },
-                SHOW_NEXTMENUTILE: function(t, e) {
-                    var o = t.layout.tiles.indexOf(e);
-                    t.menuTile = t.layout.tiles[o + 1 >= t.layout.tiles.length ? 0 : o + 1]
-                },
-                SHOW_PREVIOUSMENUTILE: function(t, e) {
-                    var o = t.layout.tiles.indexOf(e);
-                    t.menuTile = t.layout.tiles[o - 1 >= 0 ? o - 1 : t.layout.tiles.length - 1]
-                },
-                CLOSE_MENUTILE: function(t) {
-                    t.toggleMenuTile = !1,
-                    t.menuTile = {}
-                },
-                SET_ATTRIBUTES: function(t, e) {
-                    var o = t.devices.find((function(t) {
-                        return t.id == e.id
-                    }
-                    ));
-                    if (void 0 != o)
-                        for (var a = 0; a < e.attr.length; a++)
-                            o.attr[Object.keys(e.attr[a])[0]] = e.attr[a][Object.keys(e.attr[a])[0]]
-                },
-                SET_LASTLAYOUTSAVE: function(t, e) {
-                    t.lastLayoutSave = e
-                },
-                SET_CONNECTED: function(t, e) {
-                    t.isConnected = e
-                },
-                SOCKET_ONOPEN: function(t, e) {
-                    console.log("socket opened"),
-                    this.commit("log", "Websocket Opened"),
-                    a["default"].prototype.$socket = e.currentTarget,
-                    t.socket.isConnected = e,
-                    this.commit("SET_CONNECTED", !0),
-                    t.socket.retryCount = 0
-                },
-                SOCKET_ONCLOSE: function(t, e) {
+                // SET_CLOCKMODE: function(t, e) {
+                //     t.layout.clockMode = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_HIDEICONTEXT: function(t, e) {
+                //     t.layout.hideIconText = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_HIDETEXTSHADOW: function(t, e) {
+                //     t.layout.hideTextShadow = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_HIDEEVENTS: function(t, e) {
+                //     t.layout.hideEvents = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_NOCOLORS: function(t, e) {
+                //     t.layout.noColors = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_DATEFORMAT: function(t, e) {
+                //     t.layout.dateFormat = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_GRIDGAP: function(t, e) {
+                //     t.layout.gridGap = parseInt(e),
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_CLOUDREFRESH: function(t, e) {
+                //     t.layout.cloudRefresh = parseInt(e),
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_LANREFRESH: function(t, e) {
+                //     t.layout.lanRefresh = parseInt(e),
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_GOBACK: function(t, e) {
+                //     t.layout.goBack = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_HIDE3DOT: function(t, e) {
+                //     t.layout.hide3dot = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_HIDELABELS: function(t, e) {
+                //     t.layout.hideLabels = e,
+                //     this.dispatch("saveLayout")
+                // },
+                // REMOVE_COLORS: function(t, e) {
+                //     var o = t.layout.customColors.find((function(t) {
+                //         return t.template == e.template && t.state == e.state
+                //     }
+                //     ));
+                //     void 0 != o && t.layout.customColors.pop(o),
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_COLWIDTH: function(t, e) {
+                //     t.layout.colWidth = "" == e ? e : parseInt(e),
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_ROWHEIGHT: function(t, e) {
+                //     t.layout.rowHeight = "" == e ? e : parseInt(e),
+                //     this.dispatch("saveLayout")
+                // },
+                // SET_ROUNDEDCORNERS: function(t, e) {
+                //     t.layout.roundedCorners = parseInt(e),
+                //     this.dispatch("saveLayout")
+                // },
+                // TOGGLE_MENU: function(t) {
+                //     t.toggleMenu = !t.toggleMenu
+                // },
+                // TOGGLE_COLORS: function(t) {
+                //     t.toggleColors = !t.toggleColors
+                // },
+                // SET_CUSTOMCOLOR: function(t, e) {
+                //     var o = t.layout.customColors.filter((function(t) {
+                //         return t.template == e.template && t.state == e.state
+                //     }
+                //     ));
+                //     o.length > 0 ? o[0].iconColor = e.color : t.layout.customColors.push({
+                //         template: e.template,
+                //         bgColor: "",
+                //         iconColor: e.color,
+                //         state: e.state
+                //     })
+                // },
+                // SET_CUSTOMBACKGROUNDCOLOR: function(t, e) {
+                //     var o = t.layout.customColors.filter((function(t) {
+                //         return t.template == e.template && t.state == e.state
+                //     }
+                //     ));
+                //     o.length > 0 ? o[0].bgColor = e.color : t.layout.customColors.push({
+                //         template: e.template,
+                //         bgColor: e.color,
+                //         iconColor: "",
+                //         customIcon: "",
+                //         state: e.state
+                //     })
+                // },
+                // SET_CUSTOMICON: function(t, e) {
+                //     var o = t.layout.customColors.filter((function(t) {
+                //         return t.template == e.template && t.state == e.state
+                //     }
+                //     ));
+                //     o.length > 0 ? o[0].customIcon = e.icon : t.layout.customColors.push({
+                //         template: e.template,
+                //         bgColor: "",
+                //         iconColor: "",
+                //         customIcon: e.icon,
+                //         state: e.state
+                //     })
+                // },
+                // SET_LOCALESJSON: function(t, e) {
+                //     t.locales = e.locales
+                // },
+                // SET_LOCALJSON: function(t, e) {
+                //     t.local = e
+                // },
+                // SET_TEMPLATESJSON: function(t, e) {
+                //     t.templates = e
+                // },
+                // GRID_UPDATE: function(t, e) {
+                //     t.grid = e
+                // },
+                // SHOW_MENUTILE: function(t, e) {
+                //     t.toggleMenuTile = !0,
+                //     t.menuTile = e
+                // },
+                // SHOW_NEXTMENUTILE: function(t, e) {
+                //     var o = t.layout.tiles.indexOf(e);
+                //     t.menuTile = t.layout.tiles[o + 1 >= t.layout.tiles.length ? 0 : o + 1]
+                // },
+                // SHOW_PREVIOUSMENUTILE: function(t, e) {
+                //     var o = t.layout.tiles.indexOf(e);
+                //     t.menuTile = t.layout.tiles[o - 1 >= 0 ? o - 1 : t.layout.tiles.length - 1]
+                // },
+                // CLOSE_MENUTILE: function(t) {
+                //     t.toggleMenuTile = !1,
+                //     t.menuTile = {}
+                // },
+                // SET_ATTRIBUTES: function(t, e) {
+                //     var o = t.devices.find((function(t) {
+                //         return t.id == e.id
+                //     }
+                //     ));
+                //     if (void 0 != o)
+                //         for (var a = 0; a < e.attr.length; a++)
+                //             o.attr[Object.keys(e.attr[a])[0]] = e.attr[a][Object.keys(e.attr[a])[0]]
+                // },
+                // SET_LASTLAYOUTSAVE: function(t, e) {
+                //     t.lastLayoutSave = e
+                // },
+                // SET_CONNECTED: function(t, e) {
+                //     t.isConnected = e
+                // },
+                // SOCKET_ONOPEN: function(t, e) {
+                //     console.log("socket opened"),
+                //     this.commit("log", "Websocket Opened"),
+                //     a["default"].prototype.$socket = e.currentTarget,
+                //     t.socket.isConnected = e,
+                //     this.commit("SET_CONNECTED", !0),
+                //     t.socket.retryCount = 0
+                // },
+                // SOCKET_ONCLOSE: function(t, e) {
 
-                    console.log("socket closed " + e),
-                    console.log(e),
-                    this.commit("log", "WebSocket closed " + e.reason),
-                    t.socket.isConnected = !1,
-                    this.commit("SET_CONNECTED", !1),
-                    t.socket.retryCount++
-                    // t.socket.retryCount < 2 && setTimeout((function() {
-                    //     0 != t.socket.retryCount && nc.$connect()
-                    // }
-                    // ), 5000)
-                },
-                SOCKET_ONERROR: function(t, e) {
-                    console.log("socket error " + e),
-                    this.commit("log", "WebSocket error " + e),
-                    this.commit("SET_CONNECTED", !1),
-                    t.socket.retryCount++,
-                    t.socket.retryCount
-                },
-                SOCKET_ONMESSAGE: function(t, e) {
-                    if (t.socket.message = e,
-                    t.socket.retryCount = 0,
-                    "TDS Homeserver" === e.source) {
-                        var o = t.devices.find((function(t) {
-                            return t.id == e.deviceId
-                        }
-                        ));
-                        if (void 0 != o) {
-                            var a = o.attr.find((function(t) {
-                                return Object.keys(t).indexOf(e.name) > -1
-                            }
-                            ));
-                            void 0 != a && void 0 != e.value && -1 == e.value.indexOf("<script") && (a[e.name] = e.value,
-                            this.commit("log", "Handling message: " + e.value + " for device id: " + e.deviceId))
-                        }
-                    }
-                    if ("LOCATION" === e.source)
-                        if ("mode" == e.name) {
-                            var n = t.devices.find((function(t) {
-                                return "Modes" == t.label
-                            }
-                            ));
-                            if (void 0 != n) {
-                                n.attr.forEach((function(t) {
-                                    void 0 != t.active && (t.active = !1)
-                                }
-                                ));
-                                var i = n.attr.find((function(t) {
-                                    return t.name == e.value
-                                }
-                                ));
-                                void 0 != i.active && (i.active = !0);
-                                var r = n.attr.find((function(t) {
-                                    return Object.keys(t).indexOf("status") > -1
-                                }
-                                ));
-                                r.status = e.value,
-                                delete r.active
-                            }
-                        } else if ("hsmStatus" == e.name) {
-                            var s = t.devices.find((function(t) {
-                                return "HSM Status" == t.label
-                            }
-                            ));
-                            s.attr[0].status = e.value
-                        } else if ("HUB_VARIABLE_SET" == e.type) {
-                            var l = t.globalVars.find((function(t) {
-                                return "variable:" + t.name == e.name
-                            }
-                            ));
-                            l.value = e.value
-                        }
-                },
-                SOCKET_RECONNECT: function(t, e) {
-                    console.info("Reconnecting socket attempt " + e),
-                    t.socket.retryCount = e,
-                    e % 4 == 0 ? nc.$disconnect : (nc.$connect,
-                    this.commit("log", "Reconnecting Websocket"))
-                },
-                SOCKET_RECONNECT_ERROR: function(t) {
-                    t.socket.reconnectError = !0,
-                    this.commit("SET_CONNECTED", !1),
-                    this.commit("log", "Failed to Reconnect Websocket")
-                },
-                SOCKET_RESET_RECONNECT: function(t) {
-                    t.socket.retryCount = 0
-                }
+                //     console.log("socket closed " + e),
+                //     console.log(e),
+                //     this.commit("log", "WebSocket closed " + e.reason),
+                //     t.socket.isConnected = !1,
+                //     this.commit("SET_CONNECTED", !1),
+                //     t.socket.retryCount++
+                //     // t.socket.retryCount < 2 && setTimeout((function() {
+                //     //     0 != t.socket.retryCount && nc.$connect()
+                //     // }
+                //     // ), 5000)
+                // },
+                // SOCKET_ONERROR: function(t, e) {
+                //     console.log("socket error " + e),
+                //     this.commit("log", "WebSocket error " + e),
+                //     this.commit("SET_CONNECTED", !1),
+                //     t.socket.retryCount++,
+                //     t.socket.retryCount
+                // },
+                // SOCKET_ONMESSAGE: function(t, e) {
+                //     if (t.socket.message = e,
+                //     t.socket.retryCount = 0,
+                //     "TDS Homeserver" === e.source) {
+                //         var o = t.devices.find((function(t) {
+                //             return t.id == e.deviceId
+                //         }
+                //         ));
+                //         if (void 0 != o) {
+                //             var a = o.attr.find((function(t) {
+                //                 return Object.keys(t).indexOf(e.name) > -1
+                //             }
+                //             ));
+                //             // console.log(e);
+                //             void 0 != a && void 0 != e.value && (a[e.name] = e.value,
+                //             this.commit("log", "Handling message: " + e.value + " for device id: " + e.deviceId))
+                //         }
+                //     }
+                // },
+                // SOCKET_RECONNECT: function(t, e) {
+                //     console.info("Reconnecting socket attempt " + e),
+                //     t.socket.retryCount = e,
+                //     e % 4 == 0 ? nc.$disconnect : (nc.$connect,
+                //     this.commit("log", "Reconnecting Websocket"))
+                // },
+                // SOCKET_RECONNECT_ERROR: function(t) {
+                //     t.socket.reconnectError = !0,
+                //     this.commit("SET_CONNECTED", !1),
+                //     this.commit("log", "Failed to Reconnect Websocket")
+                // },
+                // SOCKET_RESET_RECONNECT: function(t) {
+                //     t.socket.retryCount = 0
+                // }
             },
             actions: {
                 fixBG: function() {
@@ -15367,34 +14615,34 @@ console.log("loadpage");
                     e("SET_FONTSIZE", o)
                 },
                 loadTemplates: function(t) {
+                   
                     var e = this
                       , o = t.commit;
-                    if (ic.state.token) {
-                        var a = i.a.create({
-                            baseURL: this.getters.urlPrefix + this.getters.urlPath,
-                            crossDomain: !0,
-                            responseType: "json",
-                            withCredentials: !0,
-                            headers: {
-                                Accept: "application/json",
-                                "Content-Type": "application/json",
-                                Authorization: "Bearer " + ic.state.token
-                            }
-                        });
-                        this.commit("log", "Requesting Layout"),
-                        a.get("/localization/templates").then((function(t) {
-                            o("log", "Got Localization Templates"),
-                            o("SET_TEMPLATES", t.data),
-                            o("SET_CONNECTED", !0)
-                        }
-                        )).catch((function(t) {
-                            e.commit("log", "Error getting localization " + t),
-                            e.response = t,
-                            o("SET_CONNECTED", !1),
-                            console.log(t)
-                        }
-                        ))
-                    }
+                        // var a = i.a.create({
+                        //     baseURL: this.getters.urlPrefix + this.getters.urlPath,
+                        //     crossDomain: !0,
+                        //     responseType: "json",
+                        //     withCredentials: !0,
+                        //     headers: {
+                        //         Accept: "application/json",
+                        //         "Content-Type": "application/json",
+                        //         Authorization: "Bearer " + ic.state.token
+                        //     }
+                        // });
+                        this.commit("log", "Requesting Layout")
+                        // a.get("/localization/templates").then((function(t) {
+                        //     o("log", "Got Localization Templates"),
+                        //     o("SET_TEMPLATES", t.data),
+                        //     o("SET_CONNECTED", !0)
+                        // }
+                        // )).catch((function(t) {
+                        //     e.commit("log", "Error getting localization " + t),
+                        //     e.response = t,
+                        //     o("SET_CONNECTED", !1),
+                        //     console.log(t)
+                        // }
+                        // ))
+                    
                 },
                 loadLayout: function(t) {
                     var e = this;
@@ -15404,17 +14652,8 @@ console.log("loadpage");
                             while (1)
                                 switch (o.prev = o.next) {
                                 case 0:
-                                    if (a = t.commit,
-                                    n = t.dispatch,
-                                    !ic.state.token) {
-                                        o.next = 6;
-                                        break
-                                    }
-                                    a("SET_LAYOUT", ic.state.layout1);
-
-
-
-
+                                    a = t.commit;
+                                    a("SET_LAYOUT", hub.layout);
                                 case 6:
                                 case "end":
                                     return o.stop()
@@ -15449,71 +14688,66 @@ console.log("loadpage");
                 loadDevices: function(t) {
                     var e = this,
                     o = t.commit;
-                if (o("SET_CONNECTED", !0), ic.state.token) {
-                    this.commit("log", "Requesting Devices"),  o("SET_DEVICES",  ic.state.devices1), o("SET_CONNECTED", !0)
-                }
+                    this.commit("log", "Requesting Devices"),  o("SET_DEVICES",  hub.devices), o("SET_CONNECTED", !0)
                 },
                 loadGlobalVars: function(t) {
                     var e = this
                       , o = t.commit;
-                    if (o("SET_CONNECTED", !0),
-                    ic.state.token) {
-                        this.commit("log", "Requesting Global Variables"), o("SET_GLOBAL_VARS", "[]"), o("SET_CONNECTED", !0)
-                    }
+                      this.commit("log", "Requesting Global Variables"), o("SET_GLOBAL_VARS", "[]"), o("SET_CONNECTED", !0)
                 },
                 openSocket: function() {
-                    this.commit("log", "Opening Socket");
-                     let DashboardDevices = [];
-                        // loop over the devices in  ic.state.devices
-                        for (let i = 0; i < ic.state.devices.length; i++) {
-                            DashboardDevices.push(ic.state.devices[i].id)
-                          }
-                         //  console.log(DashboardDevices);
+                    // this.commit("log", "Opening Socket");
+                    //  let DashboardDevices = [];
+                    //     // loop over the devices in  ic.state.devices
+                    //     for (let i = 0; i < ic.state.devices.length; i++) {
+                    //         DashboardDevices.push(ic.state.devices[i].id)
+                    //       }
+                    //      //  console.log(DashboardDevices);
 
 
-                    a["default"].use(ec.a, ic.state.Websocketurl + "?devices="+ DashboardDevices.toString() +"&timeout=" + ic.state.WebSocketTimeout + "&screenID=" + ic.state.ScreenID, {
-                        format: "json",
-                        store: ic,
-                        connectManually: !0
-                    }),
-                    websocketfordashboard = nc;
-                    nc.$connect()
+                    // a["default"].use(ec.a, ic.state.Websocketurl + "?devices="+ DashboardDevices.toString() +"&timeout=" + ic.state.WebSocketTimeout + "&screenID=" + ic.state.ScreenID, {
+                    //     format: "json",
+                    //     store: ic,
+                    //     connectManually: !0
+                    // }),
+                    // websocketfordashboard = nc;
+                    // nc.$connect()
 
                 },
                 getUpdates: function(t) {
-                    var e = this
-                      , o = t.commit
-                      , a = t.dispatch;
-                    if (ic.state.isLocal && 0 == ic.state.socket.isConnected && ic.state.socket.retryCount < 1)
-                        a("openSocket");
+                    // var e = this
+                    //   , o = t.commit
+                    //   , a = t.dispatch;
+                    // if (ic.state.isLocal && 0 == ic.state.socket.isConnected && ic.state.socket.retryCount < 1)
+                    //     a("openSocket");
                 },
                 getAttributes: function(t, e) {
-                    var o = this
-                      , a = t.commit
-                      , n = i.a.create({
-                        baseURL: this.getters.urlPrefix + this.getters.urlPath,
-                        crossDomain: !0,
-                        responseType: "json",
-                        withCredentials: !0,
-                        headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                            Authorization: "Bearer " + this.state.token
-                        }
-                    });
-                    "" != e && (this.commit("log", "Requesting Attributes for ID: " + e),
-                    n.get("/device/" + e).then((function(t) {
-                        o.commit("log", "Got Attributes for ID: " + e);
-                        var n = t.data;
-                        n.length > 0 && a("SET_ATTRIBUTES", n[0])
-                    }
-                    )).catch((function(t) {
-                        o.commit("log", "Error getting Attributes " + t),
-                        o.response = t,
-                        a("SET_CONNECTED", !1),
-                        console.log(t)
-                    }
-                    )))
+                    // var o = this
+                    //   , a = t.commit
+                    //   , n = i.a.create({
+                    //     baseURL: this.getters.urlPrefix + this.getters.urlPath,
+                    //     crossDomain: !0,
+                    //     responseType: "json",
+                    //     withCredentials: !0,
+                    //     headers: {
+                    //         Accept: "application/json",
+                    //         "Content-Type": "application/json",
+                    //         Authorization: "Bearer " + this.state.token
+                    //     }
+                    // });
+                    // "" != e && (this.commit("log", "Requesting Attributes for ID: " + e),
+                    // n.get("/device/" + e).then((function(t) {
+                    //     o.commit("log", "Got Attributes for ID: " + e);
+                    //     var n = t.data;
+                    //     n.length > 0 && a("SET_ATTRIBUTES", n[0])
+                    // }
+                    // )).catch((function(t) {
+                    //     o.commit("log", "Error getting Attributes " + t),
+                    //     o.response = t,
+                    //     a("SET_CONNECTED", !1),
+                    //     console.log(t)
+                    // }
+                    // )))
                 },
                 sendCommand: function(t, e) {
                     var o = this
@@ -15546,31 +14780,6 @@ console.log("loadpage");
                         console.log(t)
                     }
                     ))
-                },
-                setGlobalVariable: function(t, e) {
-                    var o = this
-                      , a = t.commit
-                      , n = i.a.create({
-                        baseURL: this.getters.urlPrefix + this.getters.urlPath,
-                        crossDomain: !0,
-                        responseType: "json",
-                        withCredentials: !0,
-                        headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                            Authorization: "Bearer " + ic.state.token
-                        }
-                    });
-                    n.post("/variable", e).then((function(t) {
-                        o.commit("log", "Variable Set"),
-                        void 0 != t.data.poll && a("SET_UPDATES", t.data.poll)
-                    }
-                    )).catch((function(t) {
-                        o.commit("log", "Error setting variable " + t),
-                        o.response = t,
-                        console.log(t)
-                    }
-                    ))
                 }
             }
         })
@@ -15580,14 +14789,21 @@ console.log("loadpage");
                 for (var a = 0; a <= t.cols - 1; a++)
                     e[o][a] = "n"
             }
-            for (var n in t.tiles)
-                try {
-                    for (var i = 0; i <= t.tiles[n].rowSpan - 1; i++)
-                        for (var r = 0; r <= t.tiles[n].colSpan - 1; r++)
-                            t.tiles[n].row <= t.rows && t.tiles[n].col <= t.cols && (e[t.tiles[n].row - 1 + i][t.tiles[n].col - 1 + r] = "y")
-                } catch (s) {
-                    console.log(s)
-                }
+            // for (var n in t.tiles)
+            //     try {
+            //         for (var i = 0; i <= t.tiles[n].rowSpan - 1; i++) {
+            //             for (var r = 0; r <= t.tiles[n].colSpan - 1; r++) {
+            //                 t.tiles[n].row <= t.rows && 
+            //                 t.tiles[n].col <= t.cols && 
+            //                 (e[t.tiles[n].row - 1 + i]
+            //                 [t.tiles[n].col - 1 + r] = "y")
+            //                 console.log(t.tiles[n].col - 1 + r)
+            //             }
+            //         }
+                
+            //     } catch (s) {
+            //         console.log(s)
+            //     }
             return e
         }
           , sc = ic;
@@ -15750,7 +14966,7 @@ console.log("loadpage");
     cf02: function(t, e, o) {
         var a = o("24fb");
         e = a(!1),
-        e.push([t.i, '.fade-leave-to{opacity:0;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}[class*=" he-"],[class^=he-]{font-family:hubitat!important;font-style:normal;font-weight:400;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.he-add_1:before{content:"\\e906"}.he-add_2:before{content:"\\e909"}.he-advanced_1:before{content:"\\e916"}.he-apps_1:before{content:"\\ea32"}.he-apps_2:before{content:"\\ea33"}.he-community_1:before{content:"\\ea36"}.he-community_2:before{content:"\\ea37"}.he-devices_1:before{content:"\\ea47"}.he-devices_2:before{content:"\\ea48"}.he-discovery_1:before{content:"\\ea4b"}.he-discovery_3:before{content:"\\ea4d"}.he-events_2:before{content:"\\ea5c"}.he-exclude_1:before{content:"\\ea5e"}.he-exclude_3:before{content:"\\ea60"}.he-help_1:before{content:"\\ea62"}.he-help_2:before{content:"\\ea63"}.he-hubevents_2:before{content:"\\ea66"}.he-info_1:before{content:"\\ea68"}.he-info_3:before{content:"\\ea6a"}.he-location_1:before{content:"\\ea6c"}.he-location_3:before{content:"\\ea6e"}.he-locationevents_2:before{content:"\\ea73"}.he-logs_2:before{content:"\\ea75"}.he-logs_4:before{content:"\\ea77"}.he-reboothub_1:before{content:"\\e918"}.he-reboothub_2:before{content:"\\e919"}.he-repair_1:before{content:"\\e93a"}.he-repair_2:before{content:"\\ea12"}.he-settings_1:before{content:"\\ea17"}.he-shutdown_1:before{content:"\\ea79"}.he-shutdown_3:before{content:"\\ea7b"}.he-acceleration_active:before{content:"\\ebd3"}.he-acceleration_inactive:before{content:"\\ebd9"}.he-address-book1:before{content:"\\e944"}.he-aid-kit:before{content:"\\e998"}.he-air_filter:before{content:"\\ecc7"}.he-alarm:before{content:"\\e950"}.he-alarm1:before{content:"\\ecc9"}.he-alarm_2:before{content:"\\ecc8"}.he-alexa:before{content:"\\ed31"}.he-amazon2:before{content:"\\eaf4"}.he-android1:before{content:"\\eac0"}.he-apple1:before{content:"\\eaf8"}.he-appointment:before{content:"\\ecca"}.he-apps_11:before{content:"\\ea05"}.he-apps_21:before{content:"\\ea06"}.he-arrival:before{content:"\\eccb"}.he-arrow-down-left2:before{content:"\\ea3f"}.he-arrow-down-right2:before{content:"\\ea3d"}.he-arrow-down2:before{content:"\\ea3e"}.he-arrow-left2:before{content:"\\ea40"}.he-arrow-right2:before{content:"\\ea3c"}.he-arrow-up-left2:before{content:"\\ea39"}.he-arrow-up-right2:before{content:"\\ea3b"}.he-arrow-up2:before{content:"\\ea3a"}.he-attachment:before{content:"\\e9cd"}.he-axis:before{content:"\\eaf3"}.he-axis_2:before{content:"\\eaf2"}.he-axis_3:before{content:"\\ed6a"}.he-backward2:before{content:"\\ea1f"}.he-barcode1:before{content:"\\e937"}.he-bathtub1:before{content:"\\ed33"}.he-battery_25:before{content:"\\ec54"}.he-battery_25_color:before{content:"\\ebdc"}.he-battery_25_filled:before{content:"\\ec53"}.he-battery_50:before{content:"\\ec56"}.he-battery_50_color:before{content:"\\ebdd"}.he-battery_50_filled:before{content:"\\ec55"}.he-battery_75_color:before{content:"\\ebde"}.he-battery_75_to_100:before{content:"\\ec57"}.he-battery_empty:before{content:"\\ec59"}.he-battery_empty_filled:before{content:"\\ec58"}.he-battery_full:before{content:"\\ec5a"}.he-battery_full_color:before{content:"\\ebe2"}.he-battery_large:before{content:"\\eccd"}.he-battery_large_filled:before{content:"\\eccc"}.he-battery_low_color:before{content:"\\ebe3"}.he-beach-chair:before{content:"\\ec4e"}.he-bed_1:before{content:"\\eb0d"}.he-bed_2:before{content:"\\ed34"}.he-bed_3:before{content:"\\eb0e"}.he-bed_4:before{content:"\\eb0f"}.he-bed_5:before{content:"\\ed35"}.he-bell1:before{content:"\\e951"}.he-bin:before{content:"\\e9ac"}.he-bin2:before{content:"\\e9ad"}.he-blind1:before{content:"\\ecb6"}.he-blocked:before{content:"\\ea0e"}.he-bluetooth1:before{content:"\\eb11"}.he-bluetooth_headphones:before{content:"\\eb10"}.he-book1:before{content:"\\e91f"}.he-bookmark1:before{content:"\\e9d2"}.he-bookmarks:before{content:"\\e9d3"}.he-books:before{content:"\\e920"}.he-box-add:before{content:"\\e95e"}.he-box-remove:before{content:"\\e95f"}.he-briefcase1:before{content:"\\e9ae"}.he-brightness-contrast:before{content:"\\e9d6"}.he-bubble:before{content:"\\e96b"}.he-bubble2:before{content:"\\e96e"}.he-bubbles:before{content:"\\e96c"}.he-bubbles2:before{content:"\\e96d"}.he-bubbles3:before{content:"\\e96f"}.he-bubbles4:before{content:"\\e970"}.he-bug1:before{content:"\\e999"}.he-bulb_1:before{content:"\\ecda"}.he-bulb_2:before{content:"\\ecdb"}.he-bulb_4:before{content:"\\ec68"}.he-bulb_6:before{content:"\\eb12"}.he-bulb_off:before{content:"\\ebe4"}.he-bulb_on:before{content:"\\ebec"}.he-button_off .path1:before{content:"\\ebf9";color:#000}.he-button_off .path2:before{content:"\\ebfa";margin-left:-1em;color:#000}.he-button_off .path3:before{content:"\\ebfb";margin-left:-1em;color:#fff;opacity:.6}.he-button_on .path1:before{content:"\\ebfc";color:#000}.he-button_on .path2:before{content:"\\ebfd";margin-left:-1em;color:#000}.he-button_on .path3:before{content:"\\ebfe";margin-left:-1em;color:#3cbf8a}.he-calculator1:before{content:"\\e940"}.he-calendar1:before{content:"\\e953"}.he-calendar2:before{content:"\\ecbe"}.he-calendar_2:before{content:"\\ecdc"}.he-camera1:before{content:"\\e90f"}.he-cancel-circle:before{content:"\\ea0d"}.he-car1:before{content:"\\ec69"}.he-cctv:before{content:"\\ed36"}.he-cd_rom:before{content:"\\eb13"}.he-ceiling_lamp:before{content:"\\eb14"}.he-ceiling_lamp_2:before{content:"\\ed37"}.he-chair_lounge:before{content:"\\ed3b"}.he-chandelier_2:before{content:"\\eb15"}.he-checkbox-checked:before{content:"\\ea52"}.he-checkbox-unchecked:before{content:"\\ea53"}.he-checkmark:before{content:"\\ea10"}.he-checkmark2:before{content:"\\ea11"}.he-chrome1:before{content:"\\ead9"}.he-circle-down:before{content:"\\ea43"}.he-circle-left:before{content:"\\ea44"}.he-circle-right:before{content:"\\ea42"}.he-circle-up:before{content:"\\ea41"}.he-circuit:before{content:"\\ecdd"}.he-clean:before{content:"\\ec6a"}.he-cleaning_1:before{content:"\\ec6b"}.he-cleaning_2:before{content:"\\ec6c"}.he-cleaning_3:before{content:"\\ec6d"}.he-clipboard1:before{content:"\\e9b8"}.he-clock:before{content:"\\e94e"}.he-clock2:before{content:"\\e94f"}.he-cloud-check:before{content:"\\e9c4"}.he-cloud-download1:before{content:"\\e9c2"}.he-cloud-upload1:before{content:"\\e9c3"}.he-cloud1:before{content:"\\e9c1"}.he-co2:before{content:"\\ecb7"}.he-codepen1:before{content:"\\eae8"}.he-cog1:before{content:"\\e994"}.he-cogs1:before{content:"\\e995"}.he-color_palette:before{content:"\\ecde"}.he-command:before{content:"\\ea4e"}.he-compass1:before{content:"\\e949"}.he-compass2:before{content:"\\e94a"}.he-computer:before{content:"\\ecb0"}.he-computer_2:before{content:"\\eb16"}.he-connection:before{content:"\\e91b"}.he-contact_closed:before{content:"\\eb91"}.he-contact_open:before{content:"\\eb92"}.he-contrast:before{content:"\\e9d5"}.he-copy1:before{content:"\\e92c"}.he-crop1:before{content:"\\ea57"}.he-cross:before{content:"\\ea0f"}.he-ctrl:before{content:"\\ea50"}.he-customer_support:before{content:"\\eaeb"}.he-danger:before{content:"\\ecbb"}.he-dashboard1:before{content:"\\ecb2"}.he-dashboards:before{content:"\\ecdf"}.he-database1:before{content:"\\e964"}.he-default_dashboard_icon:before{content:"\\e93b"}.he-delicious1:before{content:"\\eacd"}.he-dimmer_high:before{content:"\\ebff"}.he-dimmer_low:before{content:"\\ec10"}.he-dimmer_medium:before{content:"\\ec17"}.he-dining-chair:before{content:"\\ecc2"}.he-dinner:before{content:"\\ecc3"}.he-discover:before{content:"\\eaec"}.he-display:before{content:"\\e956"}.he-door-1:before{content:"\\ecbc"}.he-door_3:before{content:"\\ec6e"}.he-door_closed:before{content:"\\ec6f"}.he-door_enter:before{content:"\\ec70"}.he-door_exit_2:before{content:"\\ec71"}.he-door_lock:before{content:"\\ed3c"}.he-door_open:before{content:"\\ec72"}.he-door_remote:before{content:"\\ed3d"}.he-download1:before{content:"\\e960"}.he-download2:before{content:"\\e9c5"}.he-download3:before{content:"\\e9c7"}.he-downstairs:before{content:"\\ed6c"}.he-drawer:before{content:"\\e95c"}.he-drawer2:before{content:"\\e95d"}.he-dribbble1:before{content:"\\eaa7"}.he-drive:before{content:"\\e963"}.he-drive1:before{content:"\\eb20"}.he-drop:before{content:"\\ec51"}.he-dropbox1:before{content:"\\eaae"}.he-dryer:before{content:"\\eb26"}.he-dryer_2:before{content:"\\eb25"}.he-earth:before{content:"\\e9ca"}.he-edge1:before{content:"\\eadc"}.he-eject1:before{content:"\\ea25"}.he-electricity:before{content:"\\ece0"}.he-embed:before{content:"\\ea7f"}.he-embed2:before{content:"\\ea80"}.he-enlarge:before{content:"\\e989"}.he-enlarge2:before{content:"\\e98b"}.he-enter:before{content:"\\ea13"}.he-envelop:before{content:"\\e945"}.he-equalizer:before{content:"\\e992"}.he-equalizer2:before{content:"\\e993"}.he-ethernet:before{content:"\\ecc6"}.he-exit:before{content:"\\ea14"}.he-eye-blocked:before{content:"\\e9d1"}.he-eye-minus:before{content:"\\e9d0"}.he-eye-plus:before{content:"\\e9cf"}.he-eye1:before{content:"\\e9ce"}.he-eyedropper1:before{content:"\\e90a"}.he-facebook1:before{content:"\\ea90"}.he-facebook2:before{content:"\\ea91"}.he-facebook3:before{content:"\\eb2a"}.he-facebook_2:before{content:"\\eb27"}.he-fan:before{content:"\\ecb8"}.he-fan_2:before{content:"\\eb2b"}.he-fan_auto:before{content:"\\e980"}.he-fan_high:before{content:"\\e9b0"}.he-fan_low:before{content:"\\e9e4"}.he-fan_med:before{content:"\\e9fc"}.he-fan_med_high:before{content:"\\e9ec"}.he-fan_med_low:before{content:"\\e9f4"}.he-fan_off:before{content:"\\e93c"}.he-fan_on:before{content:"\\ea04"}.he-feed1:before{content:"\\e91d"}.he-file-empty:before{content:"\\e924"}.he-file-music:before{content:"\\e928"}.he-file-picture:before{content:"\\e927"}.he-file-play:before{content:"\\e929"}.he-file-text1:before{content:"\\e922"}.he-file-text2:before{content:"\\e926"}.he-file-video:before{content:"\\e92a"}.he-file-zip:before{content:"\\e92b"}.he-file1:before{content:"\\eaee"}.he-file_2:before{content:"\\eaed"}.he-files-empty:before{content:"\\e925"}.he-film1:before{content:"\\e913"}.he-filter1:before{content:"\\ea5b"}.he-filter2:before{content:"\\ed2d"}.he-finder:before{content:"\\eabf"}.he-fingerprint:before{content:"\\ecaf"}.he-fire-alarm:before{content:"\\ecba"}.he-fire1:before{content:"\\e9a9"}.he-fire2:before{content:"\\ece1"}.he-fire_alarm_clear:before{content:"\\ec23"}.he-firefox1:before{content:"\\eada"}.he-fireplace:before{content:"\\ed3e"}.he-first:before{content:"\\ea21"}.he-fist:before{content:"\\ece3"}.he-fist_2:before{content:"\\ece2"}.he-flag1:before{content:"\\e9cc"}.he-flag2:before{content:"\\ece4"}.he-flash1:before{content:"\\ec73"}.he-flickr1:before{content:"\\eaa3"}.he-flickr2:before{content:"\\eaa4"}.he-flickr3:before{content:"\\eaa5"}.he-flickr4:before{content:"\\eaa6"}.he-floppy-disk:before{content:"\\e962"}.he-folder-download:before{content:"\\e933"}.he-folder-minus:before{content:"\\e932"}.he-folder-open1:before{content:"\\e930"}.he-folder-plus:before{content:"\\e931"}.he-folder-upload:before{content:"\\e934"}.he-folder1:before{content:"\\e92f"}.he-forward1:before{content:"\\e969"}.he-forward3:before{content:"\\ea20"}.he-gaming_controler:before{content:"\\eb2c"}.he-gaming_controller_2:before{content:"\\eb2d"}.he-gaming_controller_3:before{content:"\\eb2e"}.he-garage_closed:before{content:"\\ec24"}.he-garage_closing .path1:before{content:"\\ec25";color:#000}.he-garage_closing .path2:before{content:"\\ec26";margin-left:-1em;color:#fff}.he-garage_closing .path3:before{content:"\\ec27";margin-left:-1em;color:#000}.he-garage_closing .path4:before{content:"\\ec28";margin-left:-1em;color:#fff}.he-garage_closing .path5:before{content:"\\ec29";margin-left:-1em;color:#000}.he-garage_locked .path1:before{content:"\\ec2a";color:#000}.he-garage_locked .path2:before{content:"\\ec2b";margin-left:-1em;color:#000}.he-garage_locked .path3:before{content:"\\ec2c";margin-left:-1em;color:#fff}.he-garage_locked .path4:before{content:"\\ec2d";margin-left:-1em;color:#000}.he-garage_open:before{content:"\\ec2e"}.he-garage_opening .path1:before{content:"\\ec30";color:#000}.he-garage_opening .path2:before{content:"\\ec31";margin-left:-1em;color:#fff}.he-garage_opening .path3:before{content:"\\ec32";margin-left:-1em;color:#000}.he-garage_opening .path4:before{content:"\\ec33";margin-left:-1em;color:#fff}.he-garage_opening .path5:before{content:"\\ec34";margin-left:-1em;color:#000}.he-garage_unlocked .path1:before{content:"\\ec35";color:#000}.he-garage_unlocked .path2:before{content:"\\ec36";margin-left:-1em;color:#000}.he-garage_unlocked .path3:before{content:"\\ec37";margin-left:-1em;color:#fff}.he-garage_unlocked .path4:before{content:"\\ec38";margin-left:-1em;color:#000}.he-gas_warning:before{content:"\\ec74"}.he-gauge:before{content:"\\ece6"}.he-gauge_2:before{content:"\\ece5"}.he-gift1:before{content:"\\e99f"}.he-git1:before{content:"\\eae7"}.he-github1:before{content:"\\eab0"}.he-glass1:before{content:"\\e9a0"}.he-glass2:before{content:"\\e9a1"}.he-gmail:before{content:"\\eb30"}.he-google-drive:before{content:"\\ea8f"}.he-google1:before{content:"\\ea88"}.he-google2:before{content:"\\ea89"}.he-google3:before{content:"\\ea8a"}.he-google_play:before{content:"\\eb3b"}.he-grid:before{content:"\\ed2e"}.he-hammer:before{content:"\\e996"}.he-hand_3:before{content:"\\ece7"}.he-hand_wave:before{content:"\\ece8"}.he-hanging_lights:before{content:"\\eb43"}.he-hanging_roof_lamp:before{content:"\\eb44"}.he-hangouts:before{content:"\\ea8e"}.he-headphones1:before{content:"\\e910"}.he-heart1:before{content:"\\e9da"}.he-help1:before{content:"\\eaef"}.he-history1:before{content:"\\e94d"}.he-home1:before{content:"\\e900"}.he-home2:before{content:"\\e901"}.he-home3:before{content:"\\e902"}.he-hour-glass:before{content:"\\e979"}.he-house_1:before{content:"\\ed3f"}.he-house_2:before{content:"\\ed40"}.he-house_3:before{content:"\\ed41"}.he-house_4:before{content:"\\ed42"}.he-house_5:before{content:"\\ed43"}.he-humidity:before{content:"\\ecf4"}.he-humidity_filled:before{content:"\\ecf3"}.he-image1:before{content:"\\e90d"}.he-images:before{content:"\\e90e"}.he-infinite:before{content:"\\ea2f"}.he-info1:before{content:"\\ea0c"}.he-insert-template:before{content:"\\ea72"}.he-instagram1:before{content:"\\ea92"}.he-integrated_circuit:before{content:"\\ecf5"}.he-key1:before{content:"\\e98d"}.he-keyboard:before{content:"\\e955"}.he-keypad_1:before{content:"\\eb45"}.he-keypad_2:before{content:"\\eb46"}.he-kitchen:before{content:"\\ed44"}.he-lab:before{content:"\\e9aa"}.he-lamp_1:before{content:"\\ed4d"}.he-lamp_hanging:before{content:"\\ed4e"}.he-laptop1:before{content:"\\e957"}.he-last:before{content:"\\ea22"}.he-laundry:before{content:"\\ec75"}.he-leaf1:before{content:"\\e9a4"}.he-less_plus_signs:before{content:"\\ecf6"}.he-lifebuoy:before{content:"\\e941"}.he-lightbulb:before{content:"\\eca0"}.he-link1:before{content:"\\e9cb"}.he-link2:before{content:"\\ecf8"}.he-link_broken:before{content:"\\ecf7"}.he-linkedin1:before{content:"\\eac9"}.he-linkedin2:before{content:"\\eaca"}.he-list-numbered:before{content:"\\e9b9"}.he-list1:before{content:"\\e9ba"}.he-list2:before{content:"\\e9bb"}.he-list3:before{content:"\\ed2f"}.he-location:before{content:"\\e947"}.he-location2:before{content:"\\e948"}.he-lock1:before{content:"\\e98f"}.he-logo-mark:before{content:"\\e908"}.he-logo-vertical-white:before{content:"\\e907";color:#fff}.he-loop:before{content:"\\ea2d"}.he-loop2:before{content:"\\ea2e"}.he-magic-wand:before{content:"\\e997"}.he-magnet1:before{content:"\\e9ab"}.he-man:before{content:"\\e9dc"}.he-man-woman:before{content:"\\e9de"}.he-map1:before{content:"\\e94b"}.he-map2:before{content:"\\e94c"}.he-menu:before{content:"\\e9bd"}.he-menu2:before{content:"\\e9be"}.he-menu3:before{content:"\\e9bf"}.he-menu4:before{content:"\\e9c0"}.he-meter:before{content:"\\e9a6"}.he-meter1:before{content:"\\ecf9"}.he-meter2:before{content:"\\e9a7"}.he-mic:before{content:"\\e91e"}.he-microsoft:before{content:"\\eb51"}.he-microwave:before{content:"\\ecc5"}.he-minus1:before{content:"\\ea0b"}.he-mobile1:before{content:"\\e958"}.he-mobile2:before{content:"\\e959"}.he-mode_away:before{content:"\\ec39"}.he-mode_cleaning:before{content:"\\ec3a"}.he-mode_day:before{content:"\\ec3b"}.he-mode_default:before{content:"\\ec3c"}.he-mode_evening:before{content:"\\ec3d"}.he-mode_night:before{content:"\\ec3e"}.he-mode_vacation:before{content:"\\ec3f"}.he-monitor:before{content:"\\eb55"}.he-motion-sensor:before{content:"\\ed64"}.he-motion_detector_1:before{content:"\\ec76"}.he-motion_detector_2:before{content:"\\ec82"}.he-motion_detector_3:before{content:"\\ecfb"}.he-motion_detector_3_filled:before{content:"\\ecfa"}.he-motion_detector_4:before{content:"\\ecfc"}.he-mug:before{content:"\\e9a2"}.he-music1:before{content:"\\e911"}.he-music_player:before{content:"\\eb56"}.he-mute:before{content:"\\ecfd"}.he-netflix:before{content:"\\eb57"}.he-new-tab:before{content:"\\ea7e"}.he-newspaper:before{content:"\\e904"}.he-next2:before{content:"\\ea24"}.he-next_track:before{content:"\\ecfe"}.he-night_1:before{content:"\\ec83"}.he-night_2:before{content:"\\ec84"}.he-not_present:before{content:"\\eb8f"}.he-notification:before{content:"\\ea08"}.he-oculus_rift:before{content:"\\eb5f"}.he-office:before{content:"\\e903"}.he-onedrive:before{content:"\\eaaf"}.he-opt:before{content:"\\ea51"}.he-outlet:before{content:"\\ed30"}.he-outlet_3:before{content:"\\ec85"}.he-outlet_off:before{content:"\\e97c"}.he-padlock_locked:before{content:"\\ec86"}.he-padlock_unlocked:before{content:"\\ec87"}.he-paint-format:before{content:"\\e90c"}.he-pantone_1:before{content:"\\ecff"}.he-paste1:before{content:"\\e92d"}.he-pause-outlined-big-symbol:before{content:"\\ecbd"}.he-pause2:before{content:"\\ea1d"}.he-pause_circle:before{content:"\\ed00"}.he-pencil1:before{content:"\\e905"}.he-phone-hang-up:before{content:"\\e943"}.he-phone1:before{content:"\\e942"}.he-pie-chart1:before{content:"\\e99a"}.he-pinterest3:before{content:"\\eb60"}.he-placeholder:before{content:"\\ed32"}.he-placeholder_1:before{content:"\\ec88"}.he-play1:before{content:"\\e912"}.he-play3:before{content:"\\ea1c"}.he-play_button:before{content:"\\ed01"}.he-playstation:before{content:"\\eb62"}.he-playstation_logo:before{content:"\\eb61"}.he-plug1:before{content:"\\ecb9"}.he-plug_1:before{content:"\\ec89"}.he-plug_2:before{content:"\\ed4f"}.he-plug_3:before{content:"\\ed50"}.he-plug_4:before{content:"\\ec8a"}.he-plug_5:before{content:"\\ed02"}.he-plug_6:before{content:"\\ed03"}.he-plus1:before{content:"\\ea0a"}.he-podcast1:before{content:"\\e91c"}.he-portrait:before{content:"\\ed68"}.he-power:before{content:"\\e9b5"}.he-power-cord:before{content:"\\e9b7"}.he-power_off:before{content:"\\ec40"}.he-power_on:before{content:"\\ec41"}.he-present:before{content:"\\eb90"}.he-previous2:before{content:"\\ea23"}.he-price-tag:before{content:"\\e935"}.he-price-tags:before{content:"\\e936"}.he-printer:before{content:"\\e954"}.he-profile:before{content:"\\e923"}.he-property:before{content:"\\ecb1"}.he-psp:before{content:"\\eb63"}.he-pushpin:before{content:"\\e946"}.he-qrcode1:before{content:"\\e938"}.he-question1:before{content:"\\ea09"}.he-question2:before{content:"\\ecbf"}.he-question_1:before{content:"\\eaf0"}.he-question_2:before{content:"\\eaf1"}.he-quotes-left:before{content:"\\e977"}.he-quotes-right:before{content:"\\e978"}.he-radio-checked:before{content:"\\ea54"}.he-radio-checked2:before{content:"\\ea55"}.he-radio-unchecked:before{content:"\\ea56"}.he-reddit1:before{content:"\\eac6"}.he-redo:before{content:"\\e966"}.he-redo2:before{content:"\\e968"}.he-relay_off:before{content:"\\ec4a"}.he-relay_on:before{content:"\\ec4b"}.he-repair1:before{content:"\\ec96"}.he-reply1:before{content:"\\e96a"}.he-resize:before{content:"\\ec4f"}.he-road1:before{content:"\\e9b1"}.he-rocket1:before{content:"\\e9a5"}.he-router_1:before{content:"\\ed04"}.he-router_2:before{content:"\\ed05"}.he-router_3:before{content:"\\ed06"}.he-router_4:before{content:"\\ed07"}.he-rss1:before{content:"\\ea9b"}.he-rss2:before{content:"\\ea9c"}.he-running:before{content:"\\ed08"}.he-safari1:before{content:"\\eadd"}.he-samsung:before{content:"\\ed09"}.he-scissors1:before{content:"\\ea5a"}.he-search1:before{content:"\\e986"}.he-security_system:before{content:"\\ed51"}.he-sensor:before{content:"\\ed66"}.he-sensor_1:before{content:"\\ed65"}.he-sensor_2:before{content:"\\ed0a"}.he-sensor_3:before{content:"\\ed0b"}.he-sensor_4:before{content:"\\ed63"}.he-sensor_5:before{content:"\\ed0c"}.he-settings1:before{content:"\\ec4d"}.he-setup:before{content:"\\ec4c"}.he-shades_closed:before{content:"\\eba1"}.he-shades_open:before{content:"\\ebaa"}.he-shades_opening .path1:before{content:"\\ebaf";color:#231d1d}.he-shades_opening .path2:before{content:"\\ebb0";margin-left:-1em;color:#231d1d}.he-shades_opening .path3:before{content:"\\ebb1";margin-left:-1em;color:#000}.he-shades_opening .path4:before{content:"\\ebb2";margin-left:-1em;color:#fff}.he-shades_opening .path5:before{content:"\\ebb3";margin-left:-1em;color:#fff}.he-shades_opening .path6:before{content:"\\ebb4";margin-left:-1em;color:#fff}.he-shades_opening .path7:before{content:"\\ebb5";margin-left:-1em;color:#fff}.he-shades_opening .path8:before{content:"\\ebb6";margin-left:-1em;color:#fff}.he-shades_opening .path9:before{content:"\\ebb7";margin-left:-1em;color:#fff}.he-shades_opening .path10:before{content:"\\ebb8";margin-left:-1em;color:#000}.he-shades_opening .path11:before{content:"\\ebb9";margin-left:-1em;color:#fff}.he-shades_opening .path12:before{content:"\\ebba";margin-left:-1em;color:#000}.he-shades_partially_open:before{content:"\\ebbb"}.he-shades_unknown .path1:before{content:"\\ebc7";color:#231d1d}.he-shades_unknown .path2:before{content:"\\ebc8";margin-left:-1em;color:#231d1d}.he-shades_unknown .path3:before{content:"\\ebc9";margin-left:-1em;color:#000}.he-shades_unknown .path4:before{content:"\\ebca";margin-left:-1em;color:#fff}.he-shades_unknown .path5:before{content:"\\ebcb";margin-left:-1em;color:#fff}.he-shades_unknown .path6:before{content:"\\ebcc";margin-left:-1em;color:#fff}.he-shades_unknown .path7:before{content:"\\ebcd";margin-left:-1em;color:#fff}.he-shades_unknown .path8:before{content:"\\ebce";margin-left:-1em;color:#fff}.he-shades_unknown .path9:before{content:"\\ebcf";margin-left:-1em;color:#fff}.he-shades_unknown .path10:before{content:"\\ebd0";margin-left:-1em;color:#000}.he-shades_unknown .path11:before{content:"\\ebd1";margin-left:-1em;color:#fff}.he-shades_unknown .path12:before{content:"\\ebd2";margin-left:-1em;color:#000}.he-share1:before{content:"\\ea7d"}.he-share2:before{content:"\\ea82"}.he-shield1:before{content:"\\e9b4"}.he-shift:before{content:"\\ea4f"}.he-shower1:before{content:"\\ed52"}.he-shrink:before{content:"\\e98a"}.he-shrink2:before{content:"\\e98c"}.he-shuffle:before{content:"\\ea30"}.he-sink:before{content:"\\ed54"}.he-sink_2:before{content:"\\ed53"}.he-siren:before{content:"\\ed17"}.he-siren_and_alarm:before{content:"\\ed0d"}.he-skype1:before{content:"\\eac5"}.he-smoke_detector:before{content:"\\ed19"}.he-smoke_detector_2:before{content:"\\ed18"}.he-snowflake:before{content:"\\ed1a"}.he-sofa:before{content:"\\ed69"}.he-sound_on:before{content:"\\ed1c"}.he-sound_on_loud:before{content:"\\ed1b"}.he-soundcloud1:before{content:"\\eac3"}.he-soundcloud2:before{content:"\\eac4"}.he-speaker:before{content:"\\ed1e"}.he-speaker_1:before{content:"\\ed55"}.he-speaker_2:before{content:"\\ed56"}.he-speaker_3:before{content:"\\eb69"}.he-speaker_off:before{content:"\\ed1d"}.he-sphere:before{content:"\\e9c9"}.he-spinner11:before{content:"\\e984"}.he-spoon-knife:before{content:"\\e9a3"}.he-spotify1:before{content:"\\ea94"}.he-spotify2:before{content:"\\eb6a"}.he-square-measument:before{content:"\\ec50"}.he-stack:before{content:"\\e92e"}.he-stackoverflow:before{content:"\\ead0"}.he-stairs:before{content:"\\ed6b"}.he-star-empty:before{content:"\\e9d7"}.he-star-full:before{content:"\\e9d9"}.he-star-half1:before{content:"\\e9d8"}.he-stats-bars:before{content:"\\e99c"}.he-stats-bars2:before{content:"\\e99d"}.he-stats-dots:before{content:"\\e99b"}.he-steam1:before{content:"\\eaac"}.he-steam2:before{content:"\\eaad"}.he-stop2:before{content:"\\ea1e"}.he-stop3:before{content:"\\ed21"}.he-stop_2:before{content:"\\ed20"}.he-stop_2_filled:before{content:"\\ed1f"}.he-stopwatch:before{content:"\\e952"}.he-stove:before{content:"\\ed57"}.he-strikethrough2:before{content:"\\ec9b"}.he-sun:before{content:"\\e9d4"}.he-sun1:before{content:"\\ec52"}.he-sunrise:before{content:"\\ecc4"}.he-sunrise_2:before{content:"\\ec9c"}.he-sunrise_3:before{content:"\\ec9d"}.he-suspension:before{content:"\\ed67"}.he-svg:before{content:"\\eae9"}.he-switch:before{content:"\\e9b6"}.he-switch_2:before{content:"\\ed25"}.he-switch_2_flipped:before{content:"\\ed22"}.he-switch_2_off:before{content:"\\ec9e"}.he-switch_2_off_filled:before{content:"\\ed23"}.he-switch_2_on:before{content:"\\ec9f"}.he-switch_2_on_filled:before{content:"\\ed24"}.he-switch_8:before{content:"\\ed27"}.he-switch_8_closed:before{content:"\\ed26"}.he-switch_off:before{content:"\\eb98"}.he-switch_on:before{content:"\\ed28"}.he-tab:before{content:"\\ea45"}.he-table1:before{content:"\\ea70"}.he-table2:before{content:"\\ea71"}.he-table3:before{content:"\\ed58"}.he-tablet1:before{content:"\\e95a"}.he-tap:before{content:"\\ed29"}.he-target:before{content:"\\e9b3"}.he-telegram1:before{content:"\\ea95"}.he-television_1:before{content:"\\ed59"}.he-television_2:before{content:"\\ed5a"}.he-terminal1:before{content:"\\ea81"}.he-thermometer1:before{content:"\\ecb5"}.he-thermometer_2:before{content:"\\ed5b"}.he-thermometer_3:before{content:"\\ed5c"}.he-thermometer_4:before{content:"\\ed2a"}.he-thermometer_5:before{content:"\\ed2b"}.he-thermostat_6:before{content:"\\eb6b"}.he-thumb-up:before{content:"\\ecae"}.he-ticket1:before{content:"\\e939"}.he-toilet:before{content:"\\ed5d"}.he-tree1:before{content:"\\e9bc"}.he-trello1:before{content:"\\eab3"}.he-trophy1:before{content:"\\e99e"}.he-tumblr1:before{content:"\\eab9"}.he-tumblr2:before{content:"\\eaba"}.he-tux:before{content:"\\eabd"}.he-tv1:before{content:"\\e95b"}.he-twitch1:before{content:"\\ea9f"}.he-twitter1:before{content:"\\ea96"}.he-twitter2:before{content:"\\eb76"}.he-undo1:before{content:"\\e965"}.he-undo2:before{content:"\\e967"}.he-ungroup:before{content:"\\ea59"}.he-unlink1:before{content:"\\ecb3"}.he-unlocked:before{content:"\\e990"}.he-upload1:before{content:"\\e961"}.he-upload2:before{content:"\\e9c6"}.he-upload3:before{content:"\\e9c8"}.he-user-check:before{content:"\\e975"}.he-user-minus:before{content:"\\e974"}.he-user-plus1:before{content:"\\e973"}.he-user-tie:before{content:"\\e976"}.he-user1:before{content:"\\e971"}.he-users1:before{content:"\\e972"}.he-valve:before{content:"\\eb7a"}.he-valve_2:before{content:"\\eb77"}.he-valve_3:before{content:"\\eb78"}.he-valve_4:before{content:"\\eb79"}.he-ventilator:before{content:"\\eb7b"}.he-video-camera1:before{content:"\\e914"}.he-video-player:before{content:"\\ecc1"}.he-vimeo1:before{content:"\\eaa0"}.he-vimeo2:before{content:"\\eaa1"}.he-volume-decrease:before{content:"\\ea2c"}.he-volume-high:before{content:"\\ea26"}.he-volume-increase:before{content:"\\ea2b"}.he-volume-low:before{content:"\\ea28"}.he-volume-medium:before{content:"\\ea27"}.he-volume-mute:before{content:"\\ea29"}.he-volume-mute2:before{content:"\\ea2a"}.he-wardrobe:before{content:"\\ed61"}.he-wardrobe_2:before{content:"\\ed5e"}.he-warning1:before{content:"\\ea07"}.he-washing_machine:before{content:"\\eb80"}.he-washing_machine_2:before{content:"\\eb7d"}.he-washing_machine_3:before{content:"\\eb7e"}.he-washing_machine_4:before{content:"\\eb7f"}.he-water:before{content:"\\eb82"}.he-water_2:before{content:"\\eb81"}.he-water_dry:before{content:"\\eb99"}.he-water_wet:before{content:"\\eb9e";color:#6b6b6b}.he-web-design:before{content:"\\ecc0"}.he-whatsapp1:before{content:"\\ea93"}.he-wifi1:before{content:"\\ed2c"}.he-wikipedia:before{content:"\\eac8"}.he-window:before{content:"\\ecb4"}.he-window_1:before{content:"\\ecad"}.he-window_2:before{content:"\\ecac"}.he-window_3:before{content:"\\ed62"}.he-windows1:before{content:"\\eac1"}.he-windows8:before{content:"\\eac2"}.he-woman:before{content:"\\e9dd"}.he-wordpress1:before{content:"\\eab4"}.he-wrench1:before{content:"\\e991"}.he-xbox:before{content:"\\eb88"}.he-youtube1:before{content:"\\ea9d"}.he-youtube3:before{content:"\\eb89";color:#777}.he-zigbee:before{content:"\\ea83"}.he-zoom-in:before{content:"\\e987"}.he-zoom-out:before{content:"\\e988"}.he-zwave:before{content:"\\eb8b"}', ""]),
+        e.push([t.i, '.fade-leave-to{opacity:0;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}[class*=" he-"],[class^=he-]{font-family:hubitat!important;font-style:normal;font-weight:400;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.he-add_1:before{content:"\\e906"}.he-add_2:before{content:"\\e909"}.he-advanced_1:before{content:"\\e916"}.he-apps_1:before{content:"\\ea32"}.he-apps_2:before{content:"\\ea33"}.he-community_1:before{content:"\\ea36"}.he-community_2:before{content:"\\ea37"}.he-devices_1:before{content:"\\ea47"}.he-devices_2:before{content:"\\ea48"}.he-discovery_1:before{content:"\\ea4b"}.he-discovery_3:before{content:"\\ea4d"}.he-events_2:before{content:"\\ea5c"}.he-exclude_1:before{content:"\\ea5e"}.he-exclude_3:before{content:"\\ea60"}.he-help_1:before{content:"\\ea62"}.he-help_2:before{content:"\\ea63"}.he-hubevents_2:before{content:"\\ea66"}.he-info_1:before{content:"\\ea68"}.he-info_3:before{content:"\\ea6a"}.he-location_1:before{content:"\\ea6c"}.he-location_3:before{content:"\\ea6e"}.he-locationevents_2:before{content:"\\ea73"}.he-logs_2:before{content:"\\ea75"}.he-logs_4:before{content:"\\ea77"}.he-reboothub_1:before{content:"\\e918"}.he-reboothub_2:before{content:"\\e919"}.he-repair_1:before{content:"\\e93a"}.he-repair_2:before{content:"\\ea12"}.he-settings_1:before{content:"\\ea17"}.he-shutdown_1:before{content:"\\ea79"}.he-shutdown_3:before{content:"\\ea7b"}.he-acceleration_active:before{content:"\\ebd3"}.he-acceleration_inactive:before{content:"\\ebd9"}.he-address-book1:before{content:"\\e944"}.he-aid-kit:before{content:"\\e998"}.he-air_filter:before{content:"\\ecc7"}.he-alarm:before{content:"\\e950"}.he-alarm1:before{content:"\\ecc9"}.he-alarm_2:before{content:"\\ecc8"}.he-alexa:before{content:"\\ed31"}.he-amazon2:before{content:"\\eaf4"}.he-android1:before{content:"\\eac0"}.he-apple1:before{content:"\\eaf8"}.he-appointment:before{content:"\\ecca"}.he-apps_11:before{content:"\\ea05"}.he-apps_21:before{content:"\\ea06"}.he-arrival:before{content:"\\eccb"}.he-arrow-down-left2:before{content:"\\ea3f"}.he-arrow-down-right2:before{content:"\\ea3d"}.he-arrow-down2:before{content:"\\ea3e"}.he-arrow-left2:before{content:"\\ea40"}.he-arrow-right2:before{content:"\\ea3c"}.he-arrow-up-left2:before{content:"\\ea39"}.he-arrow-up-right2:before{content:"\\ea3b"}.he-arrow-up2:before{content:"\\ea3a"}.he-attachment:before{content:"\\e9cd"}.he-axis:before{content:"\\eaf3"}.he-axis_2:before{content:"\\eaf2"}.he-axis_3:before{content:"\\ed6a"}.he-backward2:before{content:"\\ea1f"}.he-barcode1:before{content:"\\e937"}.he-bathtub1:before{content:"\\ed33"}.he-battery_25:before{content:"\\ec54"}.he-battery_25_color:before{content:"\\ebdc"}.he-battery_25_filled:before{content:"\\ec53"}.he-battery_50:before{content:"\\ec56"}.he-battery_50_color:before{content:"\\ebdd"}.he-battery_50_filled:before{content:"\\ec55"}.he-battery_75_color:before{content:"\\ebde"}.he-battery_75_to_100:before{content:"\\ec57"}.he-battery_empty:before{content:"\\ec59"}.he-battery_empty_filled:before{content:"\\ec58"}.he-battery_full:before{content:"\\ec5a"}.he-battery_full_color:before{content:"\\ebe2"}.he-battery_large:before{content:"\\eccd"}.he-battery_large_filled:before{content:"\\eccc"}.he-battery_low_color:before{content:"\\ebe3"}.he-beach-chair:before{content:"\\ec4e"}.he-bed_1:before{content:"\\eb0d"}.he-bed_2:before{content:"\\ed34"}.he-bed_3:before{content:"\\eb0e"}.he-bed_4:before{content:"\\eb0f"}.he-bed_5:before{content:"\\ed35"}.he-bell1:before{content:"\\e951"}.he-bin:before{content:"\\e9ac"}.he-bin2:before{content:"\\e9ad"}.he-blind1:before{content:"\\ecb6"}.he-blocked:before{content:"\\ea0e"}.he-bluetooth1:before{content:"\\eb11"}.he-bluetooth_headphones:before{content:"\\eb10"}.he-book1:before{content:"\\e91f"}.he-bookmark1:before{content:"\\e9d2"}.he-bookmarks:before{content:"\\e9d3"}.he-books:before{content:"\\e920"}.he-box-add:before{content:"\\e95e"}.he-box-remove:before{content:"\\e95f"}.he-briefcase1:before{content:"\\e9ae"}.he-brightness-contrast:before{content:"\\e9d6"}.he-bubble:before{content:"\\e96b"}.he-bubble2:before{content:"\\e96e"}.he-bubbles:before{content:"\\e96c"}.he-bubbles2:before{content:"\\e96d"}.he-bubbles3:before{content:"\\e96f"}.he-bubbles4:before{content:"\\e970"}.he-bug1:before{content:"\\e999"}.he-bulb_1:before{content:"\\ecda"}.he-bulb_2:before{content:"\\ecdb"}.he-bulb_4:before{content:"\\ec68"}.he-bulb_6:before{content:"\\eb12"}.he-bulb_off:before{content:"\\ebe4"}.he-bulb_on:before{content:"\\ebec"}.he-button_off .path1:before{content:"\\ebf9";color:#000}.he-button_off .path2:before{content:"\\ebfa";margin-left:-1em;color:#000}.he-button_off .path3:before{content:"\\ebfb";margin-left:-1em;color:#fff;opacity:.6}.he-button_on .path1:before{content:"\\ebfc";color:#000}.he-button_on .path2:before{content:"\\ebfd";margin-left:-1em;color:#000}.he-button_on .path3:before{content:"\\ebfe";margin-left:-1em;color:#3cbf8a}.he-calculator1:before{content:"\\e940"}.he-calendar1:before{content:"\\e953"}.he-calendar2:before{content:"\\ecbe"}.he-calendar_2:before{content:"\\ecdc"}.he-camera1:before{content:"\\e90f"}.he-cancel-circle:before{content:"\\ea0d"}.he-car1:before{content:"\\ec69"}.he-cctv:before{content:"\\ed36"}.he-cd_rom:before{content:"\\eb13"}.he-ceiling_lamp:before{content:"\\eb14"}.he-ceiling_lamp_2:before{content:"\\ed37"}.he-chair_lounge:before{content:"\\ed3b"}.he-chandelier_2:before{content:"\\eb15"}.he-checkbox-checked:before{content:"\\ea52"}.he-checkbox-unchecked:before{content:"\\ea53"}.he-checkmark:before{content:"\\ea10"}.he-checkmark2:before{content:"\\ea11"}.he-chrome1:before{content:"\\ead9"}.he-circle-down:before{content:"\\ea43"}.he-circle-left:before{content:"\\ea44"}.he-circle-right:before{content:"\\ea42"}.he-circle-up:before{content:"\\ea41"}.he-circuit:before{content:"\\ecdd"}.he-clean:before{content:"\\ec6a"}.he-cleaning_1:before{content:"\\ec6b"}.he-cleaning_2:before{content:"\\ec6c"}.he-cleaning_3:before{content:"\\ec6d"}.he-clipboard1:before{content:"\\e9b8"}.he-clock:before{content:"\\e94e"}.he-clock2:before{content:"\\e94f"}.he-cloud-check:before{content:"\\e9c4"}.he-cloud-download1:before{content:"\\e9c2"}.he-cloud-upload1:before{content:"\\e9c3"}.he-cloud1:before{content:"\\e9c1"}.he-co2:before{content:"\\ecb7"}.he-codepen1:before{content:"\\eae8"}.he-cog1:before{content:"\\e994"}.he-cogs1:before{content:"\\e995"}.he-color_palette:before{content:"\\ecde"}.he-command:before{content:"\\ea4e"}.he-compass1:before{content:"\\e949"}.he-compass2:before{content:"\\e94a"}.he-computer:before{content:"\\ecb0"}.he-computer_2:before{content:"\\eb16"}.he-connection:before{content:"\\e91b"}.he-contact_closed:before{content:"\\eb91"}.he-contact_open:before{content:"\\eb92"}.he-contrast:before{content:"\\e9d5"}.he-copy1:before{content:"\\e92c"}.he-crop1:before{content:"\\ea57"}.he-cross:before{content:"\\ea0f"}.he-ctrl:before{content:"\\ea50"}.he-customer_support:before{content:"\\eaeb"}.he-danger:before{content:"\\ecbb"}.he-dashboard1:before{content:"\\ecb2"}.he-dashboards:before{content:"\\ecdf"}.he-database1:before{content:"\\e964"}.he-default_dashboard_icon:before{content:"\\e93b"}.he-delicious1:before{content:"\\eacd"}.he-dimmer_high:before{content:"\\ebff"}.he-dimmer_low:before{content:"\\ec10"}.he-dimmer_medium:before{content:"\\ec17"}.he-dining-chair:before{content:"\\ecc2"}.he-dinner:before{content:"\\ecc3"}.he-discover:before{content:"\\eaec"}.he-display:before{content:"\\e956"}.he-door-1:before{content:"\\ecbc"}.he-door_3:before{content:"\\ec6e"}.he-door_closed:before{content:"\\ec6f"}.he-door_enter:before{content:"\\ec70"}.he-door_exit_2:before{content:"\\ec71"}.he-door_lock:before{content:"\\ed3c"}.he-door_open:before{content:"\\ec72"}.he-door_remote:before{content:"\\ed3d"}.he-download1:before{content:"\\e960"}.he-download2:before{content:"\\e9c5"}.he-download3:before{content:"\\e9c7"}.he-downstairs:before{content:"\\ed6c"}.he-drawer:before{content:"\\e95c"}.he-drawer2:before{content:"\\e95d"}.he-dribbble1:before{content:"\\eaa7"}.he-drive:before{content:"\\e963"}.he-drive1:before{content:"\\eb20"}.he-drop:before{content:"\\ec51"}.he-dropbox1:before{content:"\\eaae"}.he-dryer:before{content:"\\eb26"}.he-dryer_2:before{content:"\\eb25"}.he-earth:before{content:"\\e9ca"}.he-edge1:before{content:"\\eadc"}.he-eject1:before{content:"\\ea25"}.he-electricity:before{content:"\\ece0"}.he-embed:before{content:"\\ea7f"}.he-embed2:before{content:"\\ea80"}.he-enlarge:before{content:"\\e989"}.he-enlarge2:before{content:"\\e98b"}.he-enter:before{content:"\\ea13"}.he-envelop:before{content:"\\e945"}.he-equalizer:before{content:"\\e992"}.he-equalizer2:before{content:"\\e993"}.he-ethernet:before{content:"\\ecc6"}.he-exit:before{content:"\\ea14"}.he-eye-blocked:before{content:"\\e9d1"}.he-eye-minus:before{content:"\\e9d0"}.he-eye-plus:before{content:"\\e9cf"}.he-eye1:before{content:"\\e9ce"}.he-eyedropper1:before{content:"\\e90a"}.he-facebook1:before{content:"\\ea90"}.he-facebook2:before{content:"\\ea91"}.he-facebook3:before{content:"\\eb2a"}.he-facebook_2:before{content:"\\eb27"}.he-fan:before{content:"\\ecb8"}.he-fan_2:before{content:"\\eb2b"}.he-fan_auto:before{content:"\\e980"}.he-fan_high:before{content:"\\e9b0"}.he-fan_low:before{content:"\\e9e4"}.he-fan_med:before{content:"\\e9fc"}.he-fan_med_high:before{content:"\\e9ec"}.he-fan_med_low:before{content:"\\e9f4"}.he-fan_off:before{content:"\\e93c"}.he-fan_on:before{content:"\\ea04"}.he-feed1:before{content:"\\e91d"}.he-file-empty:before{content:"\\e924"}.he-file-music:before{content:"\\e928"}.he-file-picture:before{content:"\\e927"}.he-file-play:before{content:"\\e929"}.he-file-text1:before{content:"\\e922"}.he-file-text2:before{content:"\\e926"}.he-file-video:before{content:"\\e92a"}.he-file-zip:before{content:"\\e92b"}.he-file1:before{content:"\\eaee"}.he-file_2:before{content:"\\eaed"}.he-files-empty:before{content:"\\e925"}.he-film1:before{content:"\\e913"}.he-filter1:before{content:"\\ea5b"}.he-filter2:before{content:"\\ed2d"}.he-finder:before{content:"\\eabf"}.he-fingerprint:before{content:"\\ecaf"}.he-fire-alarm:before{content:"\\ecba"}.he-fire1:before{content:"\\e9a9"}.he-fire2:before{content:"\\ece1"}.he-fire_alarm_clear:before{content:"\\ec23"}.he-firefox1:before{content:"\\eada"}.he-fireplace:before{content:"\\ed3e"}.he-first:before{content:"\\ea21"}.he-fist:before{content:"\\ece3"}.he-fist_2:before{content:"\\ece2"}.he-flag1:before{content:"\\e9cc"}.he-flag2:before{content:"\\ece4"}.he-flash1:before{content:"\\ec73"}.he-flickr1:before{content:"\\eaa3"}.he-flickr2:before{content:"\\eaa4"}.he-flickr3:before{content:"\\eaa5"}.he-flickr4:before{content:"\\eaa6"}.he-floppy-disk:before{content:"\\e962"}.he-folder-download:before{content:"\\e933"}.he-folder-minus:before{content:"\\e932"}.he-folder-open1:before{content:"\\e930"}.he-folder-plus:before{content:"\\e931"}.he-folder-upload:before{content:"\\e934"}.he-folder1:before{content:"\\e92f"}.he-forward1:before{content:"\\e969"}.he-forward3:before{content:"\\ea20"}.he-gaming_controler:before{content:"\\eb2c"}.he-gaming_controller_2:before{content:"\\eb2d"}.he-gaming_controller_3:before{content:"\\eb2e"}.he-garage_closed:before{content:"\\ec24"}.he-garage_closing .path1:before{content:"\\ec25";color:#000}.he-garage_closing .path2:before{content:"\\ec26";margin-left:-1em;color:#fff}.he-garage_closing .path3:before{content:"\\ec27";margin-left:-1em;color:#000}.he-garage_closing .path4:before{content:"\\ec28";margin-left:-1em;color:#fff}.he-garage_closing .path5:before{content:"\\ec29";margin-left:-1em;color:#000}.he-garage_locked .path1:before{content:"\\ec2a";color:#000}.he-garage_locked .path2:before{content:"\\ec2b";margin-left:-1em;color:#000}.he-garage_locked .path3:before{content:"\\ec2c";margin-left:-1em;color:#fff}.he-garage_locked .path4:before{content:"\\ec2d";margin-left:-1em;color:#000}.he-garage_open:before{content:"\\ec2e"}.he-garage_opening .path1:before{content:"\\ec30";color:#000}.he-garage_opening .path2:before{content:"\\ec31";margin-left:-1em;color:#fff}.he-garage_opening .path3:before{content:"\\ec32";margin-left:-1em;color:#000}.he-garage_opening .path4:before{content:"\\ec33";margin-left:-1em;color:#fff}.he-garage_opening .path5:before{content:"\\ec34";margin-left:-1em;color:#000}.he-garage_unlocked .path1:before{content:"\\ec35";color:#000}.he-garage_unlocked .path2:before{content:"\\ec36";margin-left:-1em;color:#000}.he-garage_unlocked .path3:before{content:"\\ec37";margin-left:-1em;color:#fff}.he-garage_unlocked .path4:before{content:"\\ec38";margin-left:-1em;color:#000}.he-gas_warning:before{content:"\\ec74"}.he-gauge:before{content:"\\ece6"}.he-gauge_2:before{content:"\\ece5"}.he-gift1:before{content:"\\e99f"}.he-git1:before{content:"\\eae7"}.he-github1:before{content:"\\eab0"}.he-glass1:before{content:"\\e9a0"}.he-glass2:before{content:"\\e9a1"}.he-gmail:before{content:"\\eb30"}.he-google-drive:before{content:"\\ea8f"}.he-google1:before{content:"\\ea88"}.he-google2:before{content:"\\ea89"}.he-google3:before{content:"\\ea8a"}.he-google_play:before{content:"\\eb3b"}.he-grid:before{content:"\\ed2e"}.he-hammer:before{content:"\\e996"}.he-hand_3:before{content:"\\ece7"}.he-hand_wave:before{content:"\\ece8"}.he-hanging_lights:before{content:"\\eb43"}.he-hanging_roof_lamp:before{content:"\\eb44"}.he-hangouts:before{content:"\\ea8e"}.he-headphones1:before{content:"\\e910"}.he-heart1:before{content:"\\e9da"}.he-help1:before{content:"\\eaef"}.he-history1:before{content:"\\e94d"}.he-home1:before{content:"\\e900"}.he-home2:before{content:"\\e901"}.he-home3:before{content:"\\e902"}.he-house_1:before{content:"\\ed3f"}.he-house_2:before{content:"\\ed40"}.he-house_3:before{content:"\\ed41"}.he-house_4:before{content:"\\ed42"}.he-house_5:before{content:"\\ed43"}.he-humidity:before{content:"\\ecf4"}.he-humidity_filled:before{content:"\\ecf3"}.he-image1:before{content:"\\e90d"}.he-images:before{content:"\\e90e"}.he-infinite:before{content:"\\ea2f"}.he-info1:before{content:"\\ea0c"}.he-insert-template:before{content:"\\ea72"}.he-instagram1:before{content:"\\ea92"}.he-integrated_circuit:before{content:"\\ecf5"}.he-key1:before{content:"\\e98d"}.he-keyboard:before{content:"\\e955"}.he-keypad_1:before{content:"\\eb45"}.he-keypad_2:before{content:"\\eb46"}.he-kitchen:before{content:"\\ed44"}.he-lab:before{content:"\\e9aa"}.he-lamp_1:before{content:"\\ed4d"}.he-lamp_hanging:before{content:"\\ed4e"}.he-laptop1:before{content:"\\e957"}.he-last:before{content:"\\ea22"}.he-laundry:before{content:"\\ec75"}.he-leaf1:before{content:"\\e9a4"}.he-less_plus_signs:before{content:"\\ecf6"}.he-lifebuoy:before{content:"\\e941"}.he-lightbulb:before{content:"\\eca0"}.he-link1:before{content:"\\e9cb"}.he-link2:before{content:"\\ecf8"}.he-link_broken:before{content:"\\ecf7"}.he-linkedin1:before{content:"\\eac9"}.he-linkedin2:before{content:"\\eaca"}.he-list-numbered:before{content:"\\e9b9"}.he-list1:before{content:"\\e9ba"}.he-list2:before{content:"\\e9bb"}.he-list3:before{content:"\\ed2f"}.he-location:before{content:"\\e947"}.he-location2:before{content:"\\e948"}.he-lock1:before{content:"\\e98f"}.he-logo-mark:before{content:"\\e908"}.he-logo-vertical-white:before{content:"\\e907";color:#fff}.he-loop:before{content:"\\ea2d"}.he-loop2:before{content:"\\ea2e"}.he-magic-wand:before{content:"\\e997"}.he-magnet1:before{content:"\\e9ab"}.he-man:before{content:"\\e9dc"}.he-man-woman:before{content:"\\e9de"}.he-map1:before{content:"\\e94b"}.he-map2:before{content:"\\e94c"}.he-menu:before{content:"\\e9bd"}.he-menu2:before{content:"\\e9be"}.he-menu3:before{content:"\\e9bf"}.he-menu4:before{content:"\\e9c0"}.he-meter:before{content:"\\e9a6"}.he-meter1:before{content:"\\ecf9"}.he-meter2:before{content:"\\e9a7"}.he-mic:before{content:"\\e91e"}.he-microsoft:before{content:"\\eb51"}.he-microwave:before{content:"\\ecc5"}.he-minus1:before{content:"\\ea0b"}.he-mobile1:before{content:"\\e958"}.he-mobile2:before{content:"\\e959"}.he-mode_away:before{content:"\\ec39"}.he-mode_cleaning:before{content:"\\ec3a"}.he-mode_day:before{content:"\\ec3b"}.he-mode_default:before{content:"\\ec3c"}.he-mode_evening:before{content:"\\ec3d"}.he-mode_night:before{content:"\\ec3e"}.he-mode_vacation:before{content:"\\ec3f"}.he-monitor:before{content:"\\eb55"}.he-motion-sensor:before{content:"\\ed64"}.he-motion_detector_1:before{content:"\\ec76"}.he-motion_detector_2:before{content:"\\ec82"}.he-motion_detector_3:before{content:"\\ecfb"}.he-motion_detector_3_filled:before{content:"\\ecfa"}.he-motion_detector_4:before{content:"\\ecfc"}.he-mug:before{content:"\\e9a2"}.he-music1:before{content:"\\e911"}.he-music_player:before{content:"\\eb56"}.he-mute:before{content:"\\ecfd"}.he-netflix:before{content:"\\eb57"}.he-new-tab:before{content:"\\ea7e"}.he-newspaper:before{content:"\\e904"}.he-next2:before{content:"\\ea24"}.he-next_track:before{content:"\\ecfe"}.he-night_1:before{content:"\\ec83"}.he-night_2:before{content:"\\ec84"}.he-not_present:before{content:"\\eb8f"}.he-notification:before{content:"\\ea08"}.he-oculus_rift:before{content:"\\eb5f"}.he-office:before{content:"\\e903"}.he-onedrive:before{content:"\\eaaf"}.he-opt:before{content:"\\ea51"}.he-outlet:before{content:"\\ed30"}.he-outlet_3:before{content:"\\ec85"}.he-outlet_off:before{content:"\\e97c"}.he-padlock_locked:before{content:"\\ec86"}.he-padlock_unlocked:before{content:"\\ec87"}.he-paint-format:before{content:"\\e90c"}.he-pantone_1:before{content:"\\ecff"}.he-paste1:before{content:"\\e92d"}.he-pause-outlined-big-symbol:before{content:"\\ecbd"}.he-pause2:before{content:"\\ea1d"}.he-pause_circle:before{content:"\\ed00"}.he-pencil1:before{content:"\\e905"}.he-phone-hang-up:before{content:"\\e943"}.he-phone1:before{content:"\\e942"}.he-pie-chart1:before{content:"\\e99a"}.he-pinterest3:before{content:"\\eb60"}.he-placeholder:before{content:"\\ed32"}.he-placeholder_1:before{content:"\\ec88"}.he-play1:before{content:"\\e912"}.he-play3:before{content:"\\ea1c"}.he-play_button:before{content:"\\ed01"}.he-playstation:before{content:"\\eb62"}.he-playstation_logo:before{content:"\\eb61"}.he-plug1:before{content:"\\ecb9"}.he-plug_1:before{content:"\\ec89"}.he-plug_2:before{content:"\\ed4f"}.he-plug_3:before{content:"\\ed50"}.he-plug_4:before{content:"\\ec8a"}.he-plug_5:before{content:"\\ed02"}.he-plug_6:before{content:"\\ed03"}.he-plus1:before{content:"\\ea0a"}.he-podcast1:before{content:"\\e91c"}.he-portrait:before{content:"\\ed68"}.he-power:before{content:"\\e9b5"}.he-power-cord:before{content:"\\e9b7"}.he-power_off:before{content:"\\ec40"}.he-power_on:before{content:"\\ec41"}.he-present:before{content:"\\eb90"}.he-previous2:before{content:"\\ea23"}.he-price-tag:before{content:"\\e935"}.he-price-tags:before{content:"\\e936"}.he-printer:before{content:"\\e954"}.he-profile:before{content:"\\e923"}.he-property:before{content:"\\ecb1"}.he-psp:before{content:"\\eb63"}.he-pushpin:before{content:"\\e946"}.he-qrcode1:before{content:"\\e938"}.he-question1:before{content:"\\ea09"}.he-question2:before{content:"\\ecbf"}.he-question_1:before{content:"\\eaf0"}.he-question_2:before{content:"\\eaf1"}.he-quotes-left:before{content:"\\e977"}.he-quotes-right:before{content:"\\e978"}.he-radio-checked:before{content:"\\ea54"}.he-radio-checked2:before{content:"\\ea55"}.he-radio-unchecked:before{content:"\\ea56"}.he-reddit1:before{content:"\\eac6"}.he-redo:before{content:"\\e966"}.he-redo2:before{content:"\\e968"}.he-relay_off:before{content:"\\ec4a"}.he-relay_on:before{content:"\\ec4b"}.he-repair1:before{content:"\\ec96"}.he-reply1:before{content:"\\e96a"}.he-resize:before{content:"\\ec4f"}.he-road1:before{content:"\\e9b1"}.he-rocket1:before{content:"\\e9a5"}.he-router_1:before{content:"\\ed04"}.he-router_2:before{content:"\\ed05"}.he-router_3:before{content:"\\ed06"}.he-router_4:before{content:"\\ed07"}.he-rss1:before{content:"\\ea9b"}.he-rss2:before{content:"\\ea9c"}.he-running:before{content:"\\ed08"}.he-safari1:before{content:"\\eadd"}.he-samsung:before{content:"\\ed09"}.he-scissors1:before{content:"\\ea5a"}.he-search1:before{content:"\\e986"}.he-security_system:before{content:"\\ed51"}.he-sensor:before{content:"\\ed66"}.he-sensor_1:before{content:"\\ed65"}.he-sensor_2:before{content:"\\ed0a"}.he-sensor_3:before{content:"\\ed0b"}.he-sensor_4:before{content:"\\ed63"}.he-sensor_5:before{content:"\\ed0c"}.he-settings1:before{content:"\\ec4d"}.he-setup:before{content:"\\ec4c"}.he-shades_closed:before{content:"\\eba1"}.he-shades_open:before{content:"\\ebaa"}.he-shades_opening .path1:before{content:"\\ebaf";color:#231d1d}.he-shades_opening .path2:before{content:"\\ebb0";margin-left:-1em;color:#231d1d}.he-shades_opening .path3:before{content:"\\ebb1";margin-left:-1em;color:#000}.he-shades_opening .path4:before{content:"\\ebb2";margin-left:-1em;color:#fff}.he-shades_opening .path5:before{content:"\\ebb3";margin-left:-1em;color:#fff}.he-shades_opening .path6:before{content:"\\ebb4";margin-left:-1em;color:#fff}.he-shades_opening .path7:before{content:"\\ebb5";margin-left:-1em;color:#fff}.he-shades_opening .path8:before{content:"\\ebb6";margin-left:-1em;color:#fff}.he-shades_opening .path9:before{content:"\\ebb7";margin-left:-1em;color:#fff}.he-shades_opening .path10:before{content:"\\ebb8";margin-left:-1em;color:#000}.he-shades_opening .path11:before{content:"\\ebb9";margin-left:-1em;color:#fff}.he-shades_opening .path12:before{content:"\\ebba";margin-left:-1em;color:#000}.he-shades_partially_open:before{content:"\\ebbb"}.he-shades_unknown .path1:before{content:"\\ebc7";color:#231d1d}.he-shades_unknown .path2:before{content:"\\ebc8";margin-left:-1em;color:#231d1d}.he-shades_unknown .path3:before{content:"\\ebc9";margin-left:-1em;color:#000}.he-shades_unknown .path4:before{content:"\\ebca";margin-left:-1em;color:#fff}.he-shades_unknown .path5:before{content:"\\ebcb";margin-left:-1em;color:#fff}.he-shades_unknown .path6:before{content:"\\ebcc";margin-left:-1em;color:#fff}.he-shades_unknown .path7:before{content:"\\ebcd";margin-left:-1em;color:#fff}.he-shades_unknown .path8:before{content:"\\ebce";margin-left:-1em;color:#fff}.he-shades_unknown .path9:before{content:"\\ebcf";margin-left:-1em;color:#fff}.he-shades_unknown .path10:before{content:"\\ebd0";margin-left:-1em;color:#000}.he-shades_unknown .path11:before{content:"\\ebd1";margin-left:-1em;color:#fff}.he-shades_unknown .path12:before{content:"\\ebd2";margin-left:-1em;color:#000}.he-share1:before{content:"\\ea7d"}.he-share2:before{content:"\\ea82"}.he-shield1:before{content:"\\e9b4"}.he-shift:before{content:"\\ea4f"}.he-shower1:before{content:"\\ed52"}.he-shrink:before{content:"\\e98a"}.he-shrink2:before{content:"\\e98c"}.he-shuffle:before{content:"\\ea30"}.he-sink:before{content:"\\ed54"}.he-sink_2:before{content:"\\ed53"}.he-siren:before{content:"\\ed17"}.he-siren_and_alarm:before{content:"\\ed0d"}.he-skype1:before{content:"\\eac5"}.he-smoke_detector:before{content:"\\ed19"}.he-smoke_detector_2:before{content:"\\ed18"}.he-snowflake:before{content:"\\ed1a"}.he-sofa:before{content:"\\ed69"}.he-sound_on:before{content:"\\ed1c"}.he-sound_on_loud:before{content:"\\ed1b"}.he-soundcloud1:before{content:"\\eac3"}.he-soundcloud2:before{content:"\\eac4"}.he-speaker:before{content:"\\ed1e"}.he-speaker_1:before{content:"\\ed55"}.he-speaker_2:before{content:"\\ed56"}.he-speaker_3:before{content:"\\eb69"}.he-speaker_off:before{content:"\\ed1d"}.he-sphere:before{content:"\\e9c9"}.he-spinner11:before{content:"\\e984"}.he-spoon-knife:before{content:"\\e9a3"}.he-spotify1:before{content:"\\ea94"}.he-spotify2:before{content:"\\eb6a"}.he-square-measument:before{content:"\\ec50"}.he-stack:before{content:"\\e92e"}.he-stackoverflow:before{content:"\\ead0"}.he-stairs:before{content:"\\ed6b"}.he-star-empty:before{content:"\\e9d7"}.he-star-full:before{content:"\\e9d9"}.he-star-half1:before{content:"\\e9d8"}.he-stats-bars:before{content:"\\e99c"}.he-stats-bars2:before{content:"\\e99d"}.he-stats-dots:before{content:"\\e99b"}.he-steam1:before{content:"\\eaac"}.he-steam2:before{content:"\\eaad"}.he-stop2:before{content:"\\ea1e"}.he-stop3:before{content:"\\ed21"}.he-stop_2:before{content:"\\ed20"}.he-stop_2_filled:before{content:"\\ed1f"}.he-stopwatch:before{content:"\\e952"}.he-stove:before{content:"\\ed57"}.he-strikethrough2:before{content:"\\ec9b"}.he-sun:before{content:"\\e9d4"}.he-sun1:before{content:"\\ec52"}.he-sunrise:before{content:"\\ecc4"}.he-sunrise_2:before{content:"\\ec9c"}.he-sunrise_3:before{content:"\\ec9d"}.he-suspension:before{content:"\\ed67"}.he-svg:before{content:"\\eae9"}.he-switch:before{content:"\\e9b6"}.he-switch_2:before{content:"\\ed25"}.he-switch_2_flipped:before{content:"\\ed22"}.he-switch_2_off:before{content:"\\ec9e"}.he-switch_2_off_filled:before{content:"\\ed23"}.he-switch_2_on:before{content:"\\ec9f"}.he-switch_2_on_filled:before{content:"\\ed24"}.he-switch_8:before{content:"\\ed27"}.he-switch_8_closed:before{content:"\\ed26"}.he-switch_off:before{content:"\\eb98"}.he-switch_on:before{content:"\\ed28"}.he-tab:before{content:"\\ea45"}.he-table1:before{content:"\\ea70"}.he-table2:before{content:"\\ea71"}.he-table3:before{content:"\\ed58"}.he-tablet1:before{content:"\\e95a"}.he-tap:before{content:"\\ed29"}.he-target:before{content:"\\e9b3"}.he-telegram1:before{content:"\\ea95"}.he-television_1:before{content:"\\ed59"}.he-television_2:before{content:"\\ed5a"}.he-terminal1:before{content:"\\ea81"}.he-thermometer1:before{content:"\\ecb5"}.he-thermometer_2:before{content:"\\ed5b"}.he-thermometer_3:before{content:"\\ed5c"}.he-thermometer_4:before{content:"\\ed2a"}.he-thermometer_5:before{content:"\\ed2b"}.he-thermostat_6:before{content:"\\eb6b"}.he-thumb-up:before{content:"\\ecae"}.he-ticket1:before{content:"\\e939"}.he-toilet:before{content:"\\ed5d"}.he-tree1:before{content:"\\e9bc"}.he-trello1:before{content:"\\eab3"}.he-trophy1:before{content:"\\e99e"}.he-tumblr1:before{content:"\\eab9"}.he-tumblr2:before{content:"\\eaba"}.he-tux:before{content:"\\eabd"}.he-tv1:before{content:"\\e95b"}.he-twitch1:before{content:"\\ea9f"}.he-twitter1:before{content:"\\ea96"}.he-twitter2:before{content:"\\eb76"}.he-undo1:before{content:"\\e965"}.he-undo2:before{content:"\\e967"}.he-ungroup:before{content:"\\ea59"}.he-unlink1:before{content:"\\ecb3"}.he-unlocked:before{content:"\\e990"}.he-upload1:before{content:"\\e961"}.he-upload2:before{content:"\\e9c6"}.he-upload3:before{content:"\\e9c8"}.he-user-check:before{content:"\\e975"}.he-user-minus:before{content:"\\e974"}.he-user-plus1:before{content:"\\e973"}.he-user-tie:before{content:"\\e976"}.he-user1:before{content:"\\e971"}.he-users1:before{content:"\\e972"}.he-valve:before{content:"\\eb7a"}.he-valve_2:before{content:"\\eb77"}.he-valve_3:before{content:"\\eb78"}.he-valve_4:before{content:"\\eb79"}.he-ventilator:before{content:"\\eb7b"}.he-video-camera1:before{content:"\\e914"}.he-video-player:before{content:"\\ecc1"}.he-vimeo1:before{content:"\\eaa0"}.he-vimeo2:before{content:"\\eaa1"}.he-volume-decrease:before{content:"\\ea2c"}.he-volume-high:before{content:"\\ea26"}.he-volume-increase:before{content:"\\ea2b"}.he-volume-low:before{content:"\\ea28"}.he-volume-medium:before{content:"\\ea27"}.he-volume-mute:before{content:"\\ea29"}.he-volume-mute2:before{content:"\\ea2a"}.he-wardrobe:before{content:"\\ed61"}.he-wardrobe_2:before{content:"\\ed5e"}.he-warning1:before{content:"\\ea07"}.he-washing_machine:before{content:"\\eb80"}.he-washing_machine_2:before{content:"\\eb7d"}.he-washing_machine_3:before{content:"\\eb7e"}.he-washing_machine_4:before{content:"\\eb7f"}.he-water:before{content:"\\eb82"}.he-water_2:before{content:"\\eb81"}.he-water_dry:before{content:"\\eb99"}.he-water_wet:before{content:"\\eb9e";color:#6b6b6b}.he-web-design:before{content:"\\ecc0"}.he-whatsapp1:before{content:"\\ea93"}.he-wifi1:before{content:"\\ed2c"}.he-wikipedia:before{content:"\\eac8"}.he-window:before{content:"\\ecb4"}.he-window_1:before{content:"\\ecad"}.he-window_2:before{content:"\\ecac"}.he-window_3:before{content:"\\ed62"}.he-windows1:before{content:"\\eac1"}.he-windows8:before{content:"\\eac2"}.he-woman:before{content:"\\e9dd"}.he-wordpress1:before{content:"\\eab4"}.he-wrench1:before{content:"\\e991"}.he-xbox:before{content:"\\eb88"}.he-youtube1:before{content:"\\ea9d"}.he-youtube3:before{content:"\\eb89";color:#777}.he-zigbee:before{content:"\\ea83"}.he-zoom-in:before{content:"\\e987"}.he-zoom-out:before{content:"\\e988"}.he-zwave:before{content:"\\eb8b"}', ""]),
         t.exports = e
     },
     d2d0: function(t, e, o) {
@@ -15830,4 +15046,4 @@ console.log("loadpage");
 
 setTimeout(() => {
     LoadDeviceScreen();
-},200 );
+},1000 );

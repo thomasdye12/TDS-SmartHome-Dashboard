@@ -1,0 +1,593 @@
+@font-face {
+    font-family: 'GothamCondSSm-XLight';
+    src: url('GothamRndSSm-Light.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/40015/ui2/dashboard2/fonts/MaterialIcons-Regular.eot');
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url('MaterialIcons-Regular.woff2') format('woff2'), url('/40015/ui2/dashboard2/fonts/MaterialIcons-Regular.woff') format('woff'), url('/40015/ui2/dashboard2/fonts/MaterialIcons-Regular.ttf') format('truetype');
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: "hubitat";
+    src: url("hubitat.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+
+
+* {
+    font-family: "GothamCondSSm-XLight", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+::selection {
+    background-color: transparent;
+    /* Set the background color to transparent */
+    color: inherit;
+    /* Inherit the color from the parent element */
+}
+
+:root {
+    -webkit-tap-highlight-color: transparent;
+    --body-font: "Inter", sans-serif;
+    --theme-bg: #1f1d2b;
+    --body-color: #808191;
+    --button-bg: #353340;
+    --border-color: rgb(128 129 145 / 24%);
+    --video-bg: #252936;
+    --delay: 0s;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* Hide the browser's default scrollbar */
+
+}
+
+
+body {
+
+
+    /* background-image: linear-gradient(to bottom right, rgb(234, 41, 11), rgb(27, 44, 238)); */
+    /* background black*/
+    background-color: black;
+    background-image: linear-gradient(to bottom right, rgba(22, 233, 226, 0.504), rgba(183, 14, 113, 0.509));
+
+    /* background-color: #212222; */
+
+    background-size: cover;
+    margin: 0px;
+    /* height: 99%; */
+    /* width: 100%; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    -webkit-touch-callout: none;
+    /* Safari */
+    -webkit-user-select: none;
+    /* Chrome */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    overflow: scroll;
+    /* Hide the browser's default scrollbar */
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.Mainbody {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: -40px;
+}
+
+
+.Dashboard {
+
+    /* background-color: red; */
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    bottom: 50px;
+    z-index: 50;
+    overflow-y: scroll; /* Enable vertical scrolling within the wrapper */
+    scroll-behavior: smooth; /* Optional: Add smooth scrolling behavior */
+
+
+
+
+}
+
+.Dashboard .wrapper {
+    grid-template-columns:repeat(100, 1fr);
+    grid-template-rows: repeat(60, 1fr);
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-gap: 1px;
+    display: grid;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    overflow: auto;
+    position: absolute;
+    /* height: calc(100% - 48px);
+    width: calc(100% - 16px);
+    margin-left: 8px;
+    margin-bottom: 8px */
+    top : 0px;
+    left : 0px;
+    right : 0px;
+    bottom : 0px;   
+
+}
+
+
+
+
+
+.HomeButton {
+    box-sizing: content-box;
+    /* top right  */
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* background-color: red; */
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.ClockAndWeather {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    margin: 15px;
+    /* padding: 15px; */
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    /* background-color: red; */
+    width: 200px;
+    height: 20px;
+    display: flex;
+    /* spacing  */
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+    z-index: 99;
+}
+
+.weathericon {
+    width: 40px;
+    height: 40px;
+}
+
+/* top middle larage text */
+.RoomName {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* top margin */
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    /* background-color: red; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    /* spacing  */
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.RoomGrid {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    top: 100px;
+    left: 10px;
+    right: 10px;
+    bottom: 50px;
+    z-index: 60;
+}
+
+.RoomGridRoom {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    /* background coloer tint gray */
+    background-color: rgba(49, 76, 132, 0.473);
+
+}
+
+.RoomGridRoom .name {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    /* background-color: red; */
+    width: 100%;
+    height: 10px;
+    /* spacing  */
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    margin: 10px;
+
+
+}
+.RoomGridRoom .item-image {
+    box-shadow: -2px 1px 14px 11px rgba(226, 226, 226, 0.273);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+.tile {
+    border: 1px solid #ccc;
+    /* border-width: 0px; */
+    border-radius: 5px;
+    /* padding: 10px;
+    box-shadow: 0px 0px 7px 8px rgba(226, 226, 226, 0.273) */
+    background-color: rgba(87, 214, 221, 0.342);
+  
+  }
+  .power {
+    background-color: transparent;
+    border-width: 0px;
+    border-radius: 0px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* big clock */
+.BigClockScreen
+{
+   background-color: #212222;
+   z-index: 70;
+}
+.BigWeathericon
+{
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+
+
+/* keypad code */
+
+#keypadPopup {
+    /* Style your popup */
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    /* Centering the popup */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Size */
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+}
+
+.keypadwrapper {
+    text-align: center;
+    width: 100%;
+
+    color: #FFFFFF;
+}
+
+.diplaytxt {
+    text-align: center;
+
+    font-size: 2em;
+}
+
+.keypadwrapper .inputwrapper {
+    margin: 0.5em;
+    line-height: 0.61em;
+    vertical-align: middle;
+}
+
+.keypadwrapper .numberinput {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    border: 3px solid #FFFFFF;
+    margin-right: 0%;
+    margin-left: 0%;
+    font-size: 5em;
+}
+
+.keypadwrapper .numberinput2 {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 2em;
+}
+
+
+.keypadwrapper .keypad .numberline {
+    width: 100%;
+}
+
+.keypadwrapper .keypad #linefour {
+    position: absolute;
+    bottom: 1%;
+}
+
+.keypadwrapper .keypad #linethree {
+    position: absolute;
+    bottom: 23%;
+}
+
+.keypadwrapper .keypad #linetwo {
+    position: absolute;
+    bottom: 45%;
+}
+
+.keypadwrapper .keypad #lineone {
+    position: absolute;
+    bottom: 68%;
+}
+
+.keypadwrapper .keypad .content {
+    display: inline-block;
+    margin: 0.7%;
+}
+
+.keypadwrapper .keypad #line5 {
+    position: absolute;
+    bottom: 18%;
+    color: green;
+}
+
+.keypadwrapper .keypad .content div {
+    width: 10em;
+    height: 8.5em;
+    text-align: center;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 100px;
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.keypadwrapper .keypad .content div span:nth-child(1) {
+    display: block;
+    font-size: 4em;
+    height: 0em;
+    margin-top: 0.2em;
+}
+
+.keypadwrapper .keypad .content2 div span:nth-child(1) {
+    display: block;
+    font-size: 3em;
+    height: 0em;
+    margin-top: 0.8em;
+    color: white;
+}
+
+.keypadwrapper .keypad .content3 div span:nth-child(1) {
+    display: block;
+    font-size: 3em;
+    height: 0em;
+    margin-top: 0.7em;
+}
+
+.keypadwrapper .keypad .content div span:nth-child(2) {
+    font-size: 0.6em;
+}
+
+.keypadwrapper .keypad .content div:hover {
+
+    color: #FFFFFF;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nocircle {
+    width: auto !important;
+    border: none !important;
+    height: auto !important;
+}
+
+.popup-content {
+    top: 50%;
+}

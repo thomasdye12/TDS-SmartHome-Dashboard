@@ -1,8 +1,8 @@
 [
 {
     "template": "switches",
-    "bgColor": "rgb(47, 125, 59, 0.619)",
-    "iconColor": "rgb(0,0,0)",
+    "bgColor": "",
+    "iconColor": "#05ff54",
     "state": "on"
   },
 {
@@ -19,7 +19,7 @@
 },
 {
     "template": "garage-control",
-    "bgColor": "rgb(175,175,175,0.1)",
+    "bgColor": "",
     "iconColor": "rgb(255,255,255)",
     "state": "closed"
 },
@@ -35,8 +35,14 @@
     "state": "closing"
 },{
     "template": "lock",
-    "iconColor": "rgb(255,255,255))",
+    "iconColor": "rgb(255,255,255)",
     "state": "locked",
+    "customIcon": ""
+},{
+    "template": "lock",
+    "iconColor": "rgb(255,255,255)",
+    "bgColor": "#ff0522",
+    "state": "unlocked",
     "customIcon": ""
 },{
     "template": "thermostat",
@@ -58,16 +64,24 @@
 },
 {
     "template": "gates",
-    "bgColor": "rgb(25,240,57)",
-    "iconColor": "rgb(0,0,0)",
+    "bgColor": "#123c80",
+    "iconColor": "rgb(255,255,255)",
     "state": "on",
     "customIcon": "pedestrian.gate.open"
   },
   {
     "template": "gates",
-    "bgColor": "rgb(175,175,175,0.1)",
+    "bgColor": "",
     "iconColor": "rgb(255,255,255)",
     "state": "off",
     "customIcon": "pedestrian.gate.closed.svg"
+  },  {
+    "template": "power",
+    "bgColor": "rgb(0,0,0,0)",
+    "iconColor": "rgb(255,255,255)",
+    "state": "default",
+    "boxShadow": "0px 0px 0px 0px rgba(0,0,0,0)",
+    "borderWidth": "0px",
+    "overflow": "visible"
   }
 ]
