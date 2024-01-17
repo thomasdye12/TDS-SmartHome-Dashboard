@@ -3,6 +3,7 @@ var timeout = 120; // number of seconds before clock appears
 var clockShowing = false;
 var supportingclock = true;
 
+var HideClock = false;
 
 // Clock on timeout 
 const url = new URL(window.location.href);
@@ -13,6 +14,12 @@ if (params.get('Clockontimeout') != null) {
 } else {
   timeout = 120;
 }
+
+// hide the clock if the parameter is set
+if (params.get('HideClock') != null) {
+  HideClock = true;
+}
+
 
 
 
@@ -54,6 +61,10 @@ function resetClock() {
 function showClock() {
   clockShowing = true;
   document.getElementById('BigClockScreen').style.display = 'block';
+  if (HideClock) {
+    document.getElementById('BigClockLocation').style.display = 'none';
+    SetScreenLevel(0);
+  }
 
 }
 
@@ -62,6 +73,9 @@ function showClock() {
 function hideClock() {
   clockShowing = false;
   document.getElementById('BigClockScreen').style.display = 'none';
+  if (HideClock) {
+    SetScreenLevel(255);
+  }
 }
 
 function updateClock(data) {
@@ -80,6 +94,12 @@ function updateClock(data) {
       document.getElementById("BigClock").textContent = time;
   
       if (data.Loc != undefined) {
+        // small screen then we need to not move the clock
+        if (smallScreen) {
+          return
+        }
+
+
         document.getElementById("BigClockLocation").style.top = data.Loc.top;
         document.getElementById("BigClockLocation").style.left = data.Loc.left;
       } else {
@@ -87,6 +107,20 @@ function updateClock(data) {
         document.getElementById("BigClockLocation").style.left = "0px";
       }
     }
+  }
+
+
+
+  function BigClockForSmallScreen() {
+
+    if (smallScreen) {
+      // BigClockScreen set font size to 10vw
+      document.getElementById("BigClockScreen").style.fontSize = "10vw";
+      document.getElementById("BigClockLocation").style.top = "60px";
+      document.getElementById("BigClockLocation").style.left = "60px";
+      return
+    }
+    
   }
   
   function handleBigClock(name) {
@@ -105,4 +139,19 @@ function updateClock(data) {
       // need to reload the underlying page
   
     }
+  }
+
+  // control itsself 
+
+
+  function SetScreenLevel(leve) {
+    const url = "http://127.0.0.1:2323/?type=json&password=thomas&cmd=setStringSetting&key=screenBrightness&value=" + leve;
+    // make a request to the server
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+
+    
   }

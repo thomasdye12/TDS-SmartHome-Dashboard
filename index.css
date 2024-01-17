@@ -58,6 +58,7 @@ html {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    scroll-behavior: smooth;
     /* Hide the browser's default scrollbar */
 
 }
@@ -120,6 +121,7 @@ body {
     z-index: 50;
     overflow-y: scroll; /* Enable vertical scrolling within the wrapper */
     scroll-behavior: smooth; /* Optional: Add smooth scrolling behavior */
+    
 
 
 
@@ -186,14 +188,14 @@ body {
     cursor: pointer;
     transition: 0.3s;
     /* background-color: red; */
-    width: 200px;
+    width: 280px;
     height: 20px;
     display: flex;
     /* spacing  */
     justify-content: space-between;
     font-size: 20px;
     align-items: center;
-    z-index: 99;
+    /* z-index: 99; */
 }
 
 .weathericon {
@@ -235,7 +237,20 @@ body {
     right: 10px;
     bottom: 50px;
     z-index: 60;
+    overflow: auto;
+    scroll-behavior: smooth;
+    will-change: scroll-position;
+    scroll-snap-type: y proximity;
 }
+.popup-content {
+    top: 100px;
+    width: 90%;
+    height: 70%;
+}
+
+
+
+
 
 .RoomGridRoom {
     display: flex;
@@ -273,7 +288,11 @@ body {
     border-radius: 10px;
 }
 
-
+.version-id {
+    padding-left: 5px;
+    font-size: 12px;
+    color: #888;
+}
 
 
 
@@ -419,12 +438,11 @@ body {
 
 
 
-
 /* big clock */
 .BigClockScreen
 {
    background-color: #212222;
-   z-index: 70;
+   z-index: 100;
 }
 .BigWeathericon
 {
@@ -432,6 +450,17 @@ body {
   height: 150px;
   margin-right: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -588,6 +617,62 @@ body {
     height: auto !important;
 }
 
-.popup-content {
-    top: 50%;
+
+
+
+/* Media query for small screens */
+@media screen and (max-width: 1000px) { /* Adjust the max-width value as needed */
+    .RoomGrid {
+        top:55px;
+        grid-template-columns: 1fr; /* Set to one column for small screens */
+        bottom: 0px;
+    }
+    .Dashboard .wrapper {
+        grid-template-columns:repeat(50, 1fr);
+        grid-template-rows: repeat(900, 1fr);
+        bottom: -7000px;
+    }
+    .RoomName {
+        font-size: 20px;
+        margin: 0px;
+    }
+    .HomeButton {
+        margin: 0px;
+        width: 40px;
+        height: 40px;
+    }
+    .Dashboard {
+        top:55px;
+        bottom: 0px;
+    }
+    .ClockAndWeather {
+        top:0px;
+        left: 5px;
+        /* remmove botton */
+        bottom: none;
+        margin: 0px;
+        bottom: 0.5px;
+        font-size:10px;
+        width: 150px;
+
+    }
+    .weathericon {
+        display: none;
+        width: 20px;
+        height: 20px;
+    }
+    .popup-content {
+        top:35px;
+        width: 100%;
+        height: 100%;
+    
+    }
+    .BigClockScreen {
+        top: 0px;
+        left: 0px;
+    }
+
 }
+
+
+/* Media query for small screens */

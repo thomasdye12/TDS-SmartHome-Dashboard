@@ -423,11 +423,12 @@ function tile_bulbColor(o, t) {
     t.popup ? o("div", {
         staticClass: "popup-container fixed inset-0 z-10 overflow-auto w-full h-full"
     }, [o("div", {
-        staticClass: "popup-content inset-auto relative bg-white z-50 m-2 mt-12 md:w-2/3 md:mx-auto flex-col flex shadow-xl h-85p md:h-auto overflow-auto rounded-xl",
+        staticClass: "popup-content  relative bg-white z-50 m-2 mt-12 md:w-2/3 md:mx-auto flex-col flex shadow-xl h-85p md:h-auto overflow-auto rounded-xl",
         style: {
-            top: "100px",
-            width: "90%",
-            height: "70%"
+            color: "black"
+        //     top: "100px",
+        //     width: "90%",
+        //     height: "70%"
         }
     }, [o("div", {
         staticClass: "top-0 right-0 absolute px-4 py-2 text-black text-lg",
@@ -648,8 +649,7 @@ function tile_musicPlayer(o, t) {
 
                             o('img', {
                                 style: {
-                                    width: "100%",
-                                    height: "100%",
+                                    height: smallScreen() ? "100px": "50%",
                                     "max-width": "100%",
                                     "max-height": "100%",
                                     "border-radius": "10px"
@@ -732,12 +732,12 @@ function tile_musicPlayer(o, t) {
         t.Popup ? o("div", {
             staticClass: "popup-container fixed inset-0 z-10 overflow-auto w-full h-full"
         }, [o("div", {
-            staticClass: "popup-content inset-auto relative bg-white z-50 m-2 mt-12 md:w-2/3 md:mx-auto flex-col flex shadow-xl h-85p md:h-auto overflow-auto rounded-xl",
-            style: {
-                top: "100px",
-                width: "90%",
-                height: "70%"
-            }
+            staticClass: "popup-content  relative bg-white z-50 m-2 mt-12 md:w-2/3 md:mx-auto flex-col flex shadow-xl h-85p md:h-auto overflow-auto rounded-xl",
+            // style: {
+            //     top: "100px",
+            //     width: "90%",
+            //     height: "70%"
+            // }
         }, [
 
             o("div", {
@@ -777,15 +777,15 @@ function tile_musicPlayer(o, t) {
                         o("i", {
                             staticClass: "material-icons ",
                             style: {
-                                width: "150px",
+                                // width: "150px",
                                 color: "black",
                             }
                         }, [
 
                             o('img', {
                                 style: {
-                                    width: "50%",
-                                    height: "50%",
+                                    width:  smallScreen() ? "100px": "50%",
+                                    height:  smallScreen() ? "100px": "50%",
                                     "max-width": "100%",
                                     "max-height": "100%",
                                     "border-radius": "10px"

@@ -8,6 +8,7 @@ ini_set('display_errors', 1);
 
 $room = getcurrentroom();
 setcookie("room", $room["ID"], time() + (86400 * 900)); // 86400 = 1 day
+$smallRoom = isset($_GET["small"]) ? $_GET["small"] : false;
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +21,10 @@ setcookie("room", $room["ID"], time() + (86400 * 900)); // 86400 = 1 day
   <script>
     var DevicesPageStore = null;
     var TemplatePageStore = null;
+    var RoomToLoad = <?php echo $room["ID"]; ?>;
 
     var hub = {
-      layout: <?php echo json_encode(getlayout($room["ID"])); ?>,
+      layout: <?php echo json_encode(getlayout($room["ID"],$smallRoom)); ?>,
       devices: <?php echo json_encode(getDevicesforroomwithformatting($room["ID"])); ?>,
       rooms:<?php echo json_encode(RoomGrid()); ?>,
     };
@@ -138,7 +140,7 @@ setcookie("room", $room["ID"], time() + (86400 * 900)); // 86400 = 1 day
   </div>
   <div id="BigClockScreen" class="BigClockScreen" style="display:none; position: fixed; width: 100%; height: 100vh; font-size: 150px; text-align: center; line-height: 80vh; color: white; font-family: sans-serif; font-weight: bold;">
     <div id="BigClockLocation" style="position:fixed; top:20px; left:400px; display:flex;align-items:center;">
-    <img id="BigWeathericon" src="" alt="" class="BigWeathericon">
+    <img id="BigWeathericon" src="<?php echo $GLOBALS["weather"]["weather_icon-url"];?>" alt="" class="BigWeathericon">
       <div id="BigClock" class="BigClock">
         00:00
       </div>

@@ -2,6 +2,8 @@
 // $redis_Storage = new Redis();
 // $redis_Storage->connect('127.0.0.1', 6120);
 $version = "10.0.0:1";
+
+$GLOBALS["weather"] = [];
 // function loadroomsidebar()
 // {
 //     global $version;
@@ -186,7 +188,8 @@ function add_defult_items($room)
         $centralheating["starty"] = 0;
         $centralheating["width"] = 4;
         $centralheating["height"] = 2;
-        $room["tiles"][] = $centralheating;
+        // append at the start of the array
+        array_unshift($room["tiles"], $centralheating);
     }
 
 
@@ -227,14 +230,15 @@ function getScreenFromIP()
     }
 }
 
-function GetRoom($room = null)
+function GetRoom($room = null, $smallroom = false)
 {
     $room = getcurrentroom($room);
     $room = add_defult_items($room);
     return $room;
 }
-function getlayout($room = null)
+function getlayout($room = null,$smallroom = false)
 {
+    $GLOBALS["smallRoomLastRow"] = 0;
     $defaultlayout = file_get_contents(dirname(__FILE__) . "/defaultlayout.json");
     $defaultlayout = json_decode($defaultlayout, true);
     $defaultlayoutcustomcolours = file_get_contents(dirname(__FILE__) . "/customlayout.json");
@@ -254,7 +258,18 @@ function getlayout($room = null)
         if (isset($value["hide"]) && $value["hide"] == true) {
             continue;
         }
+        if ($smallroom) {
+            if (isset($value["SmallScreen"]) && $value["SmallScreen"] == false) {
+                continue;
+            }
+        
+            $value = CreateeSmallScreen_TileLayout($value);
 
+        } else {
+            // if small only is set and true then skip this tile
+            if (isset($value["SmallScreenOnly"]) && $value["SmallScreenOnly"] == true) {
+                continue;
+            }
         $value["col"] = $value["startx"] + 1;
         $value["row"] = $value["starty"] + 1;
         // // if col is 0 then set it to 1
@@ -268,6 +283,7 @@ function getlayout($room = null)
         // }
         $value["colSpan"] = $value["width"] * 10;
         $value["rowSpan"] = $value["height"] * 10;
+        }
 
         if (!isset($value["templateExtra"])) {
             $value["templateExtra"] = null;
@@ -295,8 +311,62 @@ function getlayout($room = null)
     return $defaultlayout;
 }
 
+
+function CreateeSmallScreen_TileLayout($value) {
+    $value["row"] =   $GLOBALS["smallRoomLastRow"] + 1;
+    $value["rowSpan"] = $value["height"] * 10;
+
+    // Determine col and colSpan based on SmallScreenHalf
+    if (isset($value["SmallScreenHalf"])) {
+        if ($value["SmallScreenHalf"] == "left") {
+            $value["col"] = 1;
+            $value["colSpan"] = 25;
+            return $value;
+        } elseif ($value["SmallScreenHalf"] == "right") {
+            $value["col"] = 26;
+            $value["colSpan"] = 25;
+            $GLOBALS["smallRoomLastRow"] = $value["row"] + $value["rowSpan"];
+            return $value;
+        }
+    } 
+
+    if (isset($value["SmallScreen5th"])) {
+        if ($value["SmallScreen5th"] == "left1") {
+            $value["col"] = 1;
+            $value["colSpan"] = 10;
+            return $value;
+        } elseif ($value["SmallScreen5th"] == "left2") {
+            $value["col"] = 11;
+            $value["colSpan"] = 10;
+            return $value;
+        } elseif ($value["SmallScreen5th"] == "center") {
+            $value["col"] = 21;
+            $value["colSpan"] = 10;
+            return $value;
+        }elseif ($value["SmallScreen5th"] == "right1") {
+            $value["col"] = 31;
+            $value["colSpan"] = 10;
+            return $value;
+        } elseif ($value["SmallScreen5th"] == "right2") {
+            $value["col"] = 41;
+            $value["colSpan"] = 10;
+            $GLOBALS["smallRoomLastRow"] = $value["row"] + $value["rowSpan"];
+            return $value;
+        }
+    } 
+
+    $value["col"] = 1;
+    $value["colSpan"] = 50;
+    $GLOBALS["smallRoomLastRow"] = $value["row"] + $value["rowSpan"];
+
+
+    return $value;
+}
+
 function getDevicesforroomwithformatting($room = null)
 {
+
+
     global $redis_Storage;
     $room = getcurrentroom($room);
 
@@ -442,18 +512,22 @@ function Create_homeButton()
 // clock bottom right 
 function Create_clock()
 {
+    global $version;
     $weatherinfo = getWeatherData();
+    $GLOBALS["weather"] = $weatherinfo;
     $retunval = '<div class="ClockAndWeather">';
     $retunval .= '<div class="clock" id="clock">';
     $retunval .= '<div id="MyClockDisplay" class="clock">00:00</div>';
     $retunval .= '</div>';
 
     $retunval .= '<div class="weathericon" >';
-    $retunval .= '<img id="weathericon" src="' . $weatherinfo["weather_icon-url"] . '" alt="" style="width:100%">';
+    $retunval .= '<img id="weathericon" src="' . $weatherinfo["weather_icon-url"] . '" alt="" style="box-sizing:content-box ;height:35px;width:60px">';
     $retunval .= '</div>';
     $retunval .= '<div class="weatherTemp">';
     $retunval .= '<p id="Weathertemp">' . $weatherinfo["temperature"] . '°C</p>';
     $retunval .= '</div>';
+    //  show the version id
+    $retunval .= '<div class="version-id">ID: ' . $version . '</div>'; // Add this line to display the version ID
 
     $retunval .= '</div>';
     return $retunval;

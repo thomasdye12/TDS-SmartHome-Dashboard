@@ -21,6 +21,11 @@ $setcolour = $_GET["colour"];
 if ($setcolour == "undefined") {
     $setcolour = "rgb(255,255,255)";
 }
+// if colour1 is defined replace the colour in the svg
+if (isset($_GET["colour1"])) {
+    $colour1 = $_GET["colour1"];
+    $setcolour = $colour1;
+}
 // if (isset($_GET["size"])) {
 
 // $size = $_GET["size"];
