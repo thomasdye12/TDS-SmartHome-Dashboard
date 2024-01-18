@@ -4,6 +4,13 @@ var oldRoom = "";
 document.getElementById("HomeButton").addEventListener('touchstart', function () {
     ShowRoomPicker()
 });
+
+document.getElementById("SleepButton").addEventListener('touchend', function () {
+    // wait 5 seconds then hide the clock
+    setTimeout(function () {
+        showClock();
+    }, 1000);
+});
 // on page load
 // window.addEventListener('load', function () {
 //     //RoomToLoad
@@ -94,6 +101,7 @@ function ShowRoomPicker() {
         img.src = "housepages/svg.php?name=" + item.iconsvg + "&colour=rgb(255,255,255)"
         imageElement.appendChild(img);
         imageElement.addEventListener('touchend', function (event) {
+        imageElement.style.animation = "spin 1s infinite linear";
 
 
             setTimeout(function () {

@@ -1,5 +1,6 @@
 var ws;
 var roomDevices;
+const audioClick = new Audio('ass/press.wav');
 // WebSocket connection function
 function connect() {
   ws = new WebSocket('wss://dashboardcomstds-net.local.thomasdye.net:10000/?Access_main=1');
@@ -58,7 +59,7 @@ if (params.get('autorefresh') != null) {
 
 
 function SendDeviceToWebSocket(SubDevices) {
-  var RootDevices = ["526", "clock", "SideGateBellImage", "Lockout", "BigClock", "PageReload", "Sidegatebellimageupdate"];
+  var RootDevices = ["526", "clock", "SideGateBellImage", "Lockout", "BigClock", "PageReload", "Sidegatebellimageupdate","DashboardCmd"];
   // combine the two arrays
   roomDevices = RootDevices.concat(SubDevices);
 
@@ -86,7 +87,9 @@ function DeviceEventMessage(event) {
     handleBigClock(json.name);
   } else if (json.deviceId == "Lockout") {
     handleLockout(json.name);
-  } else {
+  }else if (json.deviceId == "DashboardCmd") {
+  SendCommand(json.value);
+  }else {
     // sending the device to the system
 
     var o = hub.DeviceConnect.devices.find((function (t) {
@@ -262,6 +265,7 @@ function ShowKeypad(name,callback) {
 
 // ketpad button click
 function handleButtonClick(event) {
+  audioClick.play();
   var clickedElement = event.target;
   if (clickedElement.classList.contains('number')) {
     var number = clickedElement.textContent.trim();

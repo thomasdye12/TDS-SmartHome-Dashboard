@@ -6118,7 +6118,7 @@ console.log("loadpage");
                 }
             }, [t._v(" " + t._s( t.context.name ? t.context.name : t.name) + " ")]), o("div", {
                 staticClass: "tile-contents"
-            }, [t.layout.hideLabels ? t._e() : o("div", {
+            }, [t.layout.hideLabels ? t._e() : o("div", { 
                 staticClass: "tile-secondary"
             }, [t._v(" " + t._s(t.templates[t.context.template]) + " " + t._s(t.context.templateExtra) + " ")]), o("div", {
                 staticClass: "tile-primary",
@@ -6140,7 +6140,9 @@ console.log("loadpage");
                     }
                 }, [
                     
-                    (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', { style: {
+                    (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', {
+                        class: { tapped: t.isTapped },
+                         style: {
                             height: "50%",
                             "max-width": "100%",
                             "max-height": "100%"
@@ -6183,7 +6185,12 @@ console.log("loadpage");
                     default: function() {
                         return {}
                     }
+                },
+                isTapped: {
+                    type: Boolean,
+                    default: !1
                 }
+
             },
             computed: {
                 attr: function() {
@@ -6196,6 +6203,13 @@ console.log("loadpage");
             },
             methods: {
                 doCommand: function() {
+                    
+                    this.isTapped = true;
+
+                    setTimeout(() => {
+                      this.isTapped = false;
+                    }, 100); // Duration should match CSS transition time
+
                     var t = this.context.buttonCommand ? this.context.buttonCommand : "push"
                       , e = this.context.templateExtra
                       , o = {

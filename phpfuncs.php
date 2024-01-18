@@ -1,7 +1,7 @@
 <?php
 // $redis_Storage = new Redis();
 // $redis_Storage->connect('127.0.0.1', 6120);
-$version = "10.0.0:1";
+$version = json_decode(file_get_contents(dirname(__FILE__) . "/DashboardVersion.json"), true)["version"];
 
 $GLOBALS["weather"] = [];
 // function loadroomsidebar()
@@ -505,6 +505,12 @@ function Create_homeButton()
     $retunval .= '<a>';
     // img 
     $retunval .= '<img src="housepages/svg.php?name=house&colour=rgb(255,255,255)" alt="" style="width:100%">';
+    $retunval .= '</a>';
+    $retunval .= '</div>';
+    $retunval .= '<div class="SleepButton" id="SleepButton">';
+    $retunval .= '<a>';
+    // img 
+    $retunval .= '<img src="housepages/svg.php?name=sleep&colour=rgb(255,255,255)" alt="" style="width:100%">';
     $retunval .= '</a>';
     $retunval .= '</div>';
     return $retunval;

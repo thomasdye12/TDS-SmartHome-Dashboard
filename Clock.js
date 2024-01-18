@@ -155,3 +155,15 @@ function updateClock(data) {
 
     
   }
+
+  // send any command to local server
+  function SendCommand(command) {
+    const url = "http://127.0.0.1:2323/?type=json&password=thomas&cmd=" + command;
+    // make a request to the server
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+
+}
