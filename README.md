@@ -1,10 +1,18 @@
+---
+runme:
+  id: 01HMEHEWSZGW0H4VCSXCZQC8FA
+  version: v2.2
+---
+
 # Smarthome-Dashboard
 
 This is a smarthome Dashboard built using some of the code from the Hubitat dashboard, built to work with there API endpoints, but uses lots of customisation.
 
-# Not Production ready 
+# Not Production ready
+
 <!-- make text red -->
-This is not production ready, and is still in development, so please use at your own risk. 
+
+This is not production ready, and is still in development, so please use at your own risk.
 
 This is not meant to be or intended to be compleate package, this is part of a larage, much larager system that controls our house, and is only here to show how we have done it, and to help others who are looking to do the same. There is usefull code in here as well as SF symbols that we are using to reference the icons.
 
@@ -17,7 +25,7 @@ then there is a websocket connection,well 2 in fact, one for the main page to up
 
 ## Backend
 
-You will need to run the backend service this currently isnt avalable but will be soon, it should kinda work from hubitat directory
+The backend is not part of this project as it is connected to our smart home system, it will try and connect to a websocket on port 1000 over wss, this can be changed by editing that file. The backend is written in nodejs it however is part of our smart home system so maybe will come out in the future but is much more complex than this. I would suggest looking at how it works and butilding your own backend as needed.
 
 ## Frontend
 
