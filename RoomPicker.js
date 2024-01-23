@@ -4,6 +4,11 @@ var oldRoom = "";
 document.getElementById("HomeButton").addEventListener('touchstart', function () {
     ShowRoomPicker()
 });
+// mousedown
+document.getElementById("HomeButton").addEventListener('mousedown', function () {
+    ShowRoomPicker()
+}
+);
 
 document.getElementById("SleepButton").addEventListener('touchend', function () {
     // wait 5 seconds then hide the clock
@@ -11,6 +16,14 @@ document.getElementById("SleepButton").addEventListener('touchend', function () 
         showClock();
     }, 1000);
 });
+// mousedown
+document.getElementById("SleepButton").addEventListener('mousedown', function () {
+    // wait 5 seconds then hide the clock
+    setTimeout(function () {
+        showClock();
+    }, 1000);
+});
+
 // on page load
 // window.addEventListener('load', function () {
 //     //RoomToLoad
@@ -108,6 +121,14 @@ function ShowRoomPicker() {
                 ShowRoomPage(item);
             }, 50);
         });
+        imageElement.addEventListener('mousedown', function (event) {
+            imageElement.style.animation = "spin 1s infinite linear";
+    
+    
+                setTimeout(function () {
+                    ShowRoomPage(item);
+                }, 50);
+            });
         gridItem.appendChild(imageElement);
 
         // Create the text element at the bottom
@@ -170,7 +191,7 @@ function ShowRoomPage(room) {
 
             KeypadCheckForroom(json, function (isValid) {
                 if (isValid) {
-                    ChangeName(room.Name);
+                    ChangeName(json.Name);
                     ChangeHomeButton(true);
                     ChangeRoomPage(true);
                     ChangeRoomPicker(false);

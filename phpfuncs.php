@@ -1,4 +1,5 @@
 <?php
+include_once "TDS_Custom.php";
 // $redis_Storage = new Redis();
 // $redis_Storage->connect('127.0.0.1', 6120);
 $version = json_decode(file_get_contents(dirname(__FILE__) . "/DashboardVersion.json"), true)["version"];
@@ -236,7 +237,7 @@ function GetRoom($room = null, $smallroom = false)
     $room = add_defult_items($room);
     return $room;
 }
-function getlayout($room = null,$smallroom = false)
+function getlayout($room = null, $smallroom = false)
 {
     $GLOBALS["smallRoomLastRow"] = 0;
     $defaultlayout = file_get_contents(dirname(__FILE__) . "/defaultlayout.json");
@@ -253,7 +254,8 @@ function getlayout($room = null,$smallroom = false)
     $room = getcurrentroom($room);
     $room = add_defult_items($room);
     $defaultlayout["customColors"] = $defaultlayoutcustomcolours;
-    foreach ($room["tiles"] as &$value) {
+    $tiles = [];
+    foreach ($room["tiles"] as $value) {
         // if hide is set and true then skip this tile
         if (isset($value["hide"]) && $value["hide"] == true) {
             continue;
@@ -262,46 +264,53 @@ function getlayout($room = null,$smallroom = false)
             if (isset($value["SmallScreen"]) && $value["SmallScreen"] == false) {
                 continue;
             }
-        
-            $value = CreateeSmallScreen_TileLayout($value);
 
-        } else {
-            // if small only is set and true then skip this tile
+            $value = CreateeSmallScreen_TileLayout($value);
+        } else  {
             if (isset($value["SmallScreenOnly"]) && $value["SmallScreenOnly"] == true) {
                 continue;
             }
-        $value["col"] = $value["startx"] + 1;
-        $value["row"] = $value["starty"] + 1;
-        // // if col is 0 then set it to 1
-        // if ($value["col"] == 0) {
-        //     $value["col"] = 1;
-        // }
-        // // if row is 0 then set it to 1
+            $value["col"] = $value["startx"] + 1;
+            $value["row"] = $value["starty"] + 1;
+            // // if col is 0 then set it to 1
+            // if ($value["col"] == 0) {
+            //     $value["col"] = 1;
+            // }
+            // // if row is 0 then set it to 1
 
-        // if ($value["row"] == 0) {
-        //     $value["row"] = 1;
-        // }
-        $value["colSpan"] = $value["width"] * 10;
-        $value["rowSpan"] = $value["height"] * 10;
+            // if ($value["row"] == 0) {
+            //     $value["row"] = 1;
+            // }
+            $value["colSpan"] = $value["width"] * 10;
+            $value["rowSpan"] = $value["height"] * 10;
         }
 
         if (!isset($value["templateExtra"])) {
             $value["templateExtra"] = null;
         }
 
+        // TDS_Custom
+        if (isset($value["TDS_Custom"])) {
+            $value = call_user_func($value["TDS_Custom"]["template"], $value);
+            unset($value["TDS_Custom"]);
+        }
+
+
         // unset($value["height"]);
         // unset($value["startx"]);
         // unset($value["width"]);
         // unset($value["starty"]);
         // if the id is not set then set it to the name
-        if (!isset($value["id"])) {
+        // if (!isset($value["id"])) {
             $value["id"] = $value["device"] ?? "";
-        }
+        // }
+        $tiles[] = $value;
     }
+    $defaultlayout["tiles"] = $tiles;
 
 
 
-    $defaultlayout["tiles"] = $room["tiles"];
+    // $defaultlayout["tiles"] = $room["tiles"];
 
     //
 
@@ -312,7 +321,8 @@ function getlayout($room = null,$smallroom = false)
 }
 
 
-function CreateeSmallScreen_TileLayout($value) {
+function CreateeSmallScreen_TileLayout($value)
+{
     $value["row"] =   $GLOBALS["smallRoomLastRow"] + 1;
     $value["rowSpan"] = $value["height"] * 10;
 
@@ -328,7 +338,7 @@ function CreateeSmallScreen_TileLayout($value) {
             $GLOBALS["smallRoomLastRow"] = $value["row"] + $value["rowSpan"];
             return $value;
         }
-    } 
+    }
 
     if (isset($value["SmallScreen5th"])) {
         if ($value["SmallScreen5th"] == "left1") {
@@ -343,7 +353,7 @@ function CreateeSmallScreen_TileLayout($value) {
             $value["col"] = 21;
             $value["colSpan"] = 10;
             return $value;
-        }elseif ($value["SmallScreen5th"] == "right1") {
+        } elseif ($value["SmallScreen5th"] == "right1") {
             $value["col"] = 31;
             $value["colSpan"] = 10;
             return $value;
@@ -353,7 +363,7 @@ function CreateeSmallScreen_TileLayout($value) {
             $GLOBALS["smallRoomLastRow"] = $value["row"] + $value["rowSpan"];
             return $value;
         }
-    } 
+    }
 
     $value["col"] = 1;
     $value["colSpan"] = 50;

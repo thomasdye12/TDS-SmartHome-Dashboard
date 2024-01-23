@@ -24,6 +24,7 @@ $smallRoom = isset($_GET["small"]) ? $_GET["small"] : false;
     var RoomToLoad = <?php echo $room["ID"]; ?>;
 
     var hub = {
+      Room:'<?php echo $room["ID"]; ?>',
       layout: <?php echo json_encode(getlayout($room["ID"],$smallRoom)); ?>,
       devices: <?php echo json_encode(getDevicesforroomwithformatting($room["ID"])); ?>,
       rooms:<?php echo json_encode(RoomGrid()); ?>,
@@ -148,11 +149,12 @@ $smallRoom = isset($_GET["small"]) ? $_GET["small"] : false;
   </div>
 
   <script src="Clock.js"></script>
+  <script src="Electron.js"></script>
+  <script src="RoomPicker.js"></script>
+  <script src="housepages/CustomTiles.js"></script>
   <script src="housepages/app.js"></script>
   <script src="housepages/chunk-vendors.js"></script>
   <script src="Mainjs.js"></script>
-  <script src="RoomPicker.js"></script>
-  <script src="housepages/CustomTiles.js"></script>
 </body>
 
 </html>

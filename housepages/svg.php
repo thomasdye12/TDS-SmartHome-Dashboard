@@ -3,6 +3,43 @@
 header('Cache-Control: max-age=3600');
 $file = $_GET["name"];
 
+// if it starts URL: load the file from the URL
+if (substr($file, 0, 4) == "URL:") {
+    $redis_Storage = new Redis();
+    $redis_Storage->connect('127.0.0.1', 6121);
+    $cashname = "HomeServerDashboard:" .str_replace("/", "_", base64_encode($file));
+    if ($redis_Storage->exists($cashname)) {
+        $image = $redis_Storage->get($cashname);
+        header('Content-Type: image/png');
+        echo $image;
+        exit();
+    }
+
+
+    $svg = file_get_contents(substr($file, 4));
+    header('Content-Type: image/png');
+    ob_start("ob_gzhandler");
+    $redis_Storage->set($cashname, $svg, 3600);
+    echo $svg;
+    ob_end_flush();
+    exit;
+}
+
+
+
+// if the file has a .png or .jpg extension, load the file from the icons folder
+if (substr($file, -4) == ".png" || substr($file, -4) == ".jpg") {
+    $svg = file_get_contents("../icons/img/".$file);
+    header('Content-Type: image/png');
+    ob_start("ob_gzhandler");
+    echo $svg;
+    ob_end_flush();
+    exit;
+}
+
+
+
+
 // add .svg to the end of the file name if it is not there
 if (substr($file, -4) != ".svg") {
     $file = $file . ".svg";
@@ -26,30 +63,7 @@ if (isset($_GET["colour1"])) {
     $colour1 = $_GET["colour1"];
     $setcolour = $colour1;
 }
-// if (isset($_GET["size"])) {
 
-// $size = $_GET["size"];
-// // trim the px off the end of the size if it is there
-// if (substr($size, -2) == "px") {
-//     $size = substr($size, 0, -2);
-// }
-// // chang the size of the svg
-// // $svg = str_replace("width=\"100px\"", "width=\"".$size."\"", $svg);
-// // $svg = str_replace("height=\"100px\"", "height=\"".$size."\"", $svg);
-// //  the current size is diffent for all all icons we need to use regex to find the size and replace it
-// // width="19.9219" height="19.9316"
-// // $svg = preg_replace('/width="(\d+)"/', 'width="'.$size.'"', $svg);
-// // $svg = preg_replace('/height="(\d+)"/', 'height="'.$size.'"', $svg);
-// $svg = preg_replace('/width="(\d+.\d+)"/', 'width="'.$size.'"', $svg);
-// $svg = preg_replace('/height="(\d+.\d+)"/', 'height="'.$size.'"', $svg);
-
-
-
-
-
-// }
-
-// convert rgb(255,255,255)  to hex 
 
 
 $svg = preg_replace('/#000000/', rgbToHex($setcolour), $svg);

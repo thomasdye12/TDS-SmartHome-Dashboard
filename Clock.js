@@ -27,7 +27,7 @@ if (supportingclock) {
   clockInterval = setInterval(checkClock, 2000);
   console.log("Clockontimeout is set to " + timeout);
   
-  document.body.addEventListener("mousemove", resetClock);
+  // document.body.addEventListener("mousemove", resetClock);
   document.body.addEventListener("keypress", resetClock);
   document.body.addEventListener("touchend", resetClock);
 
@@ -53,7 +53,7 @@ function resetClock() {
   if (clockShowing) {
     setTimeout(function () {
       hideClock();
-    }, 200);
+    }, 2);
 
   }
 }
@@ -73,6 +73,7 @@ function showClock() {
 function hideClock() {
   clockShowing = false;
   document.getElementById('BigClockScreen').style.display = 'none';
+  ShowRoomPage({ "ID": hub["Room"] });
   if (HideClock) {
     SetScreenLevel(255);
   }

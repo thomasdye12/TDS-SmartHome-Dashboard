@@ -1,7 +1,7 @@
 <?php
 
 $redis_Storage = new Redis();
-$redis_Storage->connect('127.0.0.1', 6120);
+$redis_Storage->connect('127.0.0.1', 6121);
 // get the url passed in in the $_GET variable
 $url = $_GET["url"];
 // check if the url is in the cache

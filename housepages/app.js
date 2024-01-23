@@ -6114,7 +6114,7 @@ console.log("loadpage");
             }, [o("div", {
                 staticClass: "tile-title",
                 style: {
-                    fontSize: t.customColor.fontSize
+                    fontSize: t.customColor.fontSize,
                 }
             }, [t._v(" " + t._s( t.context.name ? t.context.name : t.name) + " ")]), o("div", {
                 staticClass: "tile-contents"
@@ -6143,7 +6143,8 @@ console.log("loadpage");
                     (t.context.customIconarray  && t.context.customIconarray.customicon  ? o('img', {
                         class: { tapped: t.isTapped },
                          style: {
-                            height: "50%",
+                            "border-radius":"8px",
+                            width: smallScreen() ? "40px": "50%",
                             "max-width": "100%",
                             "max-height": "100%"
                         },

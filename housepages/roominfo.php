@@ -6,11 +6,12 @@
 
     $retun = array();
     $issmall = $_GET["small"] == "true" ? true : false;
+    // echo "small: " . $_GET["small"] . "\n";
     $room = GetRoom($_GET["room"], $issmall);
     
     $retun["Name"] = $room["Name"];
+    $retun["ID"] = $room["ID"];
     $retun["type"] = isset($room["type"]) ? $room["type"] : "room";
-    $retun["Did"] = (isset($room["dashboard-id"]) ? $room["dashboard-id"] : "951");
     $retun["devices"] = getDevicesforroomwithformatting($_GET["room"]);
     // check for security
     $retun["security"] = $room["security"] ?? false;
