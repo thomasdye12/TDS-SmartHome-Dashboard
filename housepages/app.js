@@ -6149,7 +6149,7 @@ console.log("loadpage");
                             "max-height": "100%"
                         },
                         attrs: {
-                        src: "housepages/svg.php?name=" +  t.customIcon(t.attr, t.customColor.customIcon, t.context.template) + "&colour=" + t.customColor.iconColor + "&size=" + t.iconSize
+                        src: t._s(t.DynamicImageULR.DynamicImageULR)
                     }}) :  t._v(" " + (t.context.customIconarray  && t.context.customIconarray.customicon  ? '' : (t._s(t.parseFont(t.customColor.customIcon ? t.customColor.customIcon : "")) + " ")))),
                     
                    
@@ -6200,7 +6200,22 @@ console.log("loadpage");
                     } : {
                         buttons: "unknown"
                     }
+                },     
+                DynamicImageULR: function() {
+                        var t = this.currentState.attr.find((function(t) {
+                            return Object.keys(t).indexOf("DynamicImageULR") > -1
+                        }
+                        ));
+                        console.log("here2")
+                        if (t != null) {
+                            return t
+                        }
+                    
+                    return {
+                        DynamicImageULR: "housepages/svg.php?name=" +  this.customIcon(this.attr, this.customColor.customIcon, this.context.template) + "&colour=" + this.customColor.iconColor + "&size=" + this.iconSize
+                    }
                 }
+
             },
             methods: {
                 doCommand: function() {
@@ -6221,6 +6236,7 @@ console.log("loadpage");
                     this.$store.dispatch("sendCommand", o),
                     this.attr.buttons = this.local.sending
                 }
+
             }
         }
           , Qe = Ze

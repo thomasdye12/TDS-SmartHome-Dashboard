@@ -38,6 +38,19 @@ function connect() {
     }, 90000);
 
   };
+
+  // every 900 seconds chekc the connection
+  setInterval(function () {
+    if (ws.readyState === ws.OPEN) {
+
+    } else {
+      // reconnect after a short delay
+      setTimeout(function () {
+        // reload the page 
+        location.reload();
+      }, 90000);
+    }
+  }, 90000);
 }
 
 // Start the initial WebSocket connection
@@ -187,7 +200,7 @@ function ShowKeypad(name,callback) {
   document.getElementById('keypadPopup').style.display = 'block';
   document.querySelectorAll(".content").forEach(function (element) {
     element.addEventListener("click", handleButtonClick);
-  });
+  },{ passive: true });
   // Store the callback function
   keypadCallback = callback;
 

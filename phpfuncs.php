@@ -100,9 +100,16 @@ function RoomGrid()
 {
     // get content from the json file
     $json = file_get_contents(dirname(__FILE__) . '/Newrooms.json');
-
     // decode the json file
     $json_data = json_decode($json, true);
+    // conver this code to a zone config, 
+    $zones = array();
+    $zones[] = array("zone" => "0","rooms"=>array(),"name"=>"Fav");
+    $zones[] = array("zone" => "1","rooms"=>array(),"name"=>"Downstairs");
+    $zones[] = array("zone" => "2","rooms"=>array(),"name"=>"Upstairs");
+    $zones[] = array("zone" => "3","rooms"=>array(),"name"=>"Other");
+
+
     $currentroom = getcurrentroom();
     $output = [];
     // loop through the json data
@@ -115,9 +122,14 @@ function RoomGrid()
         $room["iconColor"] = $value["iconColor"] ?? "rgb(255,255,255)";
         $room["bottom"] = $value["bottom"] ?? false;
         $room["current"] = $value["ID"] == $currentroom["ID"] ?  true : false;
+        $room["Zone"] = $value["Zone"];
         $output[] = $room;
     }
-    return $output;
+        // // convert all the rooms to zones, they have a zone id
+        foreach ($output as $key => $value) {
+            $zones[$value["Zone"]]["rooms"][] = $value;
+        }
+    return $zones;
 }
 
 // get current room based on url get request
@@ -292,7 +304,7 @@ function getlayout($room = null, $smallroom = false)
         // TDS_Custom
         if (isset($value["TDS_Custom"])) {
             $value = call_user_func($value["TDS_Custom"]["template"], $value);
-            unset($value["TDS_Custom"]);
+            // unset($value["TDS_Custom"]);
         }
 
 
@@ -425,6 +437,12 @@ function getDevicesforroomwithformatting($room = null)
         if (isset($roomdevice["name"])) {
             $Device["name"] = $roomdevice["name"];
             $Device["label"] = $roomdevice["name"];
+        }
+        // if TDS_Custom is set then use that
+        if (isset($roomdevice["TDS_Custom"])) {
+            $Device["TDS_Custom"] = $roomdevice["TDS_Custom"];
+        } else {
+            $Device["TDS_Custom"] = null;
         }
 
         // trim out the room name from the device name, lowercase

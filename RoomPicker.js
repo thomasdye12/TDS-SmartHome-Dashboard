@@ -3,12 +3,11 @@ var oldRoom = "";
 
 document.getElementById("HomeButton").addEventListener('touchstart', function () {
     ShowRoomPicker()
-});
+},{ passive: true });
 // mousedown
 document.getElementById("HomeButton").addEventListener('mousedown', function () {
     ShowRoomPicker()
-}
-);
+},{ passive: true });
 
 document.getElementById("SleepButton").addEventListener('touchend', function () {
     // wait 5 seconds then hide the clock
@@ -32,7 +31,7 @@ document.getElementById("SleepButton").addEventListener('mousedown', function ()
 
 
 function smallScreen() {
-    if (window.matchMedia("(max-width: 1200px)").matches) {
+    if (window.matchMedia("(max-width: 1000px)").matches) {
         return true;
     } else {
         return false;
@@ -95,81 +94,133 @@ function ShowRoomPicker() {
     const gridContainer = document.getElementById('RoomGrid');
     // Clear existing grid
     gridContainer.innerHTML = '';
-    hub["rooms"].forEach(item => {
-        // Create the grid item container
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('RoomGridRoom');
+    // hub["rooms"].forEach(item => {
+    //     // Create the grid item container
+    //     const gridItem = document.createElement('div');
+    //     gridItem.classList.add('RoomGridRoom');
 
-        // Create the name element at the top
-        // const nameElement = document.createElement('div');
-        // nameElement.classList.add('item-name');
-        // nameElement.textContent = item.Name;
-        // gridItem.appendChild(nameElement);
+    //     // Create the name element at the top
+    //     // const nameElement = document.createElement('div');
+    //     // nameElement.classList.add('item-name');
+    //     // nameElement.textContent = item.Name;
+    //     // gridItem.appendChild(nameElement);
 
-        // Create the image element with circular border and shadow
-        const imageElement = document.createElement('div');
-        imageElement.classList.add('item-image');
-        const img = document.createElement('img');
-        img.style.width = "50px";
-        img.src = "housepages/svg.php?name=" + item.iconsvg + "&colour=rgb(255,255,255)"
-        imageElement.appendChild(img);
-        imageElement.addEventListener('touchend', function (event) {
-        imageElement.style.animation = "spin 1s infinite linear";
+    //     // Create the image element with circular border and shadow
+    //     const imageElement = document.createElement('div');
+    //     imageElement.classList.add('item-image');
+    //     const img = document.createElement('img');
+    //     img.style.width = "50px";
+    //     img.src = "housepages/svg.php?name=" + item.iconsvg + "&colour=rgb(255,255,255)"
+    //     imageElement.appendChild(img);
+        // imageElement.addEventListener('touchend', function (event) {
+        // imageElement.style.animation = "spin 1s infinite linear";
 
 
-            setTimeout(function () {
-                ShowRoomPage(item);
-            }, 50);
-        });
-        imageElement.addEventListener('mousedown', function (event) {
-            imageElement.style.animation = "spin 1s infinite linear";
-    
-    
-                setTimeout(function () {
-                    ShowRoomPage(item);
-                }, 50);
-            });
-        gridItem.appendChild(imageElement);
-
-        // Create the text element at the bottom
-        const textElement = document.createElement('div');
-        textElement.classList.add('name');
-        textElement.textContent = item.Name;
-        gridItem.appendChild(textElement);
-        //  appone item click
-
-        let startX, startY, endX, endY;
-        let touchStartTimestamp;
-
-        // gridItem.addEventListener('touchstart', function (event) {
-        //     const touch = event.touches[0];
-        //     startX = touch.clientX;
-        //     startY = touch.clientY;
-        //     touchStartTimestamp = event.timeStamp;
+        //     setTimeout(function () {
+        //         ShowRoomPage(item);
+        //     }, 50);
         // });
-        // gridItem.addEventListener('touchend', function (event) {
-        //     const touch = event.changedTouches[0];
-        //     endX = touch.clientX;
-        //     endY = touch.clientY;
-        //     const touchEndTimestamp = event.timeStamp;
-
-        //     const distanceX = Math.abs(endX - startX);
-        //     const distanceY = Math.abs(endY - startY);
-        //     const timeElapsed = touchEndTimestamp - touchStartTimestamp;
-
-        //     // If the touch event has a small distance and a short duration, consider it a tap
-        //     if (distanceX < 5 && distanceY < 5 && timeElapsed < 200) {
+        // imageElement.addEventListener('mousedown', function (event) {
+        //     imageElement.style.animation = "spin 1s infinite linear";
+    
+    
         //         setTimeout(function () {
         //             ShowRoomPage(item);
         //         }, 50);
-        //     }
-        // });
+        //     });
+    //     gridItem.appendChild(imageElement);
+
+    //     // Create the text element at the bottom
+    //     const textElement = document.createElement('div');
+    //     textElement.classList.add('name');
+    //     textElement.textContent = item.Name;
+    //     gridItem.appendChild(textElement);
+    //     //  appone item click
+
+        // let startX, startY, endX, endY;
+        // let touchStartTimestamp;
+
+        // // gridItem.addEventListener('touchstart', function (event) {
+        // //     const touch = event.touches[0];
+        // //     startX = touch.clientX;
+        // //     startY = touch.clientY;
+        // //     touchStartTimestamp = event.timeStamp;
+        // // });
+        // // gridItem.addEventListener('touchend', function (event) {
+        // //     const touch = event.changedTouches[0];
+        // //     endX = touch.clientX;
+        // //     endY = touch.clientY;
+        // //     const touchEndTimestamp = event.timeStamp;
+
+        // //     const distanceX = Math.abs(endX - startX);
+        // //     const distanceY = Math.abs(endY - startY);
+        // //     const timeElapsed = touchEndTimestamp - touchStartTimestamp;
+
+        // //     // If the touch event has a small distance and a short duration, consider it a tap
+        // //     if (distanceX < 5 && distanceY < 5 && timeElapsed < 200) {
+        // //         setTimeout(function () {
+        // //             ShowRoomPage(item);
+        // //         }, 50);
+        // //     }
+        // // });
 
 
 
-        // Append the grid item to the container
-        gridContainer.appendChild(gridItem);
+    //     // Append the grid item to the container
+    //     gridContainer.appendChild(gridItem);
+    // });
+
+
+    hub["rooms"].forEach(zone => {
+        // Create and append the zone title
+        const zoneTitle = document.createElement('div');
+        zoneTitle.classList.add('zone-title');
+        zoneTitle.textContent = zone.name;
+        gridContainer.appendChild(zoneTitle);
+
+        zone.rooms.forEach(item => {
+            // Create the grid item container
+            const gridItem = document.createElement('div');
+            gridItem.classList.add('RoomGridRoom');
+
+            // Create and append the image element
+            const imageElement = document.createElement('div');
+            imageElement.classList.add('item-image');
+            const img = document.createElement('img');
+            img.style.width = "50px";
+            img.src = "housepages/svg.php?name=" + item.iconsvg + "&colour=" + item.iconColor;
+            imageElement.appendChild(img);
+
+            imageElement.addEventListener('touchend', function (event) {
+                imageElement.style.animation = "spin 1s infinite linear";
+        
+        
+                    setTimeout(function () {
+                        ShowRoomPage(item);
+                    }, 50);
+                },{ passive: true });
+                imageElement.addEventListener('mousedown', function (event) {
+                    imageElement.style.animation = "spin 1s infinite linear";
+            
+            
+                        setTimeout(function () {
+                            ShowRoomPage(item);
+                        }, 50);
+                    },{ passive: true });
+
+            gridItem.appendChild(imageElement);
+
+            // Create and append the text element
+            const textElement = document.createElement('div');
+            textElement.classList.add('name');
+            textElement.textContent = item.Name;
+            gridItem.appendChild(textElement);
+
+            // Append the grid item to the container
+            gridContainer.appendChild(gridItem);
+        });
     });
+
 }
 
 
@@ -180,6 +231,7 @@ function ShowRoomPage(room) {
     fetch("housepages/roominfo.php?room=" + room["ID"]  + "&small=" + isSmallScreen)
         .then(response => response.json())
         .then(json => {
+            hub.DeviceConnect.devices = [];
             hub["Room"] = json.ID;
             hub["dashboardId"] = json.Did;
             hub["layout"] = json.layout;
