@@ -56,7 +56,7 @@ function resetClock() {
       hideClock();
 
     }
-  }, 2);
+  }, 10);
 }
 
 function showClock() {
