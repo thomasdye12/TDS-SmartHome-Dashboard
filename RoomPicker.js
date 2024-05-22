@@ -1,7 +1,7 @@
 //  handle clicks on buttons 
 var oldRoom = "";
 
-document.getElementById("HomeButton").addEventListener('touchstart', function () {
+document.getElementById("HomeButton").addEventListener('touchend', function () {
     ShowRoomPicker()
 },{ passive: true });
 // mousedown

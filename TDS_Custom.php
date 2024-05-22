@@ -16,7 +16,7 @@ function sonosAPRecentlyPlayed($tile){
     // playParams
     $tile["templateExtra"] = $song["playParams"]["kind"].":".$song["playParams"]["id"];
     $tile["buttonCommand"] = "AppleMusicNow";
-
+    $tile["FontSize"] = 10;
 
 
 return $tile;

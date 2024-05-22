@@ -5326,7 +5326,7 @@ console.log("loadpage");
                         gridColumn: this.col,
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
-                        fontSize: parseInt(this.layout.fontSize) + "px",
+                        fontSize: (this.context.customIconarray  && this.context.customIconarray.fontSize ) ?  (parseInt(this.context.customIconarray.fontSize) + "px") : (parseInt(this.layout.fontSize) + "px"),
                         // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
@@ -5816,7 +5816,7 @@ console.log("loadpage");
                 updateSlider: function(t) {
                     this.attr2.level = t;
                     var e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setLevel",
                         secondary: t
                     };
@@ -5828,7 +5828,7 @@ console.log("loadpage");
                         e = "off" == this.attr.switch ? "on" : "off",
                         this.attr.switch = this.local.sending;
                         var a = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: e,
                             secondary: o
                         };
@@ -5966,7 +5966,7 @@ console.log("loadpage");
                 updateSlider: function(t) {
                     this.attr2.level = t;
                     var e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setLevel",
                         secondary: t
                     };
@@ -5975,7 +5975,7 @@ console.log("loadpage");
                 updateSliderCT: function(t) {
                     this.attr5.colorTemperature = t;
                     var e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setColorTemperature",
                         secondary: t
                     };
@@ -5988,7 +5988,7 @@ console.log("loadpage");
                         e = "off" == this.attr.switch ? "on" : "off",
                         this.attr.switch = this.local.sending;
                         var a = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: e,
                             secondary: o
                         };
@@ -6114,7 +6114,7 @@ console.log("loadpage");
             }, [o("div", {
                 staticClass: "tile-title",
                 style: {
-                    fontSize: t.customColor.fontSize,
+                    fontSize:(t.context.customIconarray  && t.context.customIconarray.fontSize ) ?  t.context.customIconarray.fontSize : t.customColor.fontSize,
                 }
             }, [t._v(" " + t._s( t.context.name ? t.context.name : t.name) + " ")]), o("div", {
                 staticClass: "tile-contents"
@@ -6136,7 +6136,7 @@ console.log("loadpage");
                     style: {
                         color: t.customColor.iconColor,
                         fontSize: t.iconSize,
-                        width: 1.5 * parseInt(t.layout.iconSize) + "px"
+                        width: smallScreen() ? (1.1 * parseInt(t.layout.iconSize) + "px") :(1.5 * parseInt(t.layout.iconSize) + "px")
                     }
                 }, [
                     
@@ -6229,7 +6229,7 @@ console.log("loadpage");
                     var t = this.context.buttonCommand ? this.context.buttonCommand : "push"
                       , e = this.context.templateExtra
                       , o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: e
                     };
@@ -6685,7 +6685,7 @@ console.log("loadpage");
                 updateSlider: function(t) {
                     this.attr2.level = t;
                     var e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setLevel",
                         secondary: t
                     };
@@ -6697,7 +6697,7 @@ console.log("loadpage");
                         e = "off" == this.attr.switch ? "on" : "off",
                         this.attr.switch = this.local.sending;
                         var a = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: e,
                             secondary: o
                         };
@@ -6807,7 +6807,7 @@ console.log("loadpage");
                     if ("closed" == this.attr.door ? t = "open" : "open" == this.attr.door && (t = "close"),
                     "" != t) {
                         var e = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: t,
                             secondary: ""
                         };
@@ -7170,7 +7170,7 @@ console.log("loadpage");
                         e = "setSpeed",
                         o = t.currentTarget.dataset.id;
                         var a = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: e,
                             secondary: o
                         };
@@ -7307,7 +7307,7 @@ console.log("loadpage");
                     if ("closed" == this.attr.door ? t = "open" : "open" == this.attr.door && (t = "close"),
                     "" != t) {
                         var e = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: t,
                             secondary: ""
                         };
@@ -7617,7 +7617,7 @@ console.log("loadpage");
                     e = "setLevel",
                     "up" == t ? o = parseInt(this.attr.level) + 10 >= 100 ? 100 : parseInt(this.attr.level) + 10 : "down" == t && (o = parseInt(this.attr.level) - 10 <= 0 ? 0 : parseInt(this.attr.level) - 10);
                     var a = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: o
                     };
@@ -7683,7 +7683,7 @@ console.log("loadpage");
                     this.attr.level = t;
                     var e = "setLevel"
                       , o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: parseInt(t)
                     };
@@ -7693,7 +7693,7 @@ console.log("loadpage");
                     this.attr.level = 100;
                     var e = "setLevel"
                       , o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: parseInt(100)
                     };
@@ -7703,7 +7703,7 @@ console.log("loadpage");
                     this.attr.level = 0;
                     var e = "setLevel"
                       , o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: parseInt(0)
                     };
@@ -8002,7 +8002,7 @@ console.log("loadpage");
                     this.confirmPopup = !1;
                     var t = "locked" == this.attr.lock ? "unlock" : "lock"
                       , e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: ""
                     };
@@ -8090,7 +8090,7 @@ console.log("loadpage");
                     var t = "push"
                       , e = ""
                       , o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: e
                     };
@@ -8421,7 +8421,7 @@ console.log("loadpage");
                 doCommand: function() {
                     var t = "off" == this.attr.switch ? "on" : "off"
                       , e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: ""
                     };
@@ -8656,7 +8656,7 @@ console.log("loadpage");
                 doCommand: function() {
                     var t = "off" == this.attr.switch ? "on" : "off"
                       , e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: ""
                     };
@@ -8829,7 +8829,7 @@ console.log("loadpage");
                     var e = "setPosition";
                     "-1" == this.attr4.position && (e = "setLevel");
                     var o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: t
                     };
@@ -8844,7 +8844,7 @@ console.log("loadpage");
                     "" != e)) {
                         this.attr.switch = this.local.sending;
                         var a = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: e,
                             secondary: o
                         };
@@ -9115,7 +9115,7 @@ console.log("loadpage");
                 doCommand: function() {
                     var t = "off" == this.attr.switch ? "on" : "off"
                       , e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: ""
                     };
@@ -9377,7 +9377,7 @@ console.log("loadpage");
                     }
                     this.attr2.coolingSetpoint = (parseFloat(this.attr2.coolingSetpoint) + t).toFixed(1);
                     var o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setCoolingSetpoint",
                         secondary: parseFloat(this.attr2.coolingSetpoint)
                     };
@@ -9391,7 +9391,7 @@ console.log("loadpage");
                     }
                     this.attr2.coolingSetpoint = (parseFloat(this.attr2.coolingSetpoint) - t).toFixed(1);
                     var o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setCoolingSetpoint",
                         secondary: parseFloat(this.attr2.coolingSetpoint)
                     };
@@ -9405,7 +9405,7 @@ console.log("loadpage");
                     }
                     this.attr3.heatingSetpoint = (parseFloat(this.attr3.heatingSetpoint) + t).toFixed(1);
                     var o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setHeatingSetpoint",
                         secondary: parseFloat(this.attr3.heatingSetpoint)
                     };
@@ -9419,7 +9419,7 @@ console.log("loadpage");
                     }
                     this.attr3.heatingSetpoint = (parseFloat(this.attr3.heatingSetpoint) - t).toFixed(1);
                     var o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setHeatingSetpoint",
                         secondary: parseFloat(this.attr3.heatingSetpoint)
                     };
@@ -9427,7 +9427,7 @@ console.log("loadpage");
                 },
                 doMode: function(t) {
                     var e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setThermostatMode",
                         secondary: t
                     };
@@ -9436,7 +9436,7 @@ console.log("loadpage");
                 },
                 doFanMode: function(t) {
                     var e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "setThermostatFanMode",
                         secondary: t
                     };
@@ -9547,7 +9547,7 @@ console.log("loadpage");
                     "open" == this.attr.valve && (t = "close"),
                     "" != t) {
                         var e = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: t,
                             secondary: ""
                         };
@@ -10175,7 +10175,7 @@ console.log("loadpage");
                         gridColumn: this.col,
                         backgroundColor: this.customColor.bgColor,
                         color: this.customColor.iconColor,
-                        fontSize: parseInt(this.layout.fontSize) + "px",
+                        fontSize: (t.context.customIconarray  && t.context.customIconarray.fontSize ) ?  (parseInt(t.context.customIconarray.fontSize) + "px") : (parseInt(this.layout.fontSize) + "px"),
                         // borderRadius: this.layout.roundedCorners + "px",
                         backgroundImage: this.bgImage,
                         backgroundPosition: "center center",
@@ -11723,7 +11723,7 @@ console.log("loadpage");
                 },
                 previous: function() {
                     var t = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "previousTrack",
                         secondary: ""
                     };
@@ -11731,7 +11731,7 @@ console.log("loadpage");
                 },
                 next: function() {
                     var t = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: "nextTrack",
                         secondary: ""
                     };
@@ -11739,7 +11739,7 @@ console.log("loadpage");
                 },
                 play: function(t) {
                     var e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: ""
                     };
@@ -11752,7 +11752,7 @@ console.log("loadpage");
                     var e = "setVolume";
                     "" == this.attr5.volume && (e = "setLevel");
                     var o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: t
                     };
@@ -11763,7 +11763,7 @@ console.log("loadpage");
                     if (-1 == t.target.classList.toString().indexOf("vue") && -1 == t.target.classList.toString().indexOf("dimmer") || t.target.classList.toString().indexOf("he-") > -1) {
                         e = "off" == this.attr.switch ? "on" : "off";
                         var a = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: e,
                             secondary: o
                         };
@@ -11885,7 +11885,7 @@ console.log("loadpage");
                 doCommand: function(t) {
                     var e = t
                       , o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: ""
                     };
@@ -12090,7 +12090,7 @@ console.log("loadpage");
                     var e = "setVolume";
                     "" == this.attr.volume && (e = "setLevel");
                     var o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: parseInt(t)
                     };
@@ -12101,7 +12101,7 @@ console.log("loadpage");
                     if (-1 == t.target.classList.toString().indexOf("vue") && -1 == t.target.classList.toString().indexOf("dimmer") || t.target.classList.toString().indexOf("he-") > -1) {
                         this.attr.switch = this.local.sending;
                         var a = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: e,
                             secondary: o
                         };
@@ -12392,7 +12392,7 @@ console.log("loadpage");
                     this.edit = !1;
                     var t = "setVariable"
                       , e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: this.attr.variable
                     };
@@ -12520,7 +12520,7 @@ console.log("loadpage");
                     this.edit = !1;
                     var t = "setVariable"
                       , e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: this.attr.variable
                     };
@@ -12658,7 +12658,7 @@ console.log("loadpage");
                     var t = "setVariable";
                     if ("" != this.variable) {
                         var e = {
-                            id: parseInt(this.context.device),
+                            id: this.context.device,
                             cmd: t,
                             secondary: this.variable
                         };
@@ -12772,7 +12772,7 @@ console.log("loadpage");
                     this.edit = !1;
                     var e = "setVariable"
                       , o = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: e,
                         secondary: t.currentTarget.previousElementSibling.firstChild.checked.toString()
                     };
@@ -12987,7 +12987,7 @@ console.log("loadpage");
                       , o = e.format("YYYY-MM-DDTHH:mm:00.000ZZ");
                     void 0 == this.attr.dateTime || !this.attr.dateTime.includes("9999-99-99") && 29 != this.attr.dateTime.length ? void 0 != this.attr.variable && this.attr.variable.includes("9999-99-99") && (o = "9999-99-99" + o.substring(10)) : o = "9999-99-99" + o.substring(10);
                     var a = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: o
                     };
@@ -13134,7 +13134,7 @@ console.log("loadpage");
                     this.edit = !1;
                     var t = void 0 != this.attr.variable ? "setVariable" : "setDate"
                       , e = {
-                        id: parseInt(this.context.device),
+                        id: this.context.device,
                         cmd: t,
                         secondary: this.editDate
                     };

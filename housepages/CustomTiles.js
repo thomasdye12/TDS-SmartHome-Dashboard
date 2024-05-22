@@ -849,7 +849,7 @@ function tile_musicPlayer(o, t) {
                                 staticClass: "material-icons ",
                                 style: {
                                     color: "black",
-                                    fontSize: 1.75 * parseInt(t.layout.iconSize) + "px"
+                                    fontSize: 1.70 * parseInt(t.layout.iconSize) + "px"
                                 }
                             }, [
 
