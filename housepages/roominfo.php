@@ -2,7 +2,9 @@
  header('Content-Type: application/json');
  ob_start("ob_gzhandler");
  include_once "../phpfuncs.php";
+   
 
+    
 
     $retun = array();
     $issmall = $_GET["small"] == "true" ? true : false;
@@ -18,6 +20,8 @@
     $retun["security_keypad"] = $room["security_keypad"] ?? false;
   
     $retun["layout"] = getlayout($_GET["room"], $issmall );
+     // set the browser cookie to the room, set the path /dashboard so it is available to all page
+    setcookie("room", $room["ID"], time() + (86400 * 900), "/dashboard"); // 86400 = 1 day
 
 echo json_encode($retun, JSON_PRETTY_PRINT);
 ob_end_flush();
